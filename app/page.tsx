@@ -23,6 +23,7 @@ import { buttonVariants } from "@/components/ui/button"
 export default function Home() {
   return (
     <>
+      {/* hero section  */}
       <div className={`hero-section relative min-h-screen   ${inter.className}`}>
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')", minHeight: "713px" }}></div>
         <div className={`flex min-h-screen flex-col sticky top-0 z-50`}>
@@ -36,7 +37,7 @@ export default function Home() {
               </nav>
             </div>
           </header>
-      {/* overlay on div  */}
+          {/* overlay on div  */}
           <div className="absolute inset-0 z-0" style={{ minHeight: "713px" }}>
             <div className="bg-black opacity-50 h-full w-full absolute z-0"></div>
           </div>
@@ -63,14 +64,14 @@ export default function Home() {
       </div>
       {/* section 2 */}
       <section className="container my-14">
-        <h1 className="px-28 py-6  text-center font-medium leading-tight tracking-normal text-4xl">
+        <h1 className="  py-6  text-center font-medium leading-tight tracking-normal text-4xl">
           We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
         </h1>
         <div className=" bg-cover bg-center h-72" style={{ backgroundImage: "url('/images/rectangular.png')" }}></div>
-        <p className="px-28 py-6  text-center  font-normal leading-tight tracking-normal text-xl">
+        <p className="  py-6  text-center  font-normal leading-tight tracking-normal text-xl">
           We then work with local officials to develop the land into profitable properties, constantly monitoring market trends to maximize returns and provide valuable investments for our clients.
         </p>
-        <p className="px-28   text-center  font-normal leading-tight tracking-normal text-xl">
+        <p className="    text-center  font-normal leading-tight tracking-normal text-xl">
 
 
           By following this process, we aim to provide valuable investment opportunities that offer strong returns on investment and diversification to the investors portfolios.
@@ -81,15 +82,14 @@ export default function Home() {
       {/* section 3 */}
 
       <section className="  my-14 bg-customGreen">
-        <div className="container ">
-          <h1 className="px-28 py-6  text-center font-medium leading-tight tracking-normal text-4xl">
+        <div className="container py-14">
+          <h1 className="px-28    mb-6 text-center font-medium leading-tight tracking-normal text-4xl">
             Investing in land offers numerous benefits
-          </h1>
-
-
-          <div className="flex flex-wrap justify-center">
-            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5 rounded-2xl">
-              <div className="relative h-100  ">
+          </h1> 
+          <div className="flex flex-wrap   md:flex-nowrap ">
+           
+            <div className="w-100 md:w-1/2  md:mr-3  h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
+              <div className="relative h-100 text-center flex justify-content-center  ">
                 <Image
                   src="/images/Long-term-stability.png"
                   alt="Image"
@@ -101,10 +101,10 @@ export default function Home() {
               </div>
 
               <h1 className="text-3xl font-bold text-center">Long-term stability</h1>
-              <p className="my-4  text-center px-2">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
+              <p className="mt-4  text-center ">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
             </div>
-            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5 rounded-2xl">
-              <div className="relative h-100">
+            <div className="w-100 md:w-1/2  md:ml-3 h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl p-5">
+              <div className="relative h-100  justify-content-center flex">
                 <Image
                   src="/images/Returns.png"
                   alt="Image"
@@ -116,40 +116,42 @@ export default function Home() {
               </div>
 
               <h1 className="text-3xl font-bold text-center">Returns</h1>
-              <p className="my-4  text-center r px-2">As land values increase over time, investors can potentially see significant returns on their investments.</p>
-            </div>
-            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5 rounded-2xl">
-              <div className="relative h-100">
-                <Image
-                  src="/images/Hedgeagainstinflation.png"
-                  alt="Image"
-                  // fill
-
-                  width={500}
-                  height={500}
-                />
-              </div>
-
-              <h1 className="text-3xl font-bold text-center">Hedge against inflation</h1>
-              <p className="my-4  text-center r px-2">The value of land generally increases with inflation, providing a hedge against the declining purchasing power of cash and other fixed-income investments.</p>
-            </div>
-            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5 rounded-2xl">
-              <div className="relative h-100">
-                <Image
-                  src="/images/Diversification.png"
-                  alt="Image"
-                  // fill 
-                  width={500}
-                  height={500}
-                // quality={100}
-                />
-              </div>
-
-              <h1 className="text-3xl font-bold text-center">Diversification</h1>
-              <p className="my-4  text-center r px-2">Land investments can provide diversification in an investment portfolio, since they are not directly linked to the performance of the stock market or other financial markets.</p>
-            </div>
-
+              <p className="mt-4  text-center   ">As land values increase over time, investors can potentially see significant returns on their investments.</p>
+            </div> 
           </div>
+          <div className="flex flex-wrap   md:flex-nowrap ">
+           
+           <div className="w-100 md:w-1/2  md:mr-3  h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
+             <div className="relative h-100 text-center flex justify-content-center  ">
+               <Image
+                 src="/images/Long-term-stability.png"
+                 alt="Image"
+                 // fill
+
+                 width={500}
+                 height={500}
+               />
+             </div>
+
+             <h1 className="text-3xl font-bold text-center">Long-term stability</h1>
+             <p className="mt-4  text-center ">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
+           </div>
+           <div className="w-100 md:w-1/2  md:ml-3 h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl p-5">
+             <div className="relative h-100  justify-content-center flex">
+               <Image
+                 src="/images/Returns.png"
+                 alt="Image"
+                 // fill
+
+                 width={500}
+                 height={500}
+               />
+             </div>
+
+             <h1 className="text-3xl font-bold text-center">Returns</h1>
+             <p className="mt-4  text-center   ">As land values increase over time, investors can potentially see significant returns on their investments.</p>
+           </div> 
+         </div>
         </div>
 
 
@@ -158,18 +160,18 @@ export default function Home() {
 
 
       <section className="my-14 container" id="info-section">
-        <div className="flex flex-wrap px-4 md:px-14">
+        <div className="flex flex-wrap ">
           <div className="w-full md:w-3/5 ">
 
-            <h1 className="  font-semibold text-4xl text-black flex-none order-none self-stretch flex-grow-0">
+            <h1 className="  font-semibold text-2xl text-black flex-none order-none self-stretch flex-grow-0  text-center md:text-left md:font-bold md:text-4xl">
               We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
             </h1>
-            <p className="  font-normal text-base leading-5 text-black flex-none order-1 self-stretch flex-grow-0">
+            <p className="  font-normal text-base leading-5 text-black flex-none order-1 self-stretch flex-grow-0 py-5 text-center md:text-left md:pb-0">
               We believe that investing in land should be simple, secure, and easy. With 500Land, you can purchase a fractional of land with just a few simple steps
             </p>
           </div>
           <div className="w-full md:w-2/5">
-            <div className="relative h-100  flex justify-end">
+            <div className="relative h-56  flex justify-end">
               <Image
                 src="/images/blockchaindetail.png"
                 alt="Image"
