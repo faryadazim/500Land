@@ -23,22 +23,22 @@ import { buttonVariants } from "@/components/ui/button"
 export default function Home() {
   return (
     <>
-      <div className={`hero-section relative min-h-screen ${inter.className}`}>
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')" }}></div>
+      <div className={`hero-section relative min-h-screen   ${inter.className}`}>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')" ,minHeight:"713px"}}></div>
         <div className={`flex min-h-screen flex-col sticky top-0 z-50`}>
           <header className="container   top-0 z-40">
-            <div className="flex h-16 items-center justify-between pt-7">
+            <div className="flex h-16 items-center justify-between pt-7" >
               <MainNav items={marketingConfig.mainNav} />
               <nav className="flex">
-                <Link href="/blogs" className={cn("flex items-center text-lg font-bold text-slate-600 sm:text-sm text-white tracking-widest mx-3")}>Blogs</Link>
-                <Link href="/contactus" className={cn("flex items-center text-lg font-bold text-slate-600 sm:text-sm text-white tracking-widest mx-3")}>CONTACT US</Link>
+                <Link href="/blogs" className={cn("flex items-center text-lg font-bold text-slate-600 sm:text-sm text-white tracking-widest mx-3 hidden md:flex")}>Blogs</Link>
+                <Link href="/contactus" className={cn("flex items-center text-lg font-bold text-slate-600 sm:text-sm text-white tracking-widest mx-3 hidden  md:flex ")}>CONTACT US</Link>
                 <Link href="/dashboard" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-white w-100 px-10 rounded-full font-bold")}>LOGIN</Link>
               </nav>
             </div>
           </header>
 
-          <div className="absolute inset-0 z-0">
-            <div className="bg-gray-700 opacity-20 h-full w-full absolute z-0"></div>
+          <div className="absolute inset-0 z-0" style={{minHeight:"713px"}}>
+            <div className="bg-black opacity-50 h-full w-full absolute z-0"></div>
           </div>
 
           <div className="absolute bottom-0 left-0 container" style={{ width: "60%", left: "120px", top: "55%" }}>
@@ -50,6 +50,7 @@ export default function Home() {
               We specializes in investing in land by purchasing undervalued properties and developing them into profitable investments.</p>
 
             <div className="flex container">
+
               <Link href="/login" className={cn(buttonVariants({ variant: "primary" }), "px-3 mr-2   w-100 px-10 rounded-full font-bold  ")}>Check Available Opportunity</Link>
               <Link href="/login" className={cn(buttonVariants({ variant: "primary" }), "px-3    w-100 px-10 rounded-full font-bold")}> How it works</Link>
             </div>

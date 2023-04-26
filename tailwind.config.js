@@ -21,6 +21,9 @@ module.exports = {
 
     },
     extend: {
+      gradientColorStops: {
+        'gradient-opacity': ['rgba(0, 0, 0, 0.5)', 'rgba(0, 0, 0, 0.3)'],
+      },
       colors: {
         customGreen: "#70F09C",
         customBlack: "#101010",
