@@ -5,6 +5,14 @@ import Link from "next/link"
 import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
 import { MainNav } from "@/components/main-nav"
+import { Progress } from "@/components/ui/progress"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 const inter = Poppins({
   subsets: ['latin'],
   weight: "100"
@@ -158,30 +166,147 @@ export default function Home() {
               We believe that investing in land should be simple, secure, and easy. With 500Land, you can purchase a fractional of land with just a few simple steps
             </p>
           </div>
-            <div className="w-full md:w-2/5">
-              <div className="relative h-100  flex justify-end">
-                <Image
-                  src="/images/blockchaindetail.png"
-                  alt="Image"
+          <div className="w-full md:w-2/5">
+            <div className="relative h-100  flex justify-end">
+              <Image
+                src="/images/blockchaindetail.png"
+                alt="Image"
 
-                  // quality={100}
-                  width={200}
-                  height={400}
-                  // style={{ height: '100%' }}
+                // quality={100}
+                width={200}
+                height={400}
+                // style={{ height: '100%' }}
                 sizes="(max-width: 768px) 100vw,
                       (max-width: 1200px) 50vw,
                       33vw"
                 style={{ height: '100%', width: 'auto' }} //The point is right there!
 
-                />
-              </div>
+              />
             </div>
+          </div>
         </div>
       </section>
 
+      <section>
+        <div className="flex flex-wrap justify-center py-4">
+          {[1, 2, 3].map((x: any): any => {
+            return <> <div className="bg-white shadow-lg rounded-lg w-80 h-100 m-4  ">
+              <div className=" bg-cover bg-center  h-80" style={{ backgroundImage: "url('/images/Diversification.png')" }}></div>
 
 
+              <div className="p-4">
+                <h2 className="text-xl font-bold mb-2">Card 1 Heading</h2>
+                <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div className="mt-4">
+                  <h3 className="text-md font-bold mb-2">Progress</h3>
+                  <Progress value={75} />
 
+                </div>
+                <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 w-9/12">Button</button>
+              </div>
+            </div></>
+          })}
+
+          {/* Card 1 */}
+
+          {/* Card 1 */}
+
+        </div>
+
+      </section>
+
+      <section className="bg-black">
+<div className="container ">
+
+
+        <Accordion type="single" collapsible className="w-full py-5">
+          <AccordionItem value="item-1" className="bg-customLightDark rounded-lg my-2 px-5">
+            <AccordionTrigger className="text-white">Is it accessible?</AccordionTrigger>
+            <AccordionContent className="text-white">
+              Yes. It adheres to the WAI-ARIA design pattern.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2" className="bg-customLightDark rounded-lg my-2 px-5">
+            <AccordionTrigger className="text-white">Is it styled?</AccordionTrigger>
+            <AccordionContent className="text-white">
+              Yes. It comes with default styles that matches the other components'
+              aesthetic.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3" className="bg-customLightDark rounded-lg  my-2 px-5">
+            <AccordionTrigger className="text-white">Is it animated?</AccordionTrigger>
+            <AccordionContent className="text-white">
+              Yes. It's animated by default, but you can disable it if you prefer.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion></div>
+      </section>
+
+
+      <section className=" ">
+        <footer className="p-6 bg-customGreen ">
+          <div className="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-5">
+            <div className="flex flex-col space-y-4">
+              <h2 className="font-medium">Getting started</h2>
+              <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                <a rel="noopener noreferrer" href="#">Installation</a>
+                <a rel="noopener noreferrer" href="#">Release Notes</a>
+                <a rel="noopener noreferrer" href="#">Upgrade Guide</a>
+                <a rel="noopener noreferrer" href="#">Using with Preprocessors</a>
+                <a rel="noopener noreferrer" href="#">Optimizing for Production</a>
+                <a rel="noopener noreferrer" href="#">Browser Support</a>
+                <a rel="noopener noreferrer" href="#">IntelliSense</a>
+              </div>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <h2 className="font-medium">Core Concepts</h2>
+              <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                <a rel="noopener noreferrer" href="#">Utility-First</a>
+                <a rel="noopener noreferrer" href="#">Responsive Design</a>
+                <a rel="noopener noreferrer" href="#">Hover, Focus, &amp; Other States</a>
+                <a rel="noopener noreferrer" href="#">Dark Mode</a>
+                <a rel="noopener noreferrer" href="#">Adding Base Styles</a>
+                <a rel="noopener noreferrer" href="#">Extracting Components</a>
+                <a rel="noopener noreferrer" href="#">Adding New Utilities</a>
+              </div>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <h2 className="font-medium">Customization</h2>
+              <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                <a rel="noopener noreferrer" href="#">Configuration</a>
+                <a rel="noopener noreferrer" href="#">Theme Configuration</a>
+                <a rel="noopener noreferrer" href="#">Breakpoints</a>
+                <a rel="noopener noreferrer" href="#">Customizing Colors</a>
+                <a rel="noopener noreferrer" href="#">Customizing Spacing</a>
+                <a rel="noopener noreferrer" href="#">Configuring Variants</a>
+                <a rel="noopener noreferrer" href="#">Plugins</a>
+              </div>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <h2 className="font-medium">Community</h2>
+              <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                <a rel="noopener noreferrer" href="#">GitHub</a>
+                <a rel="noopener noreferrer" href="#">Discord</a>
+                <a rel="noopener noreferrer" href="#">Twitter</a>
+                <a rel="noopener noreferrer" href="#">YouTube</a>
+              </div>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <h2 className="font-medium">Community</h2>
+              <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
+                <a rel="noopener noreferrer" href="#">GitHub</a>
+                <a rel="noopener noreferrer" href="#">Discord</a>
+                <a rel="noopener noreferrer" href="#">Twitter</a>
+                <a rel="noopener noreferrer" href="#">YouTube</a>
+              </div>
+            </div>
+          </div>
+          <div className=" container flex items-center justify-between px-6 pt-12 text-sm">
+            <span className="dark:text-gray-400">logo</span>
+            <span className="dark:text-gray-400">© Copyright 1986. All Rights Reserved.</span>
+          </div>
+        </footer>
+      </section>
     </>
 
 

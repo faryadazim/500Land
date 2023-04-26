@@ -18,6 +18,7 @@ module.exports = {
       colors: {
         customGreen: "#70F09C",
         customBlack: "#101010", 
+        customLightDark: "grey", 
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
