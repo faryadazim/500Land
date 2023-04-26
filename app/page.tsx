@@ -78,7 +78,7 @@ export default function Home() {
 
 
           <div className="flex flex-wrap justify-center">
-            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5">
+            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5 rounded-2xl">
               <div className="relative h-100  ">
                 <Image
                   src="/images/Long-term-stability.png"
@@ -93,7 +93,7 @@ export default function Home() {
               <h1 className="text-3xl font-bold text-center">Long-term stability</h1>
               <p className="my-4  text-center px-2">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
             </div>
-            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5">
+            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5 rounded-2xl">
               <div className="relative h-100">
                 <Image
                   src="/images/Returns.png"
@@ -108,7 +108,7 @@ export default function Home() {
               <h1 className="text-3xl font-bold text-center">Returns</h1>
               <p className="my-4  text-center r px-2">As land values increase over time, investors can potentially see significant returns on their investments.</p>
             </div>
-            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5">
+            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5 rounded-2xl">
               <div className="relative h-100">
                 <Image
                   src="/images/Hedgeagainstinflation.png"
@@ -123,7 +123,7 @@ export default function Home() {
               <h1 className="text-3xl font-bold text-center">Hedge against inflation</h1>
               <p className="my-4  text-center r px-2">The value of land generally increases with inflation, providing a hedge against the declining purchasing power of cash and other fixed-income investments.</p>
             </div>
-            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5">
+            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5 rounded-2xl">
               <div className="relative h-100">
                 <Image
                   src="/images/Diversification.png"
@@ -145,6 +145,40 @@ export default function Home() {
 
 
       </section>
+
+
+      <section className="my-14 container" id="info-section">
+        <div className="flex flex-wrap px-4 md:px-14">
+          <div className="w-full md:w-3/5 ">
+
+            <h1 className="  font-semibold text-4xl text-black flex-none order-none self-stretch flex-grow-0">
+              We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
+            </h1>
+            <p className="  font-normal text-base leading-5 text-black flex-none order-1 self-stretch flex-grow-0">
+              We believe that investing in land should be simple, secure, and easy. With 500Land, you can purchase a fractional of land with just a few simple steps
+            </p>
+          </div>
+            <div className="w-full md:w-2/5">
+              <div className="relative h-100  flex justify-end">
+                <Image
+                  src="/images/blockchaindetail.png"
+                  alt="Image"
+
+                  // quality={100}
+                  width={200}
+                  height={400}
+                  // style={{ height: '100%' }}
+                sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw"
+                style={{ height: '100%', width: 'auto' }} //The point is right there!
+
+                />
+              </div>
+            </div>
+        </div>
+      </section>
+
 
 
 
