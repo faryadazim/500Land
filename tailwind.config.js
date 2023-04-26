@@ -27,6 +27,7 @@ module.exports = {
       colors: {
         customGreen: "#70F09C",
         customBlack: "#101010",
+        customLightTransparent: "rgba(255, 255, 255, 0.24)",
         customLightDark: "grey",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -67,6 +68,10 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      // fontFamily: {
+      //   sans: ['var(--font-inter)'],
+      //   mono: ['var(--font-roboto-mono)'],
+      // },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },

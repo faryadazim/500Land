@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <div className={`hero-section relative min-h-screen   ${inter.className}`}>
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')" ,minHeight:"713px"}}></div>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')", minHeight: "713px" }}></div>
         <div className={`flex min-h-screen flex-col sticky top-0 z-50`}>
           <header className="container   top-0 z-40">
             <div className="flex h-16 items-center justify-between pt-7" >
@@ -36,23 +36,23 @@ export default function Home() {
               </nav>
             </div>
           </header>
-
-          <div className="absolute inset-0 z-0" style={{minHeight:"713px"}}>
+      {/* overlay on div  */}
+          <div className="absolute inset-0 z-0" style={{ minHeight: "713px" }}>
             <div className="bg-black opacity-50 h-full w-full absolute z-0"></div>
           </div>
 
-          <div className="absolute bottom-0 left-0 container" style={{ width: "60%", left: "120px", top: "55%" }}>
-            <h1 className=" font-boldest text-white text-7xl leading-tight container" style={{ textShadow: "0px 1px 1px rgba(0, 0, 0, 0.15)" }}>Invest in land,
+          <div className="  absolute bottom-0 left-0 container" style={{ width: "60%", left: "142px", top: "40%" }}>
+            <h1 className=" font-boldest text-white text-7xl leading-tight container " style={{ textShadow: "0px 1px 1px rgba(0, 0, 0, 0.15)", fontFamily: "sans-serif" }}>Invest in land,
               <br />
               invest in your future.</h1>
 
-            <p className=" font-normal text-white text-xl leading-10 container">
+            <p className=" font-normal text-white text-xl leading-10 container mb-14">
               We specializes in investing in land by purchasing undervalued properties and developing them into profitable investments.</p>
 
             <div className="flex container">
 
-              <Link href="/login" className={cn(buttonVariants({ variant: "primary" }), "px-3 mr-2   w-100 px-10 rounded-full font-bold  ")}>Check Available Opportunity</Link>
-              <Link href="/login" className={cn(buttonVariants({ variant: "primary" }), "px-3    w-100 px-10 rounded-full font-bold")}> How it works</Link>
+              <Link href="/login" className={cn(buttonVariants({ variant: "primary" }), "  mr-2   w-100 px-6 rounded-full font-bold  py-6 ")} style={{ fontFamily: "sans-serif" }}>Check Available Opportunity</Link>
+              <Link href="/login" className={cn(buttonVariants({ variant: "primaryLight" }), "    w-100 px-6 rounded-full font-bold py-6 ")} style={{ fontFamily: "sans-serif" }}> How it works</Link>
             </div>
 
 
@@ -218,30 +218,30 @@ export default function Home() {
       </section>
 
       <section className="bg-black">
-<div className="container ">
+        <div className="container ">
 
 
-        <Accordion type="single" collapsible className="w-full py-5">
-          <AccordionItem value="item-1" className="bg-customLightDark rounded-lg my-2 px-5">
-            <AccordionTrigger className="text-white">Is it accessible?</AccordionTrigger>
-            <AccordionContent className="text-white">
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2" className="bg-customLightDark rounded-lg my-2 px-5">
-            <AccordionTrigger className="text-white">Is it styled?</AccordionTrigger>
-            <AccordionContent className="text-white">
-              Yes. It comes with default styles that matches the other components
-              aesthetic.
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-3" className="bg-customLightDark rounded-lg  my-2 px-5">
-            <AccordionTrigger className="text-white">Is it animated?</AccordionTrigger>
-            <AccordionContent className="text-white">
-              Yes. Its animated by default, but you can disable it if you prefer.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion></div>
+          <Accordion type="single" collapsible className="w-full py-5">
+            <AccordionItem value="item-1" className="bg-customLightDark rounded-lg my-2 px-5">
+              <AccordionTrigger className="text-white">Is it accessible?</AccordionTrigger>
+              <AccordionContent className="text-white">
+                Yes. It adheres to the WAI-ARIA design pattern.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2" className="bg-customLightDark rounded-lg my-2 px-5">
+              <AccordionTrigger className="text-white">Is it styled?</AccordionTrigger>
+              <AccordionContent className="text-white">
+                Yes. It comes with default styles that matches the other components
+                aesthetic.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3" className="bg-customLightDark rounded-lg  my-2 px-5">
+              <AccordionTrigger className="text-white">Is it animated?</AccordionTrigger>
+              <AccordionContent className="text-white">
+                Yes. Its animated by default, but you can disable it if you prefer.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion></div>
       </section>
 
 
