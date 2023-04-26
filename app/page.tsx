@@ -71,7 +71,7 @@ export default function Home() {
         <p className="px-28   text-center  font-normal leading-tight tracking-normal text-xl">
 
 
-          By following this process, we aim to provide valuable investment opportunities that offer strong returns on investment and diversification to the investors' portfolios.
+          By following this process, we aim to provide valuable investment opportunities that offer strong returns on investment and diversification to the investors portfolios.
         </p>
 
       </section>
@@ -229,14 +229,14 @@ export default function Home() {
           <AccordionItem value="item-2" className="bg-customLightDark rounded-lg my-2 px-5">
             <AccordionTrigger className="text-white">Is it styled?</AccordionTrigger>
             <AccordionContent className="text-white">
-              Yes. It comes with default styles that matches the other components'
+              Yes. It comes with default styles that matches the other components
               aesthetic.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3" className="bg-customLightDark rounded-lg  my-2 px-5">
             <AccordionTrigger className="text-white">Is it animated?</AccordionTrigger>
             <AccordionContent className="text-white">
-              Yes. It's animated by default, but you can disable it if you prefer.
+              Yes. Its animated by default, but you can disable it if you prefer.
             </AccordionContent>
           </AccordionItem>
         </Accordion></div>
