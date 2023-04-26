@@ -15,46 +15,138 @@ import { buttonVariants } from "@/components/ui/button"
 export default function Home() {
   return (
     <>
-     <div className={`hero-section relative min-h-screen ${inter.className} `}>
-  <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')" }}>
-  </div>
-  <div className={`flex min-h-screen flex-col  sticky top-0 z-50 `}   >
-    <header className="container sticky top-0 z-40 ">
-      <div className="flex h-16 items-center justify-between  pt-7" >
-        <MainNav items={marketingConfig.mainNav} />
-        <nav className=" flex">
-          <Link
-            href="/contactus"
-            className={cn("flex items-center text-lg font-bold text-slate-600 sm:text-sm text-white tracking-widest mx-3")}
-          >
-            CONTACT US
-          </Link>
-          <Link
-            href="/login"
-            className={cn(buttonVariants({ size: "sm" , variant:"outline" }), "px-4 text-white w-100 px-10  rounded-full font-bold")}
-          >
-            LOGIN
-          </Link>
-        </nav>
+      <div className={`hero-section relative min-h-screen ${inter.className}`}>
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')" }}></div>
+        <div className={`flex min-h-screen flex-col sticky top-0 z-50`}>
+          <header className="container   top-0 z-40">
+            <div className="flex h-16 items-center justify-between pt-7">
+              <MainNav items={marketingConfig.mainNav} />
+              <nav className="flex">
+                <Link href="/contactus" className={cn("flex items-center text-lg font-bold text-slate-600 sm:text-sm text-white tracking-widest mx-3")}>CONTACT US</Link>
+                <Link href="/login" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-white w-100 px-10 rounded-full font-bold")}>LOGIN</Link>
+              </nav>
+            </div>
+          </header>
+
+          <div className="absolute inset-0 z-0">
+            <div className="bg-gray-700 opacity-20 h-full w-full absolute z-0"></div>
+          </div>
+
+          <div className="absolute bottom-0 left-0 container" style={{ width: "60%", left: "120px", top: "55%" }}>
+            <h1 className=" font-boldest text-white text-7xl leading-tight container" style={{ textShadow: "0px 1px 1px rgba(0, 0, 0, 0.15)" }}>Invest in land,
+              <br />
+              invest in your future.</h1>
+
+            <p className=" font-normal text-white text-xl leading-10 container">
+              We specializes in investing in land by purchasing undervalued properties and developing them into profitable investments.</p>
+
+            <div className="flex container">
+              <Link href="/login" className={cn(buttonVariants({ variant: "primary" }), "px-3 mr-2   w-100 px-10 rounded-full font-bold  ")}>Check Available Opportunity</Link>
+              <Link href="/login" className={cn(buttonVariants({ variant: "primary" }), "px-3    w-100 px-10 rounded-full font-bold")}> How it works</Link>
+            </div>
+
+
+          </div>
+
+
+        </div>
       </div>
-    </header>
+      {/* section 2 */}
+      <section className="container my-14">
+        <h1 className="px-28 py-6  text-center font-medium leading-tight tracking-normal text-4xl">
+          We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
+        </h1>
+        <div className=" bg-cover bg-center h-72" style={{ backgroundImage: "url('/images/rectangular.png')" }}></div>
+        <p className="px-28 py-6  text-center  font-normal leading-tight tracking-normal text-xl">
+          We then work with local officials to develop the land into profitable properties, constantly monitoring market trends to maximize returns and provide valuable investments for our clients.
+        </p>
+        <p className="px-28   text-center  font-normal leading-tight tracking-normal text-xl">
 
-    <div className="absolute inset-0 z-0">
-      <div className="bg-gray-700 opacity-20 h-full w-full absolute z-0"></div>
-    </div>
+
+          By following this process, we aim to provide valuable investment opportunities that offer strong returns on investment and diversification to the investors' portfolios.
+        </p>
+
+      </section>
+
+      {/* section 3 */}
+
+      <section className="  my-14 bg-customGreen">
+        <div className="container ">
+          <h1 className="px-28 py-6  text-center font-medium leading-tight tracking-normal text-4xl">
+            Investing in land offers numerous benefits
+          </h1>
 
 
-    {/* Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore provident harum neque assumenda beatae quia qui accusantium nisi accusamus optio! Ut explicabo rerum fugiat quam enim vitae ipsa vel nulla! */}
-    {/* //hero section data here a */}
-  </div>
-  
-</div>
-<main className="flex-1">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio fugit facere minus in voluptate sequi atque deleniti ut, enim mollitia deserunt alias consequatur nobis. Quod accusamus consequuntur accusantium nemo voluptatibus porro vitae, a hic aperiam earum repellat, velit, laborum commodi saepe ipsum. Autem odit provident ad amet molestiae molestias dignissimos, distinctio laboriosam quibusdam quia nulla a. Earum illum asperiores natus porro quas, molestiae, esse officiis illo expedita tenetur, vitae obcaecati nostrum omnis adipisci qui. Aut vel aliquam consequuntur explicabo nostrum expedita totam, quia itaque inventore laborum rerum officiis placeat aspernatur assumenda velit eveniet sequi dolores error quae corporis, tempore quas iure! Nam, aperiam eius vel corrupti debitis possimus in iusto ipsum, dolor sunt doloribus praesentium repudiandae nulla nihil. Minus animi id ratione amet pariatur voluptate quasi expedita ab, quam impedit placeat similique eius, aspernatur dolorum? Eveniet, ipsa? Incidunt illo provident vero molestias adipisci ipsam ut dicta tenetur, inventore debitis voluptatum animi numquam placeat corrupti molestiae reiciendis accusamus recusandae officiis harum quos iure necessitatibus atque? Velit, quo? Expedita reprehenderit voluptatibus commodi tenetur, maiores beatae eos rem ut nemo unde. Iure voluptatum temporibus illo totam ut maiores expedita ab deserunt aut veniam, eius quis! Laborum ad ducimus delectus nihil eos debitis eaque quos minus, ipsum eveniet magni facere quas asperiores omnis suscipit dolorum, qui totam? Reprehenderit, sit error officia eligendi amet fugit molestiae. In facilis illo nesciunt modi dolores asperiores voluptas blanditiis quaerat vel veritatis, error quibusdam! Excepturi neque nam dolores accusamus explicabo porro doloribus culpa iure blanditiis dicta, numquam assumenda eligendi voluptas qui possimus odio nesciunt quisquam at, animi a deleniti alias. Earum corrupti, id similique porro deleniti maiores laudantium molestias. Quasi, error vel, maiores cupiditate deserunt molestiae doloribus totam, numquam perspiciatis amet dolorum illo repudiandae consequuntur unde provident praesentium nesciunt quos ad accusantium? Quod quidem perspiciatis asperiores harum dicta dolores commodi, libero, consequuntur sit veritatis iure unde. Voluptatem dolores facere magnam aliquam adipisci consequatur eum placeat ratione veritatis eveniet. Obcaecati dolorum voluptatum cupiditate ullam officia. Tenetur nesciunt minus laudantium ducimus adipisci provident corporis molestias eligendi ratione asperiores itaque doloribus enim facere quod et, nam velit corrupti nihil cupiditate. Dolores eos minus fuga architecto beatae reprehenderit recusandae? Sapiente voluptatum harum officia fugit, neque atque ipsam. Provident ipsa iure hic id animi voluptatem eveniet explicabo, autem soluta fugiat rerum rem nisi sed dolor nihil culpa quas, fugit aliquid. Assumenda possimus et iusto, amet ad nihil iure numquam fugit suscipit cumque, aspernatur nobis eos quam quaerat distinctio neque, sunt sint placeat. Dignissimos et vitae est officiis praesentium. Eum reiciendis at adipisci iste tempora quasi repellat dicta, minus distinctio veritatis pariatur fugit consequuntur corrupti est, ea enim dolor beatae reprehenderit doloremque fugiat dolorum cum dolores aut porro. Exercitationem.
-    {/* main content here */}
-  </main>
+          <div className="flex flex-wrap justify-center">
+            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5">
+              <div className="relative h-100  ">
+                <Image
+                  src="/images/Long-term-stability.png"
+                  alt="Image"
+                  // fill
 
-      
+                  width={500}
+                  height={500}
+                />
+              </div>
+
+              <h1 className="text-3xl font-bold text-center">Long-term stability</h1>
+              <p className="my-4  text-center px-2">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
+            </div>
+            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5">
+              <div className="relative h-100">
+                <Image
+                  src="/images/Returns.png"
+                  alt="Image"
+                  // fill
+
+                  width={500}
+                  height={500}
+                />
+              </div>
+
+              <h1 className="text-3xl font-bold text-center">Returns</h1>
+              <p className="my-4  text-center r px-2">As land values increase over time, investors can potentially see significant returns on their investments.</p>
+            </div>
+            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5">
+              <div className="relative h-100">
+                <Image
+                  src="/images/Hedgeagainstinflation.png"
+                  alt="Image"
+                  // fill
+
+                  width={500}
+                  height={500}
+                />
+              </div>
+
+              <h1 className="text-3xl font-bold text-center">Hedge against inflation</h1>
+              <p className="my-4  text-center r px-2">The value of land generally increases with inflation, providing a hedge against the declining purchasing power of cash and other fixed-income investments.</p>
+            </div>
+            <div className="w-[584px] h-[687px] mx-4   bg-white flex flex-col justify-end mb-5">
+              <div className="relative h-100">
+                <Image
+                  src="/images/Diversification.png"
+                  alt="Image"
+                  // fill 
+                  width={500}
+                  height={500}
+                // quality={100}
+                />
+              </div>
+
+              <h1 className="text-3xl font-bold text-center">Diversification</h1>
+              <p className="my-4  text-center r px-2">Land investments can provide diversification in an investment portfolio, since they are not directly linked to the performance of the stock market or other financial markets.</p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </section>
+
+
 
     </>
 
