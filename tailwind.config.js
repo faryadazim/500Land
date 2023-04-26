@@ -5,20 +5,26 @@ module.exports = {
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-	],
+  ],
   theme: {
+
     container: {
       center: true,
-      padding: "2rem",
+      padding: '1rem',
       screens: {
-        "2xl": "1400px",
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1200px',
       },
+      width: '1200px',
+
     },
     extend: {
       colors: {
         customGreen: "#70F09C",
-        customBlack: "#101010", 
-        customLightDark: "grey", 
+        customBlack: "#101010",
+        customLightDark: "grey",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
