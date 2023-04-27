@@ -308,8 +308,10 @@ export default function Home() {
         <Separator />
 </div>
         <div className=" container flex items-center justify-between px-6  pt-6 text-sm">
-          <span className="dark:text-gray-400">logo</span>
-          <span className="dark:text-gray-400">© Copyright 1986. All Rights Reserved.</span>
+          <span className="dark:text-gray-400">  <Image src="/images/Logo.png" alt="500Land Logo" width={40}
+          height={40}
+          quality={100} /></span>
+          <span className="dark:text-gray-400">© Copyright 2023 500 Land. All Rights Reserved.</span>
         </div>
       </footer>
     </>
