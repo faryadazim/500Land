@@ -201,7 +201,7 @@ export default function Home() {
           {[1, 2, 3].map((x: any): any => {
             return (
 
-              <div className="md:w-4/12 ">
+              <div className="md:w-4/12 " key={x}>
                 <div className="bg-white shadow-lg   rounded-2xl  h-100  mx-2 ">
                   {/* <div className="bg-cover bg-center h-80" style={{ backgroundImage: "url('/images/Diversification.png')" }}></div> */}
 
@@ -268,8 +268,8 @@ export default function Home() {
             { index: 6, question: "Does 500Land provide ongoing management and monitoring of investments?", answer: "500Lands mission is to make land investment accessible and easy for everyone by providing exceptional investment opportunities in the land market. We identify and acquire undervalued land with the goal of maximizing returns for our clients." }
 
 
-            ].map((x: any): any => {
-              return <AccordionItem value={`item-${x.index}`} className="bg-customLightDark rounded-2xl my-2 px-5">
+            ].map((x: any , index:number): any => {
+              return <AccordionItem value={`item-${x.index}`} className="bg-customLightDark rounded-2xl my-2 px-5" key={x.index}>
                 <AccordionTrigger className="text-white">{x.question}</AccordionTrigger>
                 <AccordionContent className="text-customLightTQuestions">
                   {x.answer}
@@ -286,7 +286,7 @@ export default function Home() {
       <footer className="p-6 bg-customGreen py-10 ">
         <div className="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-5">
           {[1, 2, 3, 4, , 5].map((x) => {
-            return <div className="flex flex-col space-y-4">
+            return <div className="flex flex-col space-y-4" key={x}>
               <h2 className="font-bold">Getting started</h2>
               <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
                 <a rel="noopener noreferrer" href="#" className="font-semibold">Installation</a>
