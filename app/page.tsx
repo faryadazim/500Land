@@ -287,15 +287,15 @@ export default function Home() {
         <div className="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-5">
           {[1, 2, 3, 4, , 5].map((x) => {
             return <div className="flex flex-col space-y-4" key={x}>
-              <h2 className="font-bold">Getting started</h2>
+              <h2 className="font-bold">Website</h2>
               <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Installation</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Release Notes</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Upgrade Guide</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Using with Preprocessors</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Optimizing for Production</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Browser Support</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">IntelliSense</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Overview</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Features</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Solutions</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Tutorials</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Pricing</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Releases</a>
+                {/* <a rel="noopener noreferrer" href="#" className="font-semibold">IntelliSense</a> */}
               </div>
             </div>
           })}
@@ -308,7 +308,7 @@ export default function Home() {
         <Separator />
 </div>
         <div className=" container flex items-center justify-between px-6  pt-6 text-sm">
-          <span className="dark:text-gray-400">  <Image src="/images/Logo.png" alt="500Land Logo" width={40}
+          <span className="dark:text-gray-400">  <Image src="/images/logoDark.png" alt="500Land Logo" width={40}
           height={40}
           quality={100} /></span>
           <span className="dark:text-gray-400">© Copyright 2023 500 Land. All Rights Reserved.</span>
