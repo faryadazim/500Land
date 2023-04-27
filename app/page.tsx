@@ -6,6 +6,8 @@ import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
 import { MainNav } from "@/components/main-nav"
 import { Progress } from "@/components/ui/progress"
+import { Separator } from "@/components/ui/separator"
+
 import {
   Accordion,
   AccordionContent,
@@ -85,9 +87,9 @@ export default function Home() {
         <div className="container py-14">
           <h1 className="px-28    mb-6 text-center font-medium leading-tight tracking-normal text-4xl">
             Investing in land offers numerous benefits
-          </h1> 
+          </h1>
           <div className="flex flex-wrap   md:flex-nowrap ">
-           
+
             <div className="w-100 md:w-1/2  md:mr-3  h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
               <div className="relative h-100 text-center flex justify-center  ">
                 <Image
@@ -117,41 +119,41 @@ export default function Home() {
 
               <h1 className="text-3xl font-bold text-center">Returns</h1>
               <p className="mt-4  text-center   ">As land values increase over time, investors can potentially see significant returns on their investments.</p>
-            </div> 
+            </div>
           </div>
           <div className="flex flex-wrap   md:flex-nowrap ">
-           
-           <div className="w-100 md:w-1/2  md:mr-3  h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
-             <div className="relative h-100 text-center flex justify-center  ">
-               <Image
-                 src="/images/Long-term-stability.png"
-                 alt="Image"
-                 // fill
 
-                 width={500}
-                 height={500}
-               />
-             </div>
+            <div className="w-100 md:w-1/2  md:mr-3  h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
+              <div className="relative h-100 text-center flex justify-center  ">
+                <Image
+                  src="/images/Long-term-stability.png"
+                  alt="Image"
+                  // fill
 
-             <h1 className="text-3xl font-bold text-center">Long-term stability</h1>
-             <p className="mt-4  text-center ">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
-           </div>
-           <div className="w-100 md:w-1/2  md:ml-3 h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl p-5">
-             <div className="relative h-100  justify-center flex">
-               <Image
-                 src="/images/Returns.png"
-                 alt="Image"
-                 // fill
+                  width={500}
+                  height={500}
+                />
+              </div>
 
-                 width={500}
-                 height={500}
-               />
-             </div>
+              <h1 className="text-3xl font-bold text-center">Long-term stability</h1>
+              <p className="mt-4  text-center ">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
+            </div>
+            <div className="w-100 md:w-1/2  md:ml-3 h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl p-5">
+              <div className="relative h-100  justify-center flex">
+                <Image
+                  src="/images/Returns.png"
+                  alt="Image"
+                  // fill
 
-             <h1 className="text-3xl font-bold text-center">Returns</h1>
-             <p className="mt-4  text-center   ">As land values increase over time, investors can potentially see significant returns on their investments.</p>
-           </div> 
-         </div>
+                  width={500}
+                  height={500}
+                />
+              </div>
+
+              <h1 className="text-3xl font-bold text-center">Returns</h1>
+              <p className="mt-4  text-center   ">As land values increase over time, investors can potentially see significant returns on their investments.</p>
+            </div>
+          </div>
         </div>
 
 
@@ -193,149 +195,123 @@ export default function Home() {
 
       <section className="container my-6">
         <h1 className="font-bold text-customBlack text-4xl mb-6 py-3">
-        Available Opportunities
+          Available Opportunities
         </h1>
-  <div className="flex flex-wrap ">
-    {[1, 2, 3].map((x: any): any => {
-      return (
+        <div className="flex flex-wrap ">
+          {[1, 2, 3].map((x: any): any => {
+            return (
 
-        <div className="md:w-4/12 "> 
-        <div className="bg-white shadow-lg   rounded-2xl  h-100  mx-2 ">
-          {/* <div className="bg-cover bg-center h-80" style={{ backgroundImage: "url('/images/Diversification.png')" }}></div> */}
+              <div className="md:w-4/12 ">
+                <div className="bg-white shadow-lg   rounded-2xl  h-100  mx-2 ">
+                  {/* <div className="bg-cover bg-center h-80" style={{ backgroundImage: "url('/images/Diversification.png')" }}></div> */}
 
-          <div className="relative h-[179px] text-center flex justify-center  ">
-                <Image
-                  src="/images/Img.png"
-                  alt="Image"
-                  // fill
+                  <div className="relative h-[179px] text-center flex justify-center  ">
+                    <Image
+                      src="/images/Img.png"
+                      alt="Image"
+                      // fill
 
-                  width={384}
-                  height={179}
-                  className="rounded-t-2xl"
-                  // style={{ objectFit: "cover", objectPosition: "center" }}
+                      width={384}
+                      height={179}
+                      className="rounded-t-2xl"
+                    // style={{ objectFit: "cover", objectPosition: "center" }}
 
-                />
+                    />
+                  </div>
+                  <div className="p-4">
+                    <div className="flex justify-between">
+                      <span>Bradley,CA</span>
+                      <span>2000 SQFT</span>
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Lynch Canyon Road</h2>
+                    <div className="flex justify-between">
+                      <span className="title">Requested Fund</span>
+                      <span className="price   font-semibold text-base leading-5 text-black">USD,1,023,550</span>
+
+                    </div>
+
+                    <div className="my-4 ">
+                      <Progress value={75} />
+                    </div>
+                    <div className="flex justify-center">
+
+                      <Link href="/login" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Fund start from $100</Link>
+                    </div>
+                    <div className="flex justify-center">
+
+
+                      <p className="h-5 font-semibold text-sm leading-5 flex items-center text-center text-green-900">
+                        102 Investors
+                      </p> </div>
+
+                  </div>
+                </div>
               </div>
-          <div className="p-4">
-            <div className="flex justify-between">
-              <span>Bradley,CA</span>
-              <span>2000 SQFT</span>
-            </div>
-            <h2 className="text-xl font-bold mb-2">Lynch Canyon Road</h2>
-            <div className="flex justify-between">
-               <span className="title">Requested Fund</span>
-           <span className="price   font-semibold text-base leading-5 text-black">USD,1,023,550</span>
-           
-            </div>
-          
-            <div className="my-4 "> 
-              <Progress value={75} />
-            </div>
-            <div className="flex justify-center">
-
-            <Link href="/login" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Fund start from $100</Link>
-             </div>
-          </div>
+            )
+          })}
         </div>
-        </div>
-      )
-    })}
-  </div>
-</section>
+      </section>
 
 
-      <section className="bg-black">
-        <div className="container ">
+      <section className="bg-customStrongtDark py-10">
+        <div className="container  ">
 
-
+          <h1 className="font-semibold text-white text-4xl  ">
+            Common Questions
+          </h1>
           <Accordion type="single" collapsible className="w-full py-5">
-            <AccordionItem value="item-1" className="bg-customLightDark rounded-lg my-2 px-5">
-              <AccordionTrigger className="text-white">Is it accessible?</AccordionTrigger>
-              <AccordionContent className="text-white">
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2" className="bg-customLightDark rounded-lg my-2 px-5">
-              <AccordionTrigger className="text-white">Is it styled?</AccordionTrigger>
-              <AccordionContent className="text-white">
-                Yes. It comes with default styles that matches the other components
-                aesthetic.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3" className="bg-customLightDark rounded-lg  my-2 px-5">
-              <AccordionTrigger className="text-white">Is it animated?</AccordionTrigger>
-              <AccordionContent className="text-white">
-                Yes. Its animated by default, but you can disable it if you prefer.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion></div>
+            {[{ index: 1, question: "What is 500Land?", answer: "500Lands mission is to make land investment accessible and easy for everyone by providing exceptional investment opportunities in the land market. We identify and acquire undervalued land with the goal of maximizing returns for our clients." },
+            { index: 2, question: "What is the company’s mission??", answer: "500Lands mission is to make land investment accessible and easy for everyone by providing exceptional investment opportunities in the land market. We identify and acquire undervalued land with the goal of maximizing returns for our clients." },
+            { index: 3, question: "What are the benefits of investing in land?", answer: "500Lands mission is to make land investment accessible and easy for everyone by providing exceptional investment opportunities in the land market. We identify and acquire undervalued land with the goal of maximizing returns for our clients." },
+            { index: 4, question: "How does 500Land select land for investment?", answer: "500Lands mission is to make land investment accessible and easy for everyone by providing exceptional investment opportunities in the land market. We identify and acquire undervalued land with the goal of maximizing returns for our clients." },
+            { index: 5, question: "What services does 500Land offer?", answer: "500Lands mission is to make land investment accessible and easy for everyone by providing exceptional investment opportunities in the land market. We identify and acquire undervalued land with the goal of maximizing returns for our clients." },
+            { index: 6, question: "Does 500Land provide ongoing management and monitoring of investments?", answer: "500Lands mission is to make land investment accessible and easy for everyone by providing exceptional investment opportunities in the land market. We identify and acquire undervalued land with the goal of maximizing returns for our clients." }
+
+
+            ].map((x: any): any => {
+              return <AccordionItem value={`item-${x.index}`} className="bg-customLightDark rounded-2xl my-2 px-5">
+                <AccordionTrigger className="text-white">{x.question}</AccordionTrigger>
+                <AccordionContent className="text-customLightTQuestions">
+                  {x.answer}
+                </AccordionContent>
+              </AccordionItem>
+            })}
+
+
+          </Accordion>
+        </div>
       </section>
 
 
-      <section className=" ">
-        <footer className="p-6 bg-customGreen ">
-          <div className="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-5">
-            <div className="flex flex-col space-y-4">
-              <h2 className="font-medium">Getting started</h2>
+      <footer className="p-6 bg-customGreen py-10 ">
+        <div className="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-5">
+          {[1, 2, 3, 4, , 5].map((x) => {
+            return <div className="flex flex-col space-y-4">
+              <h2 className="font-bold">Getting started</h2>
               <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
-                <a rel="noopener noreferrer" href="#">Installation</a>
-                <a rel="noopener noreferrer" href="#">Release Notes</a>
-                <a rel="noopener noreferrer" href="#">Upgrade Guide</a>
-                <a rel="noopener noreferrer" href="#">Using with Preprocessors</a>
-                <a rel="noopener noreferrer" href="#">Optimizing for Production</a>
-                <a rel="noopener noreferrer" href="#">Browser Support</a>
-                <a rel="noopener noreferrer" href="#">IntelliSense</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Installation</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Release Notes</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Upgrade Guide</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Using with Preprocessors</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Optimizing for Production</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">Browser Support</a>
+                <a rel="noopener noreferrer" href="#" className="font-semibold">IntelliSense</a>
               </div>
             </div>
-            <div className="flex flex-col space-y-4">
-              <h2 className="font-medium">Core Concepts</h2>
-              <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
-                <a rel="noopener noreferrer" href="#">Utility-First</a>
-                <a rel="noopener noreferrer" href="#">Responsive Design</a>
-                <a rel="noopener noreferrer" href="#">Hover, Focus, &amp; Other States</a>
-                <a rel="noopener noreferrer" href="#">Dark Mode</a>
-                <a rel="noopener noreferrer" href="#">Adding Base Styles</a>
-                <a rel="noopener noreferrer" href="#">Extracting Components</a>
-                <a rel="noopener noreferrer" href="#">Adding New Utilities</a>
-              </div>
-            </div>
-            <div className="flex flex-col space-y-4">
-              <h2 className="font-medium">Customization</h2>
-              <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
-                <a rel="noopener noreferrer" href="#">Configuration</a>
-                <a rel="noopener noreferrer" href="#">Theme Configuration</a>
-                <a rel="noopener noreferrer" href="#">Breakpoints</a>
-                <a rel="noopener noreferrer" href="#">Customizing Colors</a>
-                <a rel="noopener noreferrer" href="#">Customizing Spacing</a>
-                <a rel="noopener noreferrer" href="#">Configuring Variants</a>
-                <a rel="noopener noreferrer" href="#">Plugins</a>
-              </div>
-            </div>
-            <div className="flex flex-col space-y-4">
-              <h2 className="font-medium">Community</h2>
-              <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
-                <a rel="noopener noreferrer" href="#">GitHub</a>
-                <a rel="noopener noreferrer" href="#">Discord</a>
-                <a rel="noopener noreferrer" href="#">Twitter</a>
-                <a rel="noopener noreferrer" href="#">YouTube</a>
-              </div>
-            </div>
-            <div className="flex flex-col space-y-4">
-              <h2 className="font-medium">Community</h2>
-              <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
-                <a rel="noopener noreferrer" href="#">GitHub</a>
-                <a rel="noopener noreferrer" href="#">Discord</a>
-                <a rel="noopener noreferrer" href="#">Twitter</a>
-                <a rel="noopener noreferrer" href="#">YouTube</a>
-              </div>
-            </div>
-          </div>
-          <div className=" container flex items-center justify-between px-6 pt-12 text-sm">
-            <span className="dark:text-gray-400">logo</span>
-            <span className="dark:text-gray-400">© Copyright 1986. All Rights Reserved.</span>
-          </div>
-        </footer>
-      </section>
+          })}
+
+
+
+        </div>
+<div className="container mt-8  ">
+
+        <Separator />
+</div>
+        <div className=" container flex items-center justify-between px-6  pt-6 text-sm">
+          <span className="dark:text-gray-400">logo</span>
+          <span className="dark:text-gray-400">© Copyright 1986. All Rights Reserved.</span>
+        </div>
+      </footer>
     </>
 
 
