@@ -89,7 +89,7 @@ export default function Home() {
           <div className="flex flex-wrap   md:flex-nowrap ">
            
             <div className="w-100 md:w-1/2  md:mr-3  h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
-              <div className="relative h-100 text-center flex justify-content-center  ">
+              <div className="relative h-100 text-center flex justify-center  ">
                 <Image
                   src="/images/Long-term-stability.png"
                   alt="Image"
@@ -104,7 +104,7 @@ export default function Home() {
               <p className="mt-4  text-center ">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
             </div>
             <div className="w-100 md:w-1/2  md:ml-3 h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl p-5">
-              <div className="relative h-100  justify-content-center flex">
+              <div className="relative h-100  justify-center flex">
                 <Image
                   src="/images/Returns.png"
                   alt="Image"
@@ -122,7 +122,7 @@ export default function Home() {
           <div className="flex flex-wrap   md:flex-nowrap ">
            
            <div className="w-100 md:w-1/2  md:mr-3  h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
-             <div className="relative h-100 text-center flex justify-content-center  ">
+             <div className="relative h-100 text-center flex justify-center  ">
                <Image
                  src="/images/Long-term-stability.png"
                  alt="Image"
@@ -137,7 +137,7 @@ export default function Home() {
              <p className="mt-4  text-center ">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
            </div>
            <div className="w-100 md:w-1/2  md:ml-3 h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl p-5">
-             <div className="relative h-100  justify-content-center flex">
+             <div className="relative h-100  justify-center flex">
                <Image
                  src="/images/Returns.png"
                  alt="Image"
@@ -192,6 +192,9 @@ export default function Home() {
       </section>
 
       <section className="container my-6">
+        <h1 className="font-bold text-customBlack text-4xl mb-6 py-3">
+        Available Opportunities
+        </h1>
   <div className="flex flex-wrap ">
     {[1, 2, 3].map((x: any): any => {
       return (
@@ -200,7 +203,7 @@ export default function Home() {
         <div className="bg-white shadow-lg   rounded-2xl  h-100  mx-2 ">
           {/* <div className="bg-cover bg-center h-80" style={{ backgroundImage: "url('/images/Diversification.png')" }}></div> */}
 
-          <div className="relative h-[179px] text-center flex justify-content-center  ">
+          <div className="relative h-[179px] text-center flex justify-center  ">
                 <Image
                   src="/images/Img.png"
                   alt="Image"
@@ -214,13 +217,24 @@ export default function Home() {
                 />
               </div>
           <div className="p-4">
-            <h2 className="text-xl font-bold mb-2">Card 1 Heading</h2>
-            <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <div className="mt-4">
-              <h3 className="text-md font-bold mb-2">Progress</h3>
+            <div className="flex justify-between">
+              <span>Bradley,CA</span>
+              <span>2000 SQFT</span>
+            </div>
+            <h2 className="text-xl font-bold mb-2">Lynch Canyon Road</h2>
+            <div className="flex justify-between">
+               <span className="title">Requested Fund</span>
+           <span className="price   font-semibold text-base leading-5 text-black">USD,1,023,550</span>
+           
+            </div>
+          
+            <div className="my-4 "> 
               <Progress value={75} />
             </div>
-            <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 w-9/12">Button</button>
+            <div className="flex justify-center">
+
+            <Link href="/login" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Fund start from $100</Link>
+             </div>
           </div>
         </div>
         </div>

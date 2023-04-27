@@ -26,6 +26,7 @@ module.exports = {
       },
       colors: {
         customGreen: "#70F09C",
+        customDarkGreen: "#1B4638;",
         customBlack: "#101010",
         customLightTransparent: "rgba(255, 255, 255, 0.24)",
         customLightDark: "grey",
