@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       {/* hero section  */}
-      <div className={`hero-section relative min-h-screen   ${inter.className}`}>
+      <section className={`hero-section relative min-h-screen   ${inter.className}`}>
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')", minHeight: "auto" }}></div>
         <div className={`flex min-h-screen flex-col sticky top-0 z-50`}>
           <header className="container   top-0 z-40">
@@ -43,23 +43,23 @@ export default function Home() {
           <div className="absolute inset-0 z-0" style={{ minHeight: "auto" }}>
             <div className="bg-black opacity-50 h-full w-full absolute z-0"></div>
           </div>
-          <div className="  relative md:absolute bottom-0 left-0  w-full mt-28 md:m-auto mv-12 md:mb-auto md:w-3/5  left-auto  md:left-36 top-auto md:top-2/3 top-2/4"   style={{ minHeight: "auto" }}>
-           <div className="container">
-            <h1 className=" font-boldest text-white text-7xl leading-tight container " style={{ textShadow: "0px 1px 1px rgba(0, 0, 0, 0.15)", fontFamily: "sans-serif" }}>Invest in land,
-              <br />
-              invest in your future.</h1>
-            <p className=" font-normal text-white text-xl leading-10 container mb-6">
-              We specializes in investing in land by purchasing undervalued properties and developing them into profitable investments.</p>
-            <div className="flex container">
-              <Link href="/login" className={cn(buttonVariants({ variant: "primary" }), "  mr-2   w-100 px-6 rounded-full font-bold  py-6 ")} style={{ fontFamily: "sans-serif" }}>Check Available Opportunity</Link>
-              <Link href="/login" className={cn(buttonVariants({ variant: "primaryLight" }), "    w-100 px-6 rounded-full font-bold py-6 ")} style={{ fontFamily: "sans-serif" }}> How it works</Link>
+          <div className="  relative md:absolute bottom-0 left-0  w-full mt-28 md:m-auto mv-12 md:mb-auto md:w-3/5  left-auto  md:left-36 top-auto   top-1/3" style={{ minHeight: "auto" }}>
+            <div className="container">
+              <h1 className=" font-boldest text-white text-7xl leading-tight container " style={{ textShadow: "0px 1px 1px rgba(0, 0, 0, 0.15)", fontFamily: "sans-serif" }}>Invest in land,
+                <br />
+                invest in your future.</h1>
+              <p className=" font-normal text-white text-xl leading-10 container mb-6">
+                We specializes in investing in land by purchasing undervalued properties and developing them into profitable investments.</p>
+              <div className="flex container">
+                <Link href="/login" className={cn(buttonVariants({ variant: "primary" }), "  mr-2   w-100 px-6 rounded-full font-bold  py-6 ")} style={{ fontFamily: "sans-serif" }}>Check Available Opportunity</Link>
+                <Link href="/login" className={cn(buttonVariants({ variant: "primaryLight" }), "    w-100 px-6 rounded-full font-bold py-6 ")} style={{ fontFamily: "sans-serif" }}> How it works</Link>
+              </div>
             </div>
-           </div>
-           
-            
+
+
           </div>
         </div>
-      </div>
+      </section>
       {/* section 2 */}
       <section className="container my-14">
         <h1 className="  py-6  text-center font-medium leading-tight tracking-normal text-4xl">
