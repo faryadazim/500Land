@@ -6,7 +6,7 @@ export default async function OpportunitiesLayout({
    
 
   return (
-    <div  >
+    <div  className="" >
      {children}
     </div>
   )
