@@ -191,33 +191,44 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div className="flex flex-wrap justify-center py-4">
-          {[1, 2, 3].map((x: any): any => {
-            return <> <div className="bg-white shadow-lg rounded-lg w-80 h-100 m-4  ">
-              <div className=" bg-cover bg-center  h-80" style={{ backgroundImage: "url('/images/Diversification.png')" }}></div>
+      <section className="container my-6">
+  <div className="flex flex-wrap ">
+    {[1, 2, 3].map((x: any): any => {
+      return (
 
+        <div className="md:w-4/12 "> 
+        <div className="bg-white shadow-lg   rounded-2xl  h-100  mx-2 ">
+          {/* <div className="bg-cover bg-center h-80" style={{ backgroundImage: "url('/images/Diversification.png')" }}></div> */}
 
-              <div className="p-4">
-                <h2 className="text-xl font-bold mb-2">Card 1 Heading</h2>
-                <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div className="mt-4">
-                  <h3 className="text-md font-bold mb-2">Progress</h3>
-                  <Progress value={75} />
+          <div className="relative h-[179px] text-center flex justify-content-center  ">
+                <Image
+                  src="/images/Img.png"
+                  alt="Image"
+                  // fill
 
-                </div>
-                <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 w-9/12">Button</button>
+                  width={384}
+                  height={179}
+                  className="rounded-t-2xl"
+                  // style={{ objectFit: "cover", objectPosition: "center" }}
+
+                />
               </div>
-            </div></>
-          })}
-
-          {/* Card 1 */}
-
-          {/* Card 1 */}
-
+          <div className="p-4">
+            <h2 className="text-xl font-bold mb-2">Card 1 Heading</h2>
+            <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div className="mt-4">
+              <h3 className="text-md font-bold mb-2">Progress</h3>
+              <Progress value={75} />
+            </div>
+            <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 w-9/12">Button</button>
+          </div>
         </div>
+        </div>
+      )
+    })}
+  </div>
+</section>
 
-      </section>
 
       <section className="bg-black">
         <div className="container ">
