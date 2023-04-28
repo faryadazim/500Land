@@ -35,8 +35,8 @@ const inter = Poppins({
 export default async function opportunitiesPage() {
 
   return (
-    <div className="">
-      <section className={`hero-section relative  bg-customDarkGreen pb-16  ${inter.className} -z-30`}>
+    <div className="bg-customlightGrey">
+      <section className={`hero-section relative  bg-customDarkGreen pb-16  ${inter.className} z-30`}>
         <div className={`flex   flex-col sticky top-0 z-50`}>
           <header className="container  border-t-pink-0 border-l-pink-0 border-t-pink-0   top-0 z-40">
 
@@ -92,7 +92,7 @@ export default async function opportunitiesPage() {
         </div>
       </section>
 
-      <section className="container -mt-14 z-50 mb-14">
+      <section className="container relative -mt-14 z-50 mb-14">
 
         <div className="flex">
           <div className="w-3/5 bg-black text-white w-[696px] h-[446px] rounded-l-2xl mr-2">
@@ -134,30 +134,30 @@ export default async function opportunitiesPage() {
         <div className="flex">
           <div className="w-8/12">
 
-            <div className="rounded-2xl p-5  bg-gray-200 border border-red-200">
+            <div className="rounded-2xl p-5  bg-white border  ">
 
 
-              <div className="flex justify-between">
-                <span>Requested Fund</span>
-                <span>1,023,550</span>
+              <div className="flex justify-between pb-2">
+                <span className="  font-normal text-base leading-5 text-black">Requested Fund</span>
+                <span className=" font-semibold text-base leading-5 text-black">USD 1,023,550</span>
               </div>
 
-              <div className=" flex">
+              <div className=" flex py-1 items-center justify-between">
+ 
+                <Progress value={75} className="mr-2"/>
 
-                <Progress value={75} />
-
-                <div>
+                <div className="  text-right">
                   70%
                 </div>
               </div>
-              <div className="">
+              <div className="  font-normal text-xl leading-6 text-black">
                 Amazing apartment with stunning skyline views to Manhattan and the Empire State. don't look further if you need a quick access to to Hudson Yards, Time Square, Hell's Kitchen, Javits Center, the Summit Vanderbilt , Bryant Park, The Vessel and many more
               </div>
 
             </div>
-            <div className="rounded-2xl p-5  bg-gray-200 border border-red-200 mt-6">
-
-            <Image src={map} alt="opertunity" className="w-full h-full  " />
+            <div className="rounded-2xl p-5  bg-white border   mt-6">
+<h3 className=" font-semibold text-xl leading-7 text-black"> Location </h3>
+            <Image src={map} alt="opertunity" className="w-full h-full rounded-2xl  " />
 
               
 
@@ -170,7 +170,7 @@ export default async function opportunitiesPage() {
         </div>
       </section>
 
-      <div className="mb-16">
+      <div className="pb-16">
         .
       </div>
     </div>
