@@ -16,13 +16,13 @@ import one from "@/public/images/RectangleOppartunity(1).png";
 import two from "@/public/images/RectangleOppartunity(2).png";
 import three from "@/public/images/RectangleOppartunity(3).png";
 import map from "@/public/images/map.png";
-
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+import location from "@/public/Icon/location.png";
+import dolar from "@/public/Icon/dolar.png";
+import copy from "@/public/copy.png";
+import details from "@/public/Icon/details.png";
+import Map from "@/components/Map"
+import { Slider } from "@/components/ui/slider"
+ 
 import { Separator } from "@/components/ui/separator"
 
 const inter = Poppins({
@@ -46,7 +46,7 @@ export default async function opportunitiesPage() {
               <nav className="flex">
                 <Link href="/blogs" className={cn("flex items-center text-lg font-bold text-slate-600 sm:text-sm text-white tracking-widest mx-3 hidden md:flex")}>Blogs</Link>
                 <Link href="/contactus" className={cn("flex items-center text-lg font-bold text-slate-600 sm:text-sm text-white tracking-widest mx-3 hidden  md:flex ")}>CONTACT US</Link>
-                <Link href="/dashboard" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-white w-100 px-10 rounded-full font-bold")}>LOGIN</Link>
+                <Link href="/dashboard" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "  text-white w-100 px-10 rounded-full font-bold")}>LOGIN</Link>
               </nav>
             </div>
           </header>
@@ -132,8 +132,10 @@ export default async function opportunitiesPage() {
 
       <section className="container">
         <div className="flex">
-          <div className="w-8/12">
+          <div className="w-8/12 mr-2">
 
+
+            {/* opertunity info  */}
             <div className="rounded-2xl p-5  bg-white border  ">
 
 
@@ -155,18 +157,89 @@ export default async function opportunitiesPage() {
               </div>
 
             </div>
+
+            {/* map location card  */}
             <div className="rounded-2xl p-5  bg-white border   mt-6">
-              <h3 className=" font-semibold text-xl leading-7 text-black"> Location </h3>
-              <Image src={map} alt="opertunity" className="w-full h-full rounded-2xl  " />
+              <h3 className=" font-bold text-xl leading-7 text-black pt-3 pb-5" > Location </h3>
+              <div className="w-full h-full rounded-2xl  ">
+                <Map />
 
+              </div>
+            </div>
 
+            {/* other oppertunity  card  */}
+            <div className="rounded-2xl p-5  bg-white border   mt-6">
+              <h3 className=" font-bold text-xl leading-7 text-black pt-3 pb-5" > Other Oppartunity </h3>
+              {[1, 2, 3].map((x: any): any => {
+                return <>
+                  <div className="w-full flex">
+
+                    <div className="w-2/5">
+                      <Image src={map} alt="opertunity" className="w-full h-full rounded-2xl  " />
+
+                    </div>
+                    <div className="w-3/5 py-1 px-3">
+
+                      <h1>North Wilkesboro, Wilkes County</h1>
+
+                      <div className="location flex  ">
+                        <span> <Image src={dolar} alt='Image Not Found' width={12} height={12} />
+                        </span>  <span className="px-4">30% chance (high confidence)</span>
+                      </div>
+                      <div className="location flex  ">
+                        <span> <Image src={details} alt='Image Not Found' width={12} height={12} />
+                        </span>  <span className="px-4">2000 SQFT</span>
+                      </div>
+                      <div className="location flex  ">
+                        <span> <Image src={location} alt='Image Not Found' width={12} height={12} />
+                        </span>  <span className="px-4"> Wilkesboro, Wilkes County</span>
+                      </div>
+                      <div className="flex justify-between pb-2">
+                        <span className="  font-normal text-base leading-5 text-black">Requested Fund</span>
+                        <span className=" font-semibold text-base leading-5 text-black">USD 1,023,550</span>
+                      </div>
+
+                      <div className=" flex py-1 items-center justify-between">
+
+                        <Progress value={75} className="mr-2" />
+
+                        <div className="  text-right">
+                          70%
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <Separator className=" bg-gray-200 my-3" />
+                </>
+              })}
 
             </div>
 
           </div>
-          <div className="w-4/12 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quasi neque vero magnam, dolorum minus?
+          <div className="ml-2 w-4/12">
+            {/* opertunity info  */}
+            <div className="p-5 bg-white border rounded-2xl">
+              <h3 className="pt-3 pb-5 text-xl font-bold leading-7 text-black">Count Your Achievements</h3>
+              <Slider className="mt-5 mb-2" defaultValue={[33]} max={100} step={1} />
+              <div className="my-4 w-full flex">
+                <Link href="/dashboard" className={cn(buttonVariants({ size: "sm", variant: "primary" }), "w-full px-10 py-5 font-bold rounded-full")} style={{ fontFamily: "sans-serif" }}>
+                  Fund $1200
+                </Link>
+              </div>
+              <div className="justify-center flex">
+                <p className="flex items-center h-5 text-sm font-semibold leading-5 text-center text-green-900">
+                  102 Investors
+                </p>
+              </div>
+            </div>
+            <div className="p-5 bg-customGreen customBlack border rounded-2xl mt-6">
+              <p className="pt-3 pb-5 text-xl font-bold leading-7 text-black">Share your referral link and earn $100 in Share value for every friend that signs up and invests. Plus, your friend will also receive $100 in Share value. Start referring today and grow your rewards</p>
+              <Link href="/dashboard" className={cn(buttonVariants({ size: "sm", variant: "primary" }), "w-full px-10  font-bold rounded-full bg-black text-white py-6")} style={{ fontFamily: "sans-serif" }}>
+            <span><Image src={copy} alt='Image Not Found' width={18} height={18} /></span>      Copy Link
+                </Link>
+             
+            </div>
           </div>
-
         </div>
       </section>
 

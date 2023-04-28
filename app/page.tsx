@@ -207,7 +207,8 @@ export default function Home() {
                     <div className="flex justify-center">
                       <p className="h-5 font-semibold text-sm leading-5 flex items-center text-center text-green-900">
                         102 Investors
-                      </p> </div>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
