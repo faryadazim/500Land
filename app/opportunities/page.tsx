@@ -15,6 +15,7 @@ import Share from "@/public/Icon/share.png";
 import one from "@/public/images/RectangleOppartunity(1).png";
 import two from "@/public/images/RectangleOppartunity(2).png";
 import three from "@/public/images/RectangleOppartunity(3).png";
+import map from "@/public/images/map.png";
 
 import {
   Accordion,
@@ -140,18 +141,25 @@ export default async function opportunitiesPage() {
                 <span>Requested Fund</span>
                 <span>1,023,550</span>
               </div>
-              
-              <div className=" ">
-              
-                  <Progress value={75} />
-                
+
+              <div className=" flex">
+
+                <Progress value={75} />
+
                 <div>
                   70%
                 </div>
               </div>
               <div className="">
-              Amazing apartment with stunning skyline views to Manhattan and the Empire State. don't look further if you need a quick access to to Hudson Yards, Time Square, Hell's Kitchen, Javits Center, the Summit Vanderbilt , Bryant Park, The Vessel and many more
+                Amazing apartment with stunning skyline views to Manhattan and the Empire State. don't look further if you need a quick access to to Hudson Yards, Time Square, Hell's Kitchen, Javits Center, the Summit Vanderbilt , Bryant Park, The Vessel and many more
               </div>
+
+            </div>
+            <div className="rounded-2xl p-5  bg-gray-200 border border-red-200 mt-6">
+
+            <Image src={map} alt="opertunity" className="w-full h-full  " />
+
+              
 
             </div>
 
