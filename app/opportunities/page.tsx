@@ -143,23 +143,23 @@ export default async function opportunitiesPage() {
               </div>
 
               <div className=" flex py-1 items-center justify-between">
- 
-                <Progress value={75} className="mr-2"/>
+
+                <Progress value={75} className="mr-2" />
 
                 <div className="  text-right">
                   70%
                 </div>
               </div>
               <div className="  font-normal text-xl leading-6 text-black">
-                Amazing apartment with stunning skyline views to Manhattan and the Empire State. don't look further if you need a quick access to to Hudson Yards, Time Square, Hell's Kitchen, Javits Center, the Summit Vanderbilt , Bryant Park, The Vessel and many more
+                Amazing apartment with stunning skyline views to Manhattan and the Empire State. don t look further if you need a quick access to to Hudson Yards, Time Square, Hells Kitchen, Javits Center, the Summit Vanderbilt , Bryant Park, The Vessel and many more
               </div>
 
             </div>
             <div className="rounded-2xl p-5  bg-white border   mt-6">
-<h3 className=" font-semibold text-xl leading-7 text-black"> Location </h3>
-            <Image src={map} alt="opertunity" className="w-full h-full rounded-2xl  " />
+              <h3 className=" font-semibold text-xl leading-7 text-black"> Location </h3>
+              <Image src={map} alt="opertunity" className="w-full h-full rounded-2xl  " />
 
-              
+
 
             </div>
 
