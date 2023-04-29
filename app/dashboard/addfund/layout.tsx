@@ -1,6 +1,6 @@
  
 
-export default async function AddfundLayout({
+export default async function DashboardLayout({
   children,
 }: any) {
    
