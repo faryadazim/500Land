@@ -28,7 +28,13 @@ export default function Home() {
       {/* hero section  */}
       <section className={`hero-section relative min-h-screen   ${inter.className}`}>
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')", minHeight: "auto" }}></div>
-        <div className={`flex min-h-screen flex-col sticky top-0 z-50`}>
+        {/* overlay on div  */}
+        <div className="absolute inset-0 z-0" style={{ minHeight: "auto" }}>
+          <div className="bg-black opacity-50 h-full w-full absolute z-0"></div>
+        </div>
+        <div className={`flex min-h-screen flex-col sticky top-0 z-50 container`}>
+
+
           <header className="container   top-0 z-40">
             <div className="flex h-16 items-center justify-between pt-7" >
               <MainNav items={marketingConfig.mainNav} />
@@ -39,12 +45,10 @@ export default function Home() {
               </nav>
             </div>
           </header>
-          {/* overlay on div  */}
-          <div className="absolute inset-0 z-0" style={{ minHeight: "auto" }}>
-            <div className="bg-black opacity-50 h-full w-full absolute z-0"></div>
-          </div>
-          <div className="  relative md:absolute bottom-0 left-0  w-full mt-28 md:m-auto mv-12 md:mb-auto md:w-3/5  left-auto  md:left-36 top-auto   top-1/3" style={{ minHeight: "auto" }}>
-            <div className="container">
+
+
+          <div className=" pb-5 relative md:absolute bottom-0 left-0  w-full mt-28 md:m-auto mv-12 md:mb-auto md:w-3/5  left-auto     top-1/3" style={{ minHeight: "auto" }}>
+            <div className=" ">
               <h1 className=" font-boldest text-white text-7xl leading-tight container " style={{ textShadow: "0px 1px 1px rgba(0, 0, 0, 0.15)", fontFamily: "sans-serif" }}>Invest in land,
                 <br />
                 invest in your future.</h1>
@@ -58,20 +62,37 @@ export default function Home() {
 
 
           </div>
+
+
         </div>
       </section>
-      {/* section 2 */}
-      <section className="container my-14">
-        <h1 className="  py-6  text-center font-medium leading-tight tracking-normal text-4xl">
-          We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
-        </h1>
-        <div className=" bg-cover bg-center h-72" style={{ backgroundImage: "url('/images/rectangular.png')" }}></div>
-        <p className="  py-6  text-center  font-normal leading-tight tracking-normal text-xl">
-          We then work with local officials to develop the land into profitable properties, constantly monitoring market trends to maximize returns and provide valuable investments for our clients.
-        </p>
-        <p className="    text-center  font-normal leading-tight tracking-normal text-xl">
-          By following this process, we aim to provide valuable investment opportunities that offer strong returns on investment and diversification to the investors portfolios.
-        </p>
+      <section className="my-14 container" id="info-section">
+        <div className="flex flex-wrap ">
+          <div className="w-full md:w-3/5 ">
+            <h1 className="  font-semibold text-2xl text-black flex-none order-none self-stretch flex-grow-0  text-center md:text-left md:font-bold md:text-4xl" style={{fontFamily:"Raleway"}}>
+              We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
+            </h1>
+            <p className="  font-normal text-base leading-5 text-black flex-none order-1 self-stretch flex-grow-0 py-5 text-center md:text-left md:pb-0">
+              We believe that investing in land should be simple, secure, and easy. With 500Land, you can purchase a fractional of land with just a few simple steps
+            </p>
+          </div>
+          <div className="w-full md:w-2/5">
+            <div className="relative h-56  flex justify-end">
+              <Image
+                src="/images/blockchaindetail.png"
+                alt="Image"
+                // quality={100}
+                width={200}
+                height={400}
+                // style={{ height: '100%' }}
+                sizes="(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                      33vw"
+                style={{ height: '100%', width: 'auto' }} //The point is right there!
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* section 3 */}
@@ -139,34 +160,23 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="my-14 container" id="info-section">
-        <div className="flex flex-wrap ">
-          <div className="w-full md:w-3/5 ">
-            <h1 className="  font-semibold text-2xl text-black flex-none order-none self-stretch flex-grow-0  text-center md:text-left md:font-bold md:text-4xl">
-              We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
-            </h1>
-            <p className="  font-normal text-base leading-5 text-black flex-none order-1 self-stretch flex-grow-0 py-5 text-center md:text-left md:pb-0">
-              We believe that investing in land should be simple, secure, and easy. With 500Land, you can purchase a fractional of land with just a few simple steps
-            </p>
-          </div>
-          <div className="w-full md:w-2/5">
-            <div className="relative h-56  flex justify-end">
-              <Image
-                src="/images/blockchaindetail.png"
-                alt="Image"
-                // quality={100}
-                width={200}
-                height={400}
-                // style={{ height: '100%' }}
-                sizes="(max-width: 768px) 100vw,
-                      (max-width: 1200px) 50vw,
-                      33vw"
-                style={{ height: '100%', width: 'auto' }} //The point is right there!
-              />
-            </div>
-          </div>
-        </div>
+      {/* section 2 */}
+      <section className="container my-14">
+        <h1 className="  py-6  text-center font-medium leading-tight tracking-normal text-4xl">
+          We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
+        </h1>
+        <div className=" bg-cover bg-center h-72" style={{ backgroundImage: "url('/images/rectangular.png')" }}></div>
+        <p className="  py-6  text-center  font-normal leading-tight tracking-normal text-xl">
+          We then work with local officials to develop the land into profitable properties, constantly monitoring market trends to maximize returns and provide valuable investments for our clients.
+        </p>
+        <p className="    text-center  font-normal leading-tight tracking-normal text-xl">
+          By following this process, we aim to provide valuable investment opportunities that offer strong returns on investment and diversification to the investors portfolios.
+        </p>
       </section>
+
+
+
+
       <section className="container my-6">
         <h1 className="font-bold text-customBlack text-4xl mb-6 py-3">
           Available Opportunities
