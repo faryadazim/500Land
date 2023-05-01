@@ -33,6 +33,7 @@ module.exports = {
         customLightTransparent: "rgba(255, 255, 255, 0.24)",
         customStrongtDark: "#111111",
         customLightDark: "rgba(86, 86, 86, 0.2)",
+        customDarkGreenHeading: "#1C4739",
         customLightTQuestions: "rgba(255, 255, 255, 0.6)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

@@ -35,7 +35,7 @@ export default function Home() {
         <div className={`flex min-h-screen flex-col sticky top-0 z-50 container`}>
 
 
-          <header className="container   top-0 z-40">
+          <header className="container   top-0 z-48">
             <div className="flex h-16 items-center justify-between pt-7" >
               <MainNav items={marketingConfig.mainNav} />
               <nav className="flex">
@@ -69,7 +69,7 @@ export default function Home() {
       <section className="my-14 container" id="info-section">
         <div className="flex flex-wrap ">
           <div className="w-full md:w-3/5 ">
-            <h1 className="  font-semibold text-2xl text-black flex-none order-none self-stretch flex-grow-0  text-center md:text-left md:font-bold md:text-4xl" style={{fontFamily:"Raleway"}}>
+            <h1 className="  font-semibold text-2xl text-black flex-none order-none self-stretch flex-grow-0  text-center md:text-left md:font-bold md:text-4xl" >
               We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
             </h1>
             <p className="  font-normal text-base leading-5 text-black flex-none order-1 self-stretch flex-grow-0 py-5 text-center md:text-left md:pb-0">
@@ -79,11 +79,11 @@ export default function Home() {
           <div className="w-full md:w-2/5">
             <div className="relative h-56  flex justify-end">
               <Image
-                src="/images/blockchaindetail.png"
+                src="/images/home1.png"
                 alt="Image"
                 // quality={100}
                 width={200}
-                height={400}
+                height={480}
                 // style={{ height: '100%' }}
                 sizes="(max-width: 768px) 100vw,
                       (max-width: 1200px) 50vw,
@@ -99,59 +99,59 @@ export default function Home() {
 
       <section className="  my-14 bg-customGreen">
         <div className="container py-14">
-          <h1 className="px-28    mb-6 text-center font-medium leading-tight tracking-normal text-4xl">
+          <h1 className="    mb-6 text-left leading-tight tracking-normal text-4xl font-bold">
             Investing in land offers numerous benefits
           </h1>
           <div className="flex flex-wrap   md:flex-nowrap ">
-            <div className="w-100 md:w-1/2  md:mr-3  h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
-              <div className="relative h-100 text-center flex justify-center  ">
+            <div className="w-100 md:w-1/2  md:mr-3  h-auto    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
+              <div className="relative h-100 text-center flex justify-start   py-6">
                 <Image
-                  src="/images/Long-term-stability.png"
+                  src="/images/frame (1).png"
                   alt="Image"
                   // fill
-                  width={500}
-                  height={500}
+                  width={48}
+                  height={48}
                 />
               </div>
-              <h1 className="text-3xl font-bold text-center">Long-term stability</h1>
-              <p className="mt-4  text-center ">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
+              <h1 className="text-3xl font-bold text-left">Long-term stability</h1>
+              <p className="mt-4  text-left ">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
             </div>
-            <div className="w-100 md:w-1/2  md:ml-3 h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl p-5">
-              <div className="relative h-100  justify-center flex">
+            <div className="w-100 md:w-1/2  md:ml-3 h-auto    bg-white flex flex-col justify-end mb-5 rounded-2xl p-5">
+              <div className="relative h-100  justify-start flex py-6">
                 <Image
-                  src="/images/Returns.png"
+                  src="/images/frame (2).png"
                   alt="Image"
                   // fill
-                  width={500}
-                  height={500}
+                  width={48}
+                  height={48}
                 />
               </div>
-              <h1 className="text-3xl font-bold text-center">Returns</h1>
-              <p className="mt-4  text-center   ">As land values increase over time, investors can potentially see significant returns on their investments.</p>
+              <h1 className="text-3xl font-bold text-left">Returns</h1>
+              <p className="mt-4  text-left   ">As land values increase over time, investors can potentially see significant returns on their investments.</p>
             </div>
           </div>
           <div className="flex flex-wrap   md:flex-nowrap ">
-            <div className="w-100 md:w-1/2  md:mr-3  h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
-              <div className="relative h-100 text-center flex justify-center  ">
+            <div className="w-100 md:w-1/2  md:mr-3 h-auto    bg-white flex flex-col justify-end mb-5 rounded-2xl  p-5">
+              <div className="relative h-100 text-left flex justify-start   py-6">
                 <Image
-                  src="/images/Long-term-stability.png"
+                  src="/images/frame (1).png"
                   alt="Image"
                   // fill
-                  width={500}
-                  height={500}
+                  width={48}
+                  height={48}
                 />
               </div>
-              <h1 className="text-3xl font-bold text-center">Long-term stability</h1>
-              <p className="mt-4  text-center ">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
+              <h1 className="text-3xl font-bold text-left">Long-term stability</h1>
+              <p className="mt-4  text-left ">Land is a tangible asset that can be held for long periods of time, providing a stable foundation for an investment portfolio.</p>
             </div>
-            <div className="w-100 md:w-1/2  md:ml-3 h-[587px]    bg-white flex flex-col justify-end mb-5 rounded-2xl p-5">
-              <div className="relative h-100  justify-center flex">
+            <div className="w-100 md:w-1/2  md:ml-3 h-auto    bg-white flex flex-col justify-end mb-5 rounded-2xl p-5">
+              <div className="relative h-100  justify-start flex  py-6">
                 <Image
-                  src="/images/Returns.png"
+                  src="/images/frame (2).png"
                   alt="Image"
                   // fill
-                  width={500}
-                  height={500}
+                  width={48}
+                  height={48}
                 />
               </div>
               <h1 className="text-3xl font-bold text-center">Returns</h1>
@@ -162,29 +162,41 @@ export default function Home() {
       </section>
       {/* section 2 */}
       <section className="container my-14">
-        <h1 className="  py-6  text-center font-medium leading-tight tracking-normal text-4xl">
-          We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
+        <h3 className="customDarkGreenHeading font-bold text-xl">
+          HOW-TO-BUY
+        </h3>
+        <h1 className="  pb-6  text-left font-bold leading-tight tracking-normal text-3xl">
+          We believe that investing in land should be simple, secure, and easy. With 500Land, you can purchase a fractional of land with just a few simple steps.
         </h1>
-        <div className=" bg-cover bg-center h-72" style={{ backgroundImage: "url('/images/rectangular.png')" }}></div>
-        <p className="  py-6  text-center  font-normal leading-tight tracking-normal text-xl">
-          We then work with local officials to develop the land into profitable properties, constantly monitoring market trends to maximize returns and provide valuable investments for our clients.
-        </p>
-        <p className="    text-center  font-normal leading-tight tracking-normal text-xl">
-          By following this process, we aim to provide valuable investment opportunities that offer strong returns on investment and diversification to the investors portfolios.
-        </p>
+        <div className=" bg-cover bg-center h-72" style={{ backgroundImage: "url('/images/blockchaindetail.png')" }}></div>
+
       </section>
 
 
 
 
       <section className="container my-6">
-        <h1 className="font-bold text-customBlack text-4xl mb-6 py-3">
-          Available Opportunities
-        </h1>
-        <div className="flex flex-wrap ">
+        <div className="header flex justify-between mt-20">
+          <h1 className="font-bold text-customBlack text-4xl ">
+            Available Opportunities
+          </h1>
+
+          <Button variant="secondary" className="bg-white text-black shadow-md " >View All 
+          <Image
+                      src="/icon/arrow-right.png"
+                      alt="Image"
+                      // fill
+                      width={18}
+                      height={18}
+                      className="ml-1"
+                    // style={{ objectFit: "cover", objectPosition: "center" }}
+                    /></Button>
+        </div>
+
+        <div className="flex flex-wrap  mt-6">
           {[1, 2, 3].map((x: any): any => {
             return (
-              <div className="md:w-4/12 " key={x}>
+              <div className="md:w-4/12  my-2 md:my-0" key={x}>
                 <div className="bg-white shadow-lg   rounded-2xl  h-100  mx-2 ">
                   {/* <div className="bg-cover bg-center h-80" style={{ backgroundImage: "url('/images/Diversification.png')" }}></div> */}
                   <div className="relative h-[179px] text-center flex justify-center  ">
@@ -226,6 +238,61 @@ export default function Home() {
           })}
         </div>
       </section>
+
+
+      <section className="container my-6">
+        <div className="header flex justify-between mt-20">
+          <h1 className="font-bold text-customBlack text-4xl ">
+           Marketplace
+          </h1>
+
+          <Button variant="secondary" className="bg-white text-black shadow-md " >View All 
+          <Image
+                      src="/icon/arrow-right.png"
+                      alt="Image"
+                      // fill
+                      width={18}
+                      height={18}
+                      className="ml-1"
+                    // style={{ objectFit: "cover", objectPosition: "center" }}
+                    /></Button>
+        </div>
+
+        <div className="flex flex-wrap  mt-6">
+          {[1, 2, 3].map((x: any): any => {
+            return (
+              <div className="md:w-4/12  my-2 md:my-0" key={x}>
+                <div className="bg-white shadow-lg   rounded-2xl  h-100  mx-2 ">
+                  {/* <div className="bg-cover bg-center h-80" style={{ backgroundImage: "url('/images/Diversification.png')" }}></div> */}
+                  <div className="relative h-[179px] text-center flex justify-center  ">
+                    <Image
+                      src="/images/Img.png"
+                      alt="Image"
+                      // fill
+                      width={384}
+                      height={179}
+                      className="rounded-t-2xl"
+                    // style={{ objectFit: "cover", objectPosition: "center" }}
+                    />
+                  </div>
+                  <div className="p-4">
+                    <div className="flex justify-between">
+                      <span>Bradley,CA</span>
+                      <span>2000 SQFT</span>
+                    </div>
+                    <h2 className="text-xl font-bold mb-2">Lynch Canyon Road</h2>
+                   
+                    <div className="flex justify-center">
+                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Fund start from $100</Link>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </section>
       <section className="bg-customStrongtDark py-10">
         <div className="container  ">
 
@@ -241,7 +308,7 @@ export default function Home() {
             { index: 6, question: "Does 500Land provide ongoing management and monitoring of investments?", answer: "500Lands mission is to make land investment accessible and easy for everyone by providing exceptional investment opportunities in the land market. We identify and acquire undervalued land with the goal of maximizing returns for our clients." }
             ].map((x: any, index: number): any => {
               return <AccordionItem value={`item-${x.index}`} className="bg-customLightDark rounded-2xl my-2 px-5" key={x.index}>
-                <AccordionTrigger className="text-white">{x.question}</AccordionTrigger>
+                <AccordionTrigger className="text-white text-left">{x.question}</AccordionTrigger>
                 <AccordionContent className="text-customLightTQuestions">
                   {x.answer}
                 </AccordionContent>
@@ -255,7 +322,7 @@ export default function Home() {
           {[1, 2, 3, 4, , 5].map((x) => {
             return <div className="flex flex-col space-y-4" key={x}>
               <h2 className="font-bold">Website</h2>
-              <div className="flex flex-col space-y-2 text-sm dark:text-gray-400">
+              <div className="flex flex-col space-y-2 text-sm dark:text-gray-480">
                 <a rel="noopener noreferrer" href="#" className="font-semibold">Overview</a>
                 <a rel="noopener noreferrer" href="#" className="font-semibold">Features</a>
                 <a rel="noopener noreferrer" href="#" className="font-semibold">Solutions</a>
@@ -271,10 +338,10 @@ export default function Home() {
           <Separator />
         </div>
         <div className=" container flex items-center justify-between px-6  pt-6 text-sm">
-          <span className="dark:text-gray-400">  <Image src="/images/logoDark.png" alt="500Land Logo" width={40}
-            height={40}
+          <span className="dark:text-gray-480">  <Image src="/images/logoDark.png" alt="500Land Logo" width={48}
+            height={48}
             quality={100} /></span>
-          <span className="dark:text-gray-400">© Copyright 2023 500 Land. All Rights Reserved.</span>
+          <span className="dark:text-gray-480">© Copyright 2023 500 Land. All Rights Reserved.</span>
         </div>
       </footer>
     </>
