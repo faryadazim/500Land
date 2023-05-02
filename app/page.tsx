@@ -293,7 +293,7 @@ export default function Home() {
           })}
         </div>
       </section>
-      <section className="bg-customStrongtDark py-10">
+      <section className="bg-customStrongtDark  py-16 ">
         <div className="container  ">
 
           <h1 className="font-semibold text-white text-4xl  ">
