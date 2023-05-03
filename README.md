@@ -8,7 +8,7 @@ Tailwind CSS
 tRPC,Prisma,NextAuth
 
 ## Database:PostgreSQL
-## CMS:Sanity.io or Contentful (Recommended as Contentful offers a wider range of features and integrations)
+## CMS:Contentful (Recommended as Contentful offers a wider range of features and integrations)
 
 ## Authentication and User Management:Supabase(Firebase Alternative)
 ## Deployment:Vercel

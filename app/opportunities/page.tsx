@@ -1,4 +1,4 @@
-
+"use client";
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 import { Poppins } from 'next/font/google'
@@ -61,16 +61,16 @@ export default async function opportunitiesPage() {
               </h3>
 
               <div className=" flex my-2 text-white ">
-                <div className="area flex">
+                <div className="  flex flex-row items-center">
 
 
 
 
-                  <span>  <Image src={VectorLocation} alt='Image Not Found' width={12} height={12} />
+                  <span>  <Image src={VectorLocation} alt='Image Not Found' width={14} height={14} />
 
-                  </span>  <span className="px-4">2000 SQFT</span>
+                  </span>  <span className="px-4 text-med font-normal">2000 SQFT</span>
                 </div>
-                <div className="location flex  ">
+                <div className="flex flex-row items-center ">
                   <span> <Image src={Vector} alt='Image Not Found' width={12} height={12} />
                   </span>  <span className="px-4">Bradley, CA</span>
                 </div>
@@ -168,7 +168,7 @@ export default async function opportunitiesPage() {
             </div>
 
             {/* other oppertunity  card  */}
-            <div className="rounded-2xl p-5  bg-white border   mt-6">
+            <div className="rounded-2xl p-5  bg-white border   mt-6 pb-9">
               <h3 className=" font-bold text-xl leading-7 text-black pt-3 pb-5" > Other Oppartunity </h3>
               {[1, 2, 3].map((x: any): any => {
                 return <>
@@ -180,26 +180,26 @@ export default async function opportunitiesPage() {
                     </div>
                     <div className="w-3/5 py-1 px-3">
 
-                      <h1>North Wilkesboro, Wilkes County</h1>
+                      <h1 className="font-bold">North Wilkesboro, Wilkes County</h1>
 
-                      <div className="location flex  ">
-                        <span> <Image src={dolar} alt='Image Not Found' width={12} height={12} />
-                        </span>  <span className="px-4">30% chance (high confidence)</span>
+                      <div className="location flex items-center py-1">
+                        <span> <Image src={dolar} alt='Image Not Found' width={16} height={16} />
+                        </span>  <span className="px-4  text-sm">30% chance (high confidence)</span>
                       </div>
-                      <div className="location flex  ">
+                      <div className="location flex items-center  py-1">
                         <span> <Image src={details} alt='Image Not Found' width={12} height={12} />
-                        </span>  <span className="px-4">2000 SQFT</span>
+                        </span>  <span className="px-4  text-sm">2000 SQFT</span>
                       </div>
-                      <div className="location flex  ">
+                      <div className="location flex  items-center py-1">
                         <span> <Image src={location} alt='Image Not Found' width={12} height={12} />
-                        </span>  <span className="px-4"> Wilkesboro, Wilkes County</span>
+                        </span>  <span className="px-4 text-xs"> Wilkesboro, Wilkes County</span>
                       </div>
-                      <div className="flex justify-between pb-2">
+                      <div className="flex justify-between pb-2 text-base mt-2">
                         <span className="  font-normal text-base leading-5 text-black">Requested Fund</span>
                         <span className=" font-semibold text-base leading-5 text-black">USD 1,023,550</span>
                       </div>
 
-                      <div className=" flex py-1 items-center justify-between">
+                      <div className=" flex pb-1 items-center justify-between">
 
                         <Progress value={75} className="mr-2" />
 
@@ -209,7 +209,8 @@ export default async function opportunitiesPage() {
                       </div>
                     </div>
                   </div>
-                  <Separator className=" bg-gray-200 my-3" />
+
+                {x!==3 &&   <Separator className=" bg-gray-200 my-3" />}
                 </>
               })}
 
@@ -219,7 +220,7 @@ export default async function opportunitiesPage() {
           <div className="ml-2 w-4/12">
             {/* opertunity info  */}
             <div className="p-5 bg-white border rounded-2xl">
-              <h3 className="pt-3 pb-5 text-xl font-bold leading-7 text-black">Count Your Achievements</h3>
+              <h3 className="pt-3 pb-7 text-xl font-bold leading-7 text-black">Count Your Achievements</h3>
               <Slider className="mt-5 mb-2" defaultValue={[33]} max={100} step={1} />
               <div className="my-4 w-full flex">
                 <Link href="/dashboard" className={cn(buttonVariants({ size: "sm", variant: "primary" }), "w-full px-10 py-5 font-bold rounded-full")} style={{ fontFamily: "sans-serif" }}>
@@ -228,15 +229,15 @@ export default async function opportunitiesPage() {
               </div>
               <div className="justify-center flex">
                 <p className="flex items-center h-5 text-sm font-semibold leading-5 text-center text-green-900">
-                  102 Investors
+                 You won't be charged yet.
                 </p>
               </div>
             </div>
             <div className="p-5 bg-customGreen customBlack border rounded-2xl mt-6">
               <p className="pt-3 pb-5 text-xl font-bold leading-7 text-black">Share your referral link and earn $100 in Share value for every friend that signs up and invests. Plus, your friend will also receive $100 in Share value. Start referring today and grow your rewards</p>
-              <Link href="/dashboard" className={cn(buttonVariants({ size: "sm", variant: "primary" }), "w-full px-10  font-bold rounded-full bg-black text-white py-6")} style={{ fontFamily: "sans-serif" }}>
+              <Button  onClick={async()=>{await navigator.clipboard.writeText("asd")}} className={cn(buttonVariants({ size: "sm", variant: "primary" }), "w-full px-10  font-bold rounded-full bg-black text-white py-6 border-2 border-white")} style={{ fontFamily: "sans-serif"   }}>
             <span><Image src={copy} alt='Image Not Found' width={18} height={18} /></span>      Copy Link
-                </Link>
+                </Button>
              
             </div>
           </div>
