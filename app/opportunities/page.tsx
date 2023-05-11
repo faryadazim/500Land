@@ -229,7 +229,7 @@ export default async function opportunitiesPage() {
               </div>
               <div className="justify-center flex">
                 <p className="flex items-center h-5 text-sm font-semibold leading-5 text-center text-green-900">
-                 You won't be charged yet.
+                 You wont be charged yet.
                 </p>
               </div>
             </div>
