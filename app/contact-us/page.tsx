@@ -7,11 +7,13 @@ import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
 import { MainNav } from "@/components/main-nav"
 import { Progress } from "@/components/ui/progress"
+import { Input } from "@/components/ui/input"
+import { PhoneInput } from "@/components/ui/phone-input-field"
+import { Textarea } from "@/components/ui/textarea"
+
 
 import { buttonVariants } from "@/components/ui/button"
 import Vector from "@/public/images/Image.png";
-import Map from "@/components/Map"
-import { Slider } from "@/components/ui/slider"
 
 import { Separator } from "@/components/ui/separator"
 
@@ -49,8 +51,53 @@ export default async function opportunitiesPage() {
 
 
         <div className="flex justify-between">
-          <div id="contactform" className="w-1/2 border  mr-12">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sit nulla aliquam obcaecati officiis? Omnis deleniti esse eos! Ab nobis ea sit officia, praesentium placeat rerum magnam sed nostrum sint, quos minus laboriosam molestiae repellat repudiandae accusamus at quis reiciendis pariatur laborum cumque culpa mollitia nemo aperiam. Autem veritatis temporibus, expedita voluptatibus ad dolores totam, necessitatibus id laudantium nulla harum exercitationem illo incidunt enim amet animi, ducimus nisi odit saepe! Itaque assumenda accusamus impedit dicta quia ex eveniet officiis porro repellendus illo aspernatur dolor totam reprehenderit, iusto excepturi magnam provident beatae labore omnis. Mollitia deleniti eius dolorem pariatur nostrum doloremque nesciunt exercitationem eaque! Quam eveniet fuga dolore repellendus in, voluptatem ipsum minima sapiente placeat suscipit reprehenderit doloribus numquam commodi iste deleniti repudiandae, aliquam repellat, ab asperiores. Id cum sed minus repudiandae temporibus doloremque ex quas provident recusandae harum, nostrum aut atque placeat facere autem sint quam qui vitae eum perspiciatis dignissimos? Provident corporis nihil sit at culpa repellendus facilis expedita consequatur voluptates accusantium, recusandae a sapiente placeat, distinctio quod v
+          <div id="contactform" className="w-1/2    mr-12 py-16">
+
+            <h1 className="font-bold text-4xl pt-8 pb-2">Get in touch</h1>
+            <p className="pt-6">Our friendly team would love to hear from you.</p>
+
+            <div className="row flex justify-between pt-5  ">
+              <div className="w-1/2 pr-3">
+                <label htmlFor="Chad" className=" my-8   text-sm">First Name</label>
+                <Input placeholder="First Name" className="" />
+
+              </div>
+              <div className="w-1/2 pl-3">
+                <label htmlFor="Chad" className=" my-8   text-sm">Last Name</label>
+                <Input placeholder="Last Name" className="" />
+
+              </div>
+            </div>
+            <div className="row flex justify-between pt-5">
+              <div className="w-full pr-3">
+                <label htmlFor="Chad" className=" my-8   text-sm">Email</label>
+                <Input placeholder="you@company.com" />
+
+              </div>
+          
+            </div>
+            <div className="row flex justify-between pt-5">
+              <div className="w-full pr-3">
+                <label htmlFor="Chad" className=" my-8   text-sm">Phone </label>
+                <PhoneInput placeholder="you@company.com" />
+
+              </div>
+          
+            </div>
+            <div className="row flex justify-between pt-5">
+              <div className="w-full pr-3">
+                <label htmlFor="Chad" className=" my-8   text-sm">Phone </label>
+                <Textarea   placeholder="Leave us a message" />
+
+
+              </div>
+          
+            </div>
+            <div className="flex justify-center mt-5">
+                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Fund start from $100</Link>
+                    </div>
+
+
           </div>
           <div id="bgImage" className="w-1/2  border  ml-12" >
             <Image src={Vector} alt='Image Not Found' width={576} height={800} />
