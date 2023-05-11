@@ -39,7 +39,7 @@ export const marketingConfig: any = {
     },
     {
       title: "Contact Us",
-      href: "/contact-us",
+      href: "/contact-usjjjj",
         isMobileOnly: true,
     },
     // {
