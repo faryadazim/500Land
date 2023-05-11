@@ -8,7 +8,6 @@ Tailwind CSS
 tRPC,Prisma,NextAuth
 
 ## Database:PostgreSQL
-## CMS:Contentful (Recommended as Contentful offers a wider range of features and integrations)
-
+## CMS:Contentful  
 ## Authentication and User Management:Supabase(Firebase Alternative)
 ## Deployment:Vercel
