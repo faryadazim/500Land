@@ -94,7 +94,7 @@ export default async function opportunitiesPage() {
           
             </div>
             <div className="flex justify-center mt-5">
-                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Fund start from $100</Link>
+                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Send Message</Link>
                     </div>
 
 
