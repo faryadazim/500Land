@@ -3,33 +3,33 @@
 export const marketingConfig: any = {
   mainNav: [
     {
-      title: "HOME",
-      href: "/features",
+      title: "Home",
+      href: "/",
       isMobileOnly: false,
     },
     {
-      title: "BENEFITS",
-      href: "/pricing",
+      title: "Benefits",
+      href: "/benefits",
         isMobileOnly: false,
     },
     {
-      title: "HOW WE DO IT",
-      href: "/blog",
+      title: "Invest",
+      href: "/Invest",
         isMobileOnly: false,
     },
     {
-      title: "HOW IT WORKS",
-      href: "/docs",
+      title: "Opportunities",
+      href: "/oppertunities",
         isMobileOnly: false,
     },
     {
-      title: "OFFERS",
-      href: "/docs",
+      title: "Marketplace",
+      href: "/marketplace",
         isMobileOnly: false,
     },
     {
       title: "FAQ",
-      href: "/docs",
+      href: "/FAQ",
         isMobileOnly: false,
     },
     {
