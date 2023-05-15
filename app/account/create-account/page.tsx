@@ -41,20 +41,95 @@ export default async function opportunitiesPage() {
     //   </section> */}
 
     // </div>
-   <> <div className="h-screen w-screen flex">
-      <div className="w-1/2 bg-cover bg-center" style={{ backgroundImage: "url('/images/Image.png')" }}>
-        {/* Content for the left half */}
-      </div>
-      <div className="w-1/2 bg-red-500">
-        {/* Content for the right half */}
+    <> <div className="h-screen w-screen   bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')", position: "fixed" }}>
+      <div className="h-screen"
+        style={{}}
+      >
+        <div className="flex justify-center h-screen ">
+          <div className="w-1/2 h-screen flex  items-end justify-start font-bold py-24">
+            <h1 className="ml-[250px] mr-[124px] pl-4 text-6xl font-bold text-white">
+              Invest in land, <br />
+              invest in your future.
+            </h1>
+
+
+          </div>
+          <div className="w-1/2 bg-white h-screen flex items-center justify-center py-24">
+
+
+            <div className="mr-[250px] ml-[124px] pr-4">
+
+
+              <div className="">
+
+                <h1 className="font-bold text-3xl pt-8 pb-2">Create Account</h1>
+
+                <div className="row flex justify-between pt-5  ">
+                  <div className="w-1/2 pr-3">
+                    <label htmlFor="Chad" className=" my-8   text-sm">First Name</label>
+                    <Input placeholder="First Name" className="" />
+
+                  </div>
+                  <div className="w-1/2 pl-3">
+                    <label htmlFor="Chad" className=" my-8   text-sm">Last Name</label>
+                    <Input placeholder="Last Name" className="" />
+
+                  </div>
+                </div>
+                <div className="row flex justify-between pt-5">
+                  <div className="w-full pr-3">
+                    <label htmlFor="Chad" className=" my-8   text-sm">Email</label>
+                    <Input placeholder="you@company.com" />
+
+                  </div>
+
+                </div>
+                <div className="row flex justify-between pt-5">
+                  <div className="w-full pr-3">
+                    <label htmlFor="Chad" className=" my-8   text-sm">Password</label>
+                    <Input placeholder=""  type="password"/>
+
+                  </div>
+
+                </div>
+                <div className="row flex justify-between pt-5">
+                  <div className="w-full pr-3">
+                    <label htmlFor="Chad" className=" my-8   text-sm">Phone </label>
+                    <PhoneInput placeholder="you@company.com" />
+
+                  </div>
+
+                </div>
+                 
+                <div className="flex justify-center mt-5">
+                  <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Create Account</Link>
+                </div>
+                <div className="flex justify-center mt-5">
+               
+               <p>Already Have an account? <span className="text-customDarkGreen font-bold">Login</span> </p>
+                  </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
 
       </div>
-    
-    </div>  <div className="container ">
-        <div className="flex">
-          <div className="w-1/2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi minima voluptatibus distinctio ducimus quia dolorem autem exercitationem, maxime mollitia officiis suscipit doloremque in unde omnis? Libero doloremque consectetur similique, alias quae expedita debitis? Asperiores vitae cumque totam illum voluptatem, aliquam earum eaque architecto quam. Ad, ullam tenetur. Amet repellat laudantium quo, sed ullam asperiores quia distinctio a! Rerum ipsa provident eveniet, reiciendis consequatur ipsum quasi odit voluptatem libero nihil quibusdam voluptatibus aliquid? Eos quas praesentium, voluptate illo explicabo perferendis laboriosam nesciunt excepturi quo architecto consequatur unde itaque, repellendus, eveniet consequuntur quam? Expedita adipisci molestias a impedit omnis consequatur vel, ea iusto eum maiores officiis corrupti inventore sint nostrum magni veniam obcaecati! Nulla doloremque enim voluptatem! Et ipsum optio pariatur minus! Exercitationem distinctio vitae voluptate hic ipsa? Nihil officia rem sint! Quod facere quibusdam mollitia tempora sed fugiat voluptas dolorum laudantium aut, iure cumque id tibus fugit, animi exercitationem beatae non sunt officiis dolor ab. Cumque molestiae totam mollitia at sint eum delectus ipsum.</div>
-          <div className="w-1/2">sit tenetur, ducimus hic quis quo placeat dolore quos. Nemo, labore corporis porro laboriosam autem sequi, molestias cum modi maiores quam reiciendis aperiam ipsum dicta illum libero sit temporibus. Ipsam doloremque quae ullam voluptatum ducimus dignissimos cupiditate cumque neque suscipit? Velit, excepturi ratione. Ipsam aliquid necessitatibus provident distinctio voluptas, sit quas ad laborum, tenetur eveniet illo placeat suscipit ut soluta quibusdam velit. Nisi numquam eius corporis nulla illum laboriosam at explicabo, excepturi, consectetur, vitae debitis consequatur quae totam aliquam molestiae atque vero sit fugiat adipisci quam dolores eum? Molestias fugiat maiores qui tempora! Quae sit natus voluptates delectus! Officiis fuga, est eos porro adipisci expedita corporis odit quam, exercitationem cum ipsa vel voluptatum repudiandae dolores libero officia error facilis atque excepturi illo. Quidem illo expedita incidunt aut facilis vel accusantium suscipit, temporibus repellendus molestias quae qui impedit. Necessita</div>
-        </div>
-      </div></>
+      <div className="absolute top-0 left-0   w-screen">
+        <header className="container  border-t-pink-0 border-l-pink-0 border-t-pink-0   top-0 z-40">
+
+          {/* navigation  */}
+          <div className="flex h-16 items-center justify-start pt-7" >
+            <MainNav />
+
+          </div>
+        </header>
+
+
+      </div>
+    </div>
+
+    </>
   )
 }
