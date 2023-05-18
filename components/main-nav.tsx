@@ -20,7 +20,7 @@ interface MainNavProps {
 
 const inter = Poppins({
   subsets: ['latin'],
-  weight: "400" 
+  weight: "400"
 })
 export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment()
@@ -57,11 +57,11 @@ export function MainNav({ items, children }: MainNavProps) {
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-               `flex items-center text-[15px]  text-slate-600   text-white tracking-widest`,
+                `flex items-center text-[15px]  font-normal    text-white tracking-widest`,
                 item.href.startsWith(`/${segment}`) && "text-slate-900",
                 item.disabled && "cursor-not-allowed opacity-80"
               )}
-              style={{fontFamily:"Basier Square Regular"}}
+              style={{ fontFamily: "Basier Square Regular" }}
             >
               {item.title}
             </Link>
