@@ -236,15 +236,15 @@ export default function Home() {
                 3
               </div>
               <h3 className="text-[28px]  font-bold text-white my-1">
-                Create an account
+              Make a Selection
               </h3>
               <p className="text-[17px]  font-normal text-white">
-                Visit our website and create an account by providing your personal information, payment information, email address, and set a password.  </p>
+              Select the land fund that best fits your investment goals and needs.  </p>
             </div>
             {/* //process image  */}
             <div className="flex justify-center">
               <Image
-                src="/images/MaskGroup.png"
+                src="/images/addfund.png"
                 alt="Image"
                 // fill
                 width={547}
@@ -257,20 +257,20 @@ export default function Home() {
 
           </div>
           <div className="md:w-[49%]  bg-customDarkGreen rounded-2xl  flex flex-col overflow-hidden">
-            <div className="lg:p-[52px]  md:p-12 p-5   p-5 flex-grow   "   >
+            <div className="lg:p-[52px]  md:p-12   p-5 flex-grow   "   >
               <div id="step1 " className="w-10 h-10 rounded-full flex justify-center items-center bg-[#ECFDF3] text-[#039855]  ">
                 4
               </div>
               <h3 className="text-[28px]  font-bold text-white my-1">
-                Browse our offerings
+              Complete the purchase
               </h3>
               <p className="text-[17px]  font-normal text-white">
-                Once you’re logged in, choose our current hedge offerings for a land investment, checking the location and investment potential.  </p>
+              Once you’ve selected the land you want to invest in, complete the purchase through our secure online payment.  </p>
             </div>
             {/* //process image  */}
             <div className="flex justify-center">
               <Image
-                src="/images/portifolio.png"
+                src="/images/purchase.png"
                 alt="Image"
                 // fill
                 width={547}
