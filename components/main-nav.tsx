@@ -57,7 +57,7 @@ export function MainNav({ items, children }: MainNavProps) {
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                `flex items-center text-[15px]  font-normal    text-white tracking-widest`,
+                `flex items-center text-[15px]  font-normal  ${index==0 &&'hidden lg:flex'}  text-white tracking-widest`,
                 item.href.startsWith(`/${segment}`) && "text-slate-900",
                 item.disabled && "cursor-not-allowed opacity-80"
               )}
