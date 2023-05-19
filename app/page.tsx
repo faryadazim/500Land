@@ -158,14 +158,132 @@ export default function Home() {
       </section>
       {/* section 2 */}
       <section className="container my-14">
-        <h3 className="customDarkGreenHeading font-bold text-xl">
-          HOW-TO-BUY
+        <h3 className="customDarkGreenHeading font-bold text-[17px] text-customDarkGreen">
+          How To Buy
         </h3>
-        <h1 className="  pb-6  text-left font-bold leading-tight tracking-normal text-3xl">
-          We believe that investing in land should be simple, secure, and easy. With 500Land, you can purchase a fractional of land with just a few simple steps.
+        <h1 className="  pb-6  text-left font-bold leading-tight tracking-normal text-[34px] text-[#101010]">
+          Our team of experts at 500Land follows a process to carefully select land based on its investment potential, including:
         </h1>
         <div className=" bg-cover bg-center h-72" style={{ backgroundImage: "url('/images/blockchaindetail.png')" }}></div>
 
+      </section>
+      <section className="container my-14">
+        <h3 className="customDarkGreenHeading font-bold text-[17px] text-customDarkGreen">
+          Simple, Secure, and Easy.
+        </h3>
+        <h1 className="  pb-6  text-left font-bold leading-tight tracking-normal text-[34px] text-[#101010]">
+          Our platform allows you to purchase a fractional of a land without the need for extensive knowledge or high cost of entry. </h1>
+
+        <div className=" flex justify-between">
+          <div className="w-[49%] bg-customDarkGreen rounded-2xl">
+            <div className="p-[52px]">
+              <div id="step1 " className="w-10 h-10 rounded-full flex justify-center items-center bg-[#ECFDF3] text-[#039855] ">
+                1
+              </div>
+              <h3 className="text-[28px]  font-bold text-white my-1">
+                Create an account
+              </h3>
+              <p className="text-[17px]  font-normal text-white">
+                Visit our website and create an account by providing your personal information, payment information, email address, and set a password.  </p>
+            </div>
+            {/* //process image  */}
+            <div className="flex justify-center">
+              <Image
+                src="/images/MaskGroup.png"
+                alt="Image"
+                // fill
+                width={547}
+                height={337}
+                className=" "
+              // style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+
+            </div>
+
+          </div>
+          <div className="w-[49%] bg-customDarkGreen rounded-2xl">
+            <div className="p-[52px]">
+              <div id="step1 " className="w-10 h-10 rounded-full flex justify-center items-center bg-[#ECFDF3] text-[#039855]  ">
+             2
+              </div>
+              <h3 className="text-[28px]  font-bold text-white my-1">
+                Browse our offerings
+              </h3>
+              <p className="text-[17px]  font-normal text-white">
+                Once you’re logged in, choose our current hedge offerings for a land investment, checking the location and investment potential.  </p>
+            </div>
+            {/* //process image  */}
+            <div className="flex justify-center">
+              <Image
+                src="/images/portifolio.png"
+                alt="Image"
+                // fill
+                width={547}
+                height={337}
+                className=" "
+              // style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+        <div className=" flex justify-between mt-5">
+          <div className="w-[49%] bg-customDarkGreen rounded-2xl">
+            <div className="p-[52px]">
+              <div id="step1 " className="w-10 h-10 rounded-full flex justify-center items-center bg-[#ECFDF3] text-[#039855] ">
+                3
+              </div>
+              <h3 className="text-[28px]  font-bold text-white my-1">
+                Make a Selection
+              </h3>
+              <p className="text-[17px]  font-normal text-white">
+                Select the land fund that best fits your investment goals and needs.  </p>
+            </div>
+            {/* //process image  */}
+            <div className="flex justify-center">
+              <Image
+                src="/images/MaskGroup.png"
+                alt="Image"
+                // fill
+                width={547}
+                height={337}
+                className=" "
+              // style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+
+            </div>
+
+          </div>
+          <div className="w-[49%] bg-customDarkGreen rounded-2xl">
+            <div className="p-[52px]">
+              <div id="step1 " className="w-10 h-10 rounded-full flex justify-center items-center bg-[#ECFDF3] text-[#039855]  ">
+              4
+              </div>
+              <h3 className="text-[28px]  font-bold text-white my-1">
+              Complete the purchase
+              </h3>
+              <p className="text-[17px]  font-normal text-white">
+              Once you’ve selected the land you want to invest in, complete the purchase through our secure online payment </p>
+            </div>
+            {/* //process image  */}
+            <div className="flex justify-center">
+              <Image
+                src="/images/portifolio.png"
+                alt="Image"
+                // fill
+                width={547}
+                height={337}
+                className=" "
+              // style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+
+            </div>
+
+          </div>
+
+        </div>
       </section>
 
 
@@ -246,7 +364,7 @@ export default function Home() {
           </Button>
         </div>
         <div id="marketplace-para " className="text-base font-normal">
-        Our user-friendly platform simplifies the process of creating and managing your land listings. Just provide the essential details, upload high-quality images, and set the price. Whether you have a vacant lot, or commercial land for sale, the 500Land Marketplace connects you with interested buyers.
+          Our user-friendly platform simplifies the process of creating and managing your land listings. Just provide the essential details, upload high-quality images, and set the price. Whether you have a vacant lot, or commercial land for sale, the 500Land Marketplace connects you with interested buyers.
         </div>
 
         <div className="flex flex-wrap  mt-6 justify-between">
@@ -273,14 +391,14 @@ export default function Home() {
                     </div>
                     <h2 className="text-xl font-bold mb-3 ">Lynch Canyon Road</h2>
                     <div className="flex justify-between">
-                      
+
                       <span className="price   font-bold text-base leading-5 text-black">$ 1,023,550</span>
                     </div>
-                    
+
                     <div className="flex justify-center mt-2">
                       <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Contact Seller</Link>
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
@@ -289,7 +407,7 @@ export default function Home() {
         </div>
       </section>
 
- 
+
       <section className="bg-customStrongtDark mt-16 py-16 ">
         <div className="container  ">
 
