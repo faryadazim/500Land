@@ -73,7 +73,7 @@ export default function Home() {
       <section className="my-14 container" id="info-section">
         <div className="flex flex-wrap ">
           <div className="w-full  ">   {/* md:w-3/5 */}
-            <h3 className={` ${inter400.className}  font-normal text-lg md:text-[34px]  text-black flex-none order-none self-stretch flex-grow-0  text-center   `} >
+            <h3 className={` ${inter400.className}  font-normal  leading-tight text-lg md:text-[34px]  text-black flex-none order-none self-stretch flex-grow-0  text-center   `} >
               We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
             </h3>
             {/* <p className="  font-normal text-base leading-5 text-black flex-none order-1 self-stretch flex-grow-0 py-5 text-center md:text-left md:pb-0">
