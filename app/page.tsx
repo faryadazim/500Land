@@ -39,8 +39,8 @@ export default function Home() {
         <div className={`flex min-h-screen flex-col sticky top-0 z-50 container`}>
 
 
-          <header className="container   top-0 z-48">
-            <div className="flex h-16 items-center justify-between pt-7" >
+          <header className="    top-0 z-48">
+            <div className="flex h-16 items-center justify-between py-5" >
               <MainNav items={marketingConfig.mainNav} />
               <nav className="flex">
                 <Link href="/blogs" className={cn(" items-center text-lg   sm:text-sm text-white tracking-widest mx-3 hidden lg:flex text-[15px]  font-normal    ")} style={{ fontFamily: "Basier Square Regular" }}>Blogs</Link>
@@ -53,12 +53,12 @@ export default function Home() {
 
           <div className=" pb-5 relative md:absolute bottom-0 left-0  w-full mt-28 md:m-auto mv-12 md:mb-auto md:w-3/5  left-auto     top-1/3" style={{ minHeight: "auto" }}>
             <div className=" ">
-              <h1 className={`font-bold text-white text-7xl leading-tight container   ${inter.className} `}
+              <h1 className={`font-bold text-white text-7xl leading-tight     ${inter.className} `}
                 style={{ textShadow: "0px 1px 1px rgba(0, 0, 0, 0.15)" }}>Invest in land.
               </h1>
-              <p className=" font-normal text-white text-xl leading-8 container mb-6 " style={{ fontFamily: "Basier Square Regular" }}>
+              <p className=" font-normal text-white text-xl leading-8   mb-6 " style={{ fontFamily: "Basier Square Regular" }}>
                 Invest in your future, starting at $100. We specialize in land investments that offer stability, returns, and diversification for your portfolio.</p>
-              <div className="flex container">
+              <div className="flex  ">
                 <Link href="/login" className={cn(buttonVariants({ variant: "primary" }), " text-center mr-2   w-100 px-4 md:px-6 rounded-full md:font-bold font-normal  py-6 ")} style={{ fontFamily: "sans-serif" }}>Check Available Opportunity</Link>
                 <Link href="/login" className={cn(buttonVariants({ variant: "primaryLight" }), "    w-100 px-4 md:px-6 rounded-full font-normal md:font-bold py-6 text-center ")} style={{ fontFamily: "sans-serif" }}> How it works</Link>
               </div>
