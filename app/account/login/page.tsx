@@ -24,7 +24,7 @@ const inter = Poppins({
 
 
 
-export default async function CreateAccountPage() {
+export default async function LoginAccountPage() {
 
   return (
     // <div className="h-[100vh] bg-grey-600 flex"  style={{ backgroundImage: "url('/images/Image.png  ')", minHeight: "100vh"  , minWidth:"50vw" , backgroundRepeat:"no-repeat"}}>
@@ -75,22 +75,11 @@ export default async function CreateAccountPage() {
 
                   <div className="">
 
-                    <h1 className="font-bold text-3xl pt-8 pb-2">Create Account</h1>
+                    <h1 className="font-bold text-3xl pt-8 pb-2">Sign In Account</h1>
 
-                    <div className="row flex justify-between pt-5  ">
-                      <div className="w-1/2 ">
-                        <label htmlFor="Chad" className=" my-8   text-sm">First Name</label>
-                        <Input placeholder="First Name" className="" />
-
-                      </div>
-                      <div className="w-1/2 pl-3">
-                        <label htmlFor="Chad" className=" my-8   text-sm">Last Name</label>
-                        <Input placeholder="Last Name" className="" />
-
-                      </div>
-                    </div>
+                     
                     <div className="row flex justify-between pt-5">
-                      <div className="w-full ">
+                      <div className="w-[380px] ">
                         <label htmlFor="Chad" className=" my-8   text-sm">Email</label>
                         <Input placeholder="you@company.com" />
 
@@ -98,30 +87,22 @@ export default async function CreateAccountPage() {
 
                     </div>
                     <div className="row flex justify-between pt-5">
-                      <div className="w-full ">
+                      <div className="w-[380px] ">
                         <label htmlFor="Chad" className=" my-8   text-sm">Password</label>
                         <Input placeholder="" type="password" />
 
                       </div>
 
                     </div>
-                    <div className="row flex justify-between pt-5">
-                      <div className="w-full ">
-                        <label htmlFor="Chad" className=" my-8    font-normal  text-[13px]">Phone </label>
-                        <PhoneInput placeholder="+20 123 456 789" className="bg-white mt-[6px]" />
-
-                      </div>
-
-                    </div>
+                   
 
                     <div className="flex justify-center mt-5">
-                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Create Account</Link>
+                      <Link href="/dashboard" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Login</Link>
                     </div>
                     <div className="flex justify-center mt-5">
 
-                      <p>Already Have an account? <span className="text-customDarkGreen font-bold">   <Link href="/account/login">
-                        Login
-                        </Link> </span> </p>
+                      <p>
+                        Have not Registered yet? <span className="text-customDarkGreen font-bold">Sign Up</span> </p>
                     </div>
                   </div>
                 </div>

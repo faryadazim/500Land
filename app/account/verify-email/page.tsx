@@ -1,6 +1,5 @@
-"use client"
-import React, { useRef, ChangeEvent, useState } from 'react';
 
+"use client"
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 import { Poppins } from 'next/font/google'
@@ -12,6 +11,7 @@ import { Progress } from "@/components/ui/progress"
 import { Input } from "@/components/ui/input"
 import { PhoneInput } from "@/components/ui/phone-input-field"
 import { Textarea } from "@/components/ui/textarea"
+import React, { useRef, ChangeEvent, useState } from 'react';
 
 
 import { buttonVariants } from "@/components/ui/button"
@@ -73,8 +73,6 @@ export default async function VerifyEmailPage() {
     inputRefs.current[index] = ref;
   };
 
-
-
   return (
     // <div className="h-[100vh] bg-grey-600 flex"  style={{ backgroundImage: "url('/images/Image.png  ')", minHeight: "100vh"  , minWidth:"50vw" , backgroundRepeat:"no-repeat"}}>
     //   <div className="w-1/2  "  >First Tolo lala</div>
@@ -90,56 +88,32 @@ export default async function VerifyEmailPage() {
     //   </section> */}
 
     // </div>
-    <> <div className="h-screen w-screen   bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')", position: "fixed" }}>
-      <div className="h-screen"
-        style={{}}
-      >
-        <div className="flex justify-center h-screen ">
-          <div className="w-1/2 h-screen flex  items-end justify-start font-bold py-24">
-            <h1 className="ml-[250px] mr-[124px] pl-4 text-6xl font-bold text-white">
-              Invest in land, <br />
-              invest in your future.
-            </h1>
+    <>
+      <div className="h-screen w-screen   bg-cover bg-center -z-10" style={{ backgroundImage: "url('/images/bg.jpg')", position: "fixed" }}>
+        <div className="h-screen"
+          style={{}}
+        >
+          <div className="flex justify-center h-screen relative top-0 right-0">
 
+            <div className="w-1/2 h-screen hidden md:flex  i  py-24">
 
-          </div>
-          <div className="w-1/2 bg-white">
-            <div className="w-full border-b-2 ">
-              <div className="header relative top-0 right-0  mr-[250px] ml-[124px] pr-4 ">
+            </div>
+            <div className="w-full md:w-1/2 bg-white h-screen flex   py-24">
 
-                <div className="flex py-3" >
-                  <div className="w-1/2  flex justify-end items-center">
-                    <div className="number-filled text-white bg-customDarkGreenHeading px-2 py-[2px] mr-2 h-[20px] rounded-full text-xs">
-                      1
-                    </div>
-                    <p className="heading">
-                      Verify Email
-                    </p>
-                    <p className='px-2'>&gt;
-
-                    </p>
-                  </div>
-                  <div className="w-1/2  flex justify-start items-center">
-                    <div className="number-filled bg-slate-500 text-white px-2 py-[2px] mr-2 h-[20px] rounded-full text-xs">
-                      2
-                    </div>
-                    <button className="heading" onClick={() => {
-                      console.log("false")
-                      setIsEmailVerified(true)
-                    }}>
-                      Upload Documents
-                    </button>
-
-                  </div>
-                </div>
-
-                <div className="w-1/2 bg-slate-200"></div>
-              </div>
+             
             </div>
 
-            <div className=" flex items-center  justify-center  h-screen py-24">
-              <div className="mr-[250px] ml-[124px] pr-4">
+            <div className="container flex absolute top-0 z-20 ">
 
+              <div className="w-full md:w-1/2 h-screen hidden md:flex  items-end justify-start font-bold py-24">
+                <h1 className="  pl-4 text-6xl font-bold text-white ">
+                  Invest in land, <br />
+                  invest in your future.
+                </h1>
+
+
+              </div>
+              <div className="w-full md:w-1/2 bg-blue h-screen md:pl-10 lg:pl-0 flex items-center justify-center py-24">
 
                 {
                   !isEmailVerified ? <div className="">
@@ -151,7 +125,7 @@ export default async function VerifyEmailPage() {
 
                     </p>
                     <div className="flex flex-col space-y-16 mt-6">
-                      <div className="flex flex-row items-center justify-between mx-auto w-full max-w-xs">
+                      <div className="flex flex-row items-center justify-between mx-auto  w-[380px]">
                         {Array.from({ length: 5 }, (_, index) => (
                           <div className="w-12 h-12" key={index}>
                             <input
@@ -169,7 +143,7 @@ export default async function VerifyEmailPage() {
                     </div>
 
                     <div className="flex justify-center mt-5">
-                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Verify and Continue</Link>
+                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Verify and Continue</Link>
                     </div>
                     <div className="flex justify-center mt-5">
 
@@ -183,7 +157,7 @@ export default async function VerifyEmailPage() {
 
                     </p>
                     <div className="flex flex-col space-y-16 mt-6">
-                      <div className="flex flex-row items-center justify-between mx-auto w-full max-w-xs">
+                      <div className="flex flex-row items-center justify-between   ">
                         {Array.from({ length: 5 }, (_, index) => (
                           <div className="w-12 h-12" key={index}>
                             <input
@@ -201,7 +175,7 @@ export default async function VerifyEmailPage() {
                     </div>
 
                     <div className="flex justify-center mt-5">
-                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Verify and Continue</Link>
+                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2  w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Verify and Continue</Link>
                     </div>
                     <div className="flex justify-center mt-5">
 
@@ -209,27 +183,66 @@ export default async function VerifyEmailPage() {
                     </div>
                   </div>
                 }
-              </div>
 
+
+              </div>
             </div>
           </div>
+
         </div>
+        <div className="absolute top-0 left-0   w-screen">
+          <header className="container  border-t-pink-0 border-l-pink-0 border-t-pink-0   top-0 z-90">
 
+            {/* navigation  */}
+            <div className="flex h-16 items-center justify-start pt-7" >
+              <MainNav />
+
+            </div>
+          </header>
+
+
+        </div>
       </div>
-      <div className="absolute top-0 left-0   w-screen">
-        <header className="container  border-t-pink-0 border-l-pink-0 border-t-pink-0   top-0 z-40">
-
-          {/* navigation  */}
-          <div className="flex h-16 items-center justify-start pt-7" >
-            <MainNav />
-
-          </div>
-        </header>
-
-
-      </div>
-    </div>
 
     </>
   )
 }
+
+
+
+///////////////this is code for screen above the verification but nee to mention how should be it look like
+
+
+
+{/* <div className="w-full border-b-2 ">
+<div className="header relative top-0 right-0  mr-[250px] ml-[124px] pr-4 ">
+
+  <div className="flex py-3" >
+    <div className="w-1/2  flex justify-end items-center">
+      <div className="number-filled text-white bg-customDarkGreenHeading px-2 py-[2px] mr-2 h-[20px] rounded-full text-xs">
+        1
+      </div>
+      <p className="heading">
+        Verify Email
+      </p>
+      <p className='px-2'>&gt;
+
+      </p>
+    </div>
+    <div className="w-1/2  flex justify-start items-center">
+      <div className="number-filled bg-slate-500 text-white px-2 py-[2px] mr-2 h-[20px] rounded-full text-xs">
+        2
+      </div>
+      <button className="heading" onClick={() => {
+        console.log("false")
+        setIsEmailVerified(true)
+      }}>
+        Upload Documents
+      </button>
+
+    </div>
+  </div>
+
+  <div className="w-1/2 bg-slate-200"></div>
+</div>
+</div> */}
