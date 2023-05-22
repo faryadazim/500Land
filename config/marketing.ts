@@ -19,7 +19,7 @@ export const marketingConfig: any = {
     },
     {
       title: "Opportunities",
-      href: "/oppertunities",
+      href: "/opportunities",
         isMobileOnly: false,
     },
     {

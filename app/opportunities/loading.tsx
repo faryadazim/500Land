@@ -1,6 +1,6 @@
  
 
-export default function OpportunitiesLoading() {
+export default function OpportunituesLoading() {
   return (
     <>loading page</>
   )

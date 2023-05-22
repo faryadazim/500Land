@@ -117,7 +117,7 @@ export default async function MarketplacePage() {
                       <span className="font-normal text-[13px]">Bradley,CA</span>
                       <span className="font-normal text-[13px]">2000 SQFT</span>
                     </div>
-                    <h2 className="text-xl font-bold mb-3 ">Lynch Canyon Road</h2>
+                    <h2 className="text-xl font-bold mb-3 "> <Link href="/marketplace/marketplace-single"> Lynch Canyon Road</Link></h2>
                     <div className="flex justify-between">
 
                       <span className="price  md:mb-0 mb-1  font-bold text-base leading-5 text-black">$ 1,023,550</span>
@@ -140,7 +140,7 @@ export default async function MarketplacePage() {
         <div className="  flex  justify-center items-center md:justify-end my-5">
 
 
-          <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm  " aria-label="Pagination">
+        <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm  " aria-label="Pagination">
             <a href="#" className="relative inline-flex items-center rounded-l-md px-2 py-2 pl-4 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 bg-white">
 
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,10 +151,11 @@ export default async function MarketplacePage() {
             {/* Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" */}
             <a href="#" aria-current="page" className="relative z-10 inline-flex items-center bg-customDarkGreen text-white px-4 py-2 text-sm font-semibold  focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ">1</a>
             <a href="#" className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white">2</a>
-            <a href="#" className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white">3</a>
+            <a href="#" className="relative hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white">3</a>
+            <a href="#" className="relative md:hidden inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white">...</a>
             <a href="#" className="relative hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white ">4</a>
             <a href="#" className="relative hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white ">5</a>
-            <a href="#" className="relative hidden md:inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white">6</a>
+            <a href="#" className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white">6</a>
             <a href="#" className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white">7</a>
             <a href="#" className="relative inline-flex items-center rounded-r-md px-2 py-2  pr-4  text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white">
               <span className="text-black px-3 hidden md:flex">Next</span>
