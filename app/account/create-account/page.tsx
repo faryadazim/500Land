@@ -41,94 +41,108 @@ export default async function opportunitiesPage() {
     //   </section> */}
 
     // </div>
-    <> <div className="h-screen w-screen   bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')", position: "fixed" }}>
-      <div className="h-screen"
-        style={{}}
-      >
-        <div className="flex justify-center h-screen ">
-          <div className="w-1/2 h-screen flex  items-end justify-start font-bold py-24">
-            <h1 className="ml-[250px] mr-[124px] pl-4 text-6xl font-bold text-white">
-              Invest in land, <br />
-              invest in your future.
-            </h1>
+    <>
+      <div className="h-screen w-screen   bg-cover bg-center -z-10" style={{ backgroundImage: "url('/images/bg.jpg')", position: "fixed" }}>
+        <div className="h-screen"
+          style={{}}
+        >
+          <div className="flex justify-center h-screen relative top-0 right-0">
 
-
-          </div>
-          <div className="w-1/2 bg-white h-screen flex items-center justify-center py-24">
-
-
-            <div className="mr-[250px] ml-[124px] pr-4">
-
-
-              <div className="">
-
-                <h1 className="font-bold text-3xl pt-8 pb-2">Create Account</h1>
-
-                <div className="row flex justify-between pt-5  ">
-                  <div className="w-1/2 pr-3">
-                    <label htmlFor="Chad" className=" my-8   text-sm">First Name</label>
-                    <Input placeholder="First Name" className="" />
-
-                  </div>
-                  <div className="w-1/2 pl-3">
-                    <label htmlFor="Chad" className=" my-8   text-sm">Last Name</label>
-                    <Input placeholder="Last Name" className="" />
-
-                  </div>
-                </div>
-                <div className="row flex justify-between pt-5">
-                  <div className="w-full pr-3">
-                    <label htmlFor="Chad" className=" my-8   text-sm">Email</label>
-                    <Input placeholder="you@company.com" />
-
-                  </div>
-
-                </div>
-                <div className="row flex justify-between pt-5">
-                  <div className="w-full pr-3">
-                    <label htmlFor="Chad" className=" my-8   text-sm">Password</label>
-                    <Input placeholder=""  type="password"/>
-
-                  </div>
-
-                </div>
-                <div className="row flex justify-between pt-5">
-                  <div className="w-full pr-3">
-                    <label htmlFor="Chad" className=" my-8   text-sm">Phone </label>
-                    <PhoneInput placeholder="you@company.com" />
-
-                  </div>
-
-                </div>
-                 
-                <div className="flex justify-center mt-5">
-                  <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Create Account</Link>
-                </div>
-                <div className="flex justify-center mt-5">
-               
-               <p>Already Have an account? <span className="text-customDarkGreen font-bold">Login</span> </p>
-                  </div>
+            <div className="w-1/2 h-screen hidden md:flex  i  py-24">
+            
+            </div>
+            <div className="w-full md:w-1/2 bg-white h-screen flex   py-24">
+              
+              <div className="  ">
               </div>
             </div>
 
+            <div className="container flex absolute top-0 z-20 ">
 
+              <div className="w-full md:w-1/2 h-screen hidden md:flex  items-end justify-start font-bold py-24">
+                <h1 className="  pl-4 text-6xl font-bold text-white ">
+                  Invest in land, <br />
+                  invest in your future.
+                </h1>
+
+
+              </div>
+              <div className="w-full md:w-1/2 bg-blue h-screen md:pl-10 lg:pl-0 flex items-center justify-center py-24">
+
+
+                <div className="  ">
+
+
+                  <div className="">
+
+                    <h1 className="font-bold text-3xl pt-8 pb-2">Create Account</h1>
+
+                    <div className="row flex justify-between pt-5  ">
+                      <div className="w-1/2 ">
+                        <label htmlFor="Chad" className=" my-8   text-sm">First Name</label>
+                        <Input placeholder="First Name" className="" />
+
+                      </div>
+                      <div className="w-1/2 pl-3">
+                        <label htmlFor="Chad" className=" my-8   text-sm">Last Name</label>
+                        <Input placeholder="Last Name" className="" />
+
+                      </div>
+                    </div>
+                    <div className="row flex justify-between pt-5">
+                      <div className="w-full ">
+                        <label htmlFor="Chad" className=" my-8   text-sm">Email</label>
+                        <Input placeholder="you@company.com" />
+
+                      </div>
+
+                    </div>
+                    <div className="row flex justify-between pt-5">
+                      <div className="w-full ">
+                        <label htmlFor="Chad" className=" my-8   text-sm">Password</label>
+                        <Input placeholder="" type="password" />
+
+                      </div>
+
+                    </div>
+                    <div className="row flex justify-between pt-5">
+                      <div className="w-full ">
+                        <label htmlFor="Chad" className=" my-8    font-normal  text-[13px]">Phone </label>
+                        <PhoneInput placeholder="+20 123 456 789" className="bg-white mt-[6px]" />
+
+                      </div>
+
+                    </div>
+
+                    <div className="flex justify-center mt-5">
+                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-full px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Create Account</Link>
+                    </div>
+                    <div className="flex justify-center mt-5">
+
+                      <p>Already Have an account? <span className="text-customDarkGreen font-bold">Login</span> </p>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
           </div>
+
         </div>
+        <div className="absolute top-0 left-0   w-screen">
+          <header className="container  border-t-pink-0 border-l-pink-0 border-t-pink-0   top-0 z-90">
 
+            {/* navigation  */}
+            <div className="flex h-16 items-center justify-start pt-7" >
+              <MainNav />
+
+            </div>
+          </header>
+
+
+        </div>
       </div>
-      <div className="absolute top-0 left-0   w-screen">
-        <header className="container  border-t-pink-0 border-l-pink-0 border-t-pink-0   top-0 z-40">
-
-          {/* navigation  */}
-          <div className="flex h-16 items-center justify-start pt-7" >
-            <MainNav />
-
-          </div>
-        </header>
-
-
-      </div>
-    </div>
 
     </>
   )
