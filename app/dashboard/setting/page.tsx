@@ -122,8 +122,8 @@ export default function SettingPage() {
               </div>
               <div className="row flex pt-6 items-center">
               
-                <Link href="/dashboard" className={cn(buttonVariants({ size: "sm", variant: "outline" }), " border-customDarkGreen p-5 text-customDarkgreen w-100 px-10 rounded-full font-normal w-32 mr-3")} style={{ fontFamily: "Basier Square Regular" }}>Cancel</Link>
-                <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "w-48 p-5  mr-2    text-center     rounded-full font-bold lg:font-semibold md:font-normal  md:my-1 lg:my-2 ")} style={{ fontFamily: "sans-serif" }}>Update</Link>
+                <Button size="sm"  variant="outline" className=  " border-customDarkGreen p-5 text-customDarkgreen w-100 px-10 rounded-full font-normal w-32 mr-3"  style={{ fontFamily: "Basier Square Regular" }}>Cancel</Button>
+                <Button variant="primaryDark"  className="w-44 p-5  mr-2    text-center     rounded-full font-bold lg:font-semibold md:font-normal  md:my-1   " style={{ fontFamily: "Basier Square Regular" }}>Update</Button>
                
              
 
