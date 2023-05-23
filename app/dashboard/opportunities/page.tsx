@@ -3,16 +3,9 @@ import React, { useState } from "react"
 import NavBar from "@/components/NavBar"
 import SideBar from "@/components/SideBar"
 
-import { Button } from "@/components/ui/button"
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+ 
 import downIcon from "../../../public/downIcon.png";
-import Image from "next/image"
-import Rectangle from "../../../public/500 Land — Dashboard/Rectangle 158.png";
-import Link from "next/link"
+import Image from "next/image" 
 
 import map from "@/public/images/map.png";
 import { Separator } from "@/components/ui/separator"
@@ -26,50 +19,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-const CARD_DATA = [
-  {
-    heading: 'My Balance',
-    price: '$2,500',
-    increment: '',
-  },
-  {
-    heading: 'Total Profit',
-    price: '$2,000',
-    increment: '13.32%',
-  },
-  {
-    heading: 'Investment',
-    price: '$500',
-    increment: '13.32%',
-  },
-  {
-    heading: 'Available to Withdraw',
-    price: '$500',
-    increment: '',
-  },
-];
-
-const SMALL_CARD_DATA = [
-  {
-    heading: 'Fund Amount',
-    amount: '$100',
-  },
-  {
-    heading: 'Current Profit',
-    amount: '$100',
-  },
-  {
-    heading: 'Available to Withdraw',
-    amount: '$100',
-  },
-];
+ 
 
 
+export default function OpportunitiesPage() {
 
-export default function opportunitiesPage() {
-
-  // const isOpen=(false);
-  const [isOpen, setIsOpen] = useState(false)
+  // const isOpen=(false); 
 
   return (
     <>

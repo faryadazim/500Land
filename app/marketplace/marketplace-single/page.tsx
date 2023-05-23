@@ -145,7 +145,7 @@ export default async function MarketplaceSinglePage() {
 
 
               <div className="  font-normal text-xl leading-6 text-black">
-                Amazing apartment with stunning skyline views to Manhattan and the Empire State. don't look further if you need a quick access to to Hudson Yards, Time Square, Hell's Kitchen, Javits Center, the Summit Vanderbilt , Bryant Park, The Vessel and many more
+                Amazing apartment with stunning skyline views to Manhattan and the Empire State. dont look further if you need a quick access to to Hudson Yards, Time Square, Hells Kitchen, Javits Center, the Summit Vanderbilt , Bryant Park, The Vessel and many more
               </div>
 
             </div>
