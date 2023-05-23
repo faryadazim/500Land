@@ -9,13 +9,10 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
-import downIcon from "../../public/downIcon.png";
+import downIcon from "../../../public/downIcon.png";
 import Image from "next/image"
-import Rectangle from "../../public/500 Land — Dashboard/Rectangle 158.png";
-import Link from "next/link"
-import Slogo from "../../public/500 Land — Dashboard/Slogo.png";
-import upLogo from "../../public/upLogo.png";
-
+import Rectangle from "../../../public/500 Land — Dashboard/Rectangle 158.png";
+import Link from "next/link" 
 
 import map from "@/public/images/map.png";
 import { Separator } from "@/components/ui/separator"
