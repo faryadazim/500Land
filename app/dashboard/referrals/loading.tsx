@@ -1,6 +1,6 @@
  
 
-export default function SettingLoading() {
+export default function ReferralsLoading() {
   return (
     <div className="w-screen h-screen flex justify-center items-center">
     <div className="flex">
