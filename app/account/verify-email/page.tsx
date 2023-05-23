@@ -175,7 +175,7 @@ export default async function VerifyEmailPage() {
                     </div>
 
                     <div className="flex justify-center mt-5">
-                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2  w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Verify and Continue</Link>
+                      <Link href="/account/login" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2  w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Verify and Continue</Link>
                     </div>
                     <div className="flex justify-center mt-5">
 

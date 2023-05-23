@@ -41,8 +41,8 @@ export default async function OpportunituesPage() {
             <div className="flex h-16 items-center justify-between py-5" >
               <MainNav items={marketingConfig.mainNav} />
               <nav className="flex">
-                <Link href="/contact-us" className={cn("  items-center text-lg   sm:text-sm text-white tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Contact Us</Link>
-                <Link href="/dashboard" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-white w-100 px-10 rounded-full font-normal")} style={{ fontFamily: "Basier Square Regular" }}>Login</Link>
+               <Link href="/contact-us" className={cn("  items-center text-lg   sm:text-sm text-white tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Contact Us</Link>
+                <Link href="/account/create-account" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-white w-100 px-10 rounded-full font-normal")} style={{ fontFamily: "Basier Square Regular" }}>Login</Link>
               </nav>
             </div>
           </header>
@@ -119,7 +119,7 @@ export default async function OpportunituesPage() {
                     <span className="font-normal text-[13px]">Bradley,CA</span>
                     <span className="font-normal text-[13px]">2000 SQFT</span>
                   </div>
-                  <h2 className="text-xl font-bold mb-3">Lynch Canyon Road</h2>
+                  <h2 className="text-xl font-bold mb-3"><Link href="/opportunities/opportunities-single"> Lynch Canyon Road</Link></h2>
                   <div className="flex justify-between">
                     <span className="title">Requested Fund</span>
                     <span className="price  md:mb-0 mb-1  f  font-semibold text-base leading-5 text-black">USD 1,023,550</span>
@@ -128,7 +128,7 @@ export default async function OpportunituesPage() {
                     <Progress value={75} />
                   </div>
                   <div className="flex justify-center">
-                    <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2  w-full text-center lg:w-[90%]  px-6 rounded-full font-bold lg:font-semibold md:font-normal    py-6  md:my-1 lg:my-2  ")} style={{ fontFamily: "sans-serif" }}>Funds start from $100 / Share</Link>
+                    <Link href="/opportunities/opportunities-single" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2  w-full text-center lg:w-[90%]  px-6 rounded-full font-bold lg:font-semibold md:font-normal    py-6  md:my-1 lg:my-2  ")} style={{ fontFamily: "sans-serif" }}>Funds start from $100 / Share</Link>
                   </div>
                   <div className="flex justify-center">
                     <p className="h-5 font-normal text-[15px] leading-5 flex items-center text-center text-green-900 md:mt-0 mt-2 ">
