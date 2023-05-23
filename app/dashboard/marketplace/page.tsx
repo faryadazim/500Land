@@ -83,7 +83,7 @@ export default function MarketplacePage() {
                   border border-solid border-gray-200" />
         {/* Inner Ring */}
         <div className="w-12 h-12 rounded-full animate-spin absolute
-                  border border-solid border-yellow-500 border-t-transparent" />
+                  border border-solid border-[#70F09C] border-t-transparent" />
       </div>
     </div>
 
