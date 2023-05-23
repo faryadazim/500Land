@@ -1,10 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 import Image from 'next/image'
 import { Poppins } from 'next/font/google'
 import Link from "next/link"
 import { marketingConfig } from "@/config/marketing"
-import { cn } from "@/lib/utils"
 import { MainNav } from "@/components/main-nav"
 import { Progress } from "@/components/ui/progress"
 import { Input } from "@/components/ui/input"

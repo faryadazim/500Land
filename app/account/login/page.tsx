@@ -97,7 +97,7 @@ export default async function LoginAccountPage() {
 
 
                     <div className="flex justify-center mt-5">
-                      <Link href="/dashboard" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Login</Link>
+                      <Link href="/dashboard/dashboard-main" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Login</Link>
                     </div>
                     <div className="flex justify-center mt-5">
 

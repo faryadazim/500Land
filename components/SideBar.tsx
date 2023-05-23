@@ -167,7 +167,7 @@ export default function SideBar() {
                                 <input
                                     type="text"
                                     placeholder="Search"
-                                    className="border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
+                                    className=" px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
                                 />
                             </div>
                         </form>
@@ -184,7 +184,7 @@ export default function SideBar() {
                                 <ul className="md:flex-col md:min-w-full flex flex-col list-none">
                                     <li className="items-center">
                                         <Link
-                                            href={"#"}
+                                            href={"/dashboard/dashboard-main"}
                                             className={
                                                 "text-xs   py-3 px-3 rounded-md font-medium  text-black text-[13px]  flex items-center align-middle hover:bg-slate-200"
                                             }
@@ -199,7 +199,7 @@ export default function SideBar() {
                                     </li>
                                     <li className="items-center">
                                         <Link
-                                            href={"#"}
+                                            href={"/dashboard/opportunities"}
                                             className={
                                                 "text-xs   py-3 px-3 rounded-md font-medium  text-[#707070] text-[13px]  flex items-center align-middle hover:bg-slate-200"
                                             }
@@ -216,7 +216,7 @@ export default function SideBar() {
                                     </li>
                                     <li className="items-center">
                                         <Link
-                                            href={"#"}
+                                            href={"/dashboard/marketplace"}
                                             className={
                                                 "text-xs   py-3 px-3 rounded-md font-medium  text-[#707070] text-[13px]  flex items-center align-middle hover:bg-slate-200"
                                             }
@@ -236,7 +236,7 @@ export default function SideBar() {
                                     </li>
                                     <li className="items-center">
                                         <Link
-                                            href={"#"}
+                                            href={"/dashboard/billing"}
                                             className={
                                                 "text-xs   py-3 px-3 rounded-md font-medium  text-[#707070] text-[13px]  flex items-center align-middle hover:bg-slate-200"
                                             }
@@ -254,7 +254,7 @@ export default function SideBar() {
                                     </li>
                                     <li className="items-center">
                                         <Link
-                                            href={"#"}
+                                            href={"/dashboard/setting"}
                                             className={
                                                 "text-xs   py-3 px-3 rounded-md font-medium  text-[#707070] text-[13px]  flex items-center align-middle hover:bg-slate-200"
                                             }
@@ -272,7 +272,7 @@ export default function SideBar() {
                                     </li>
                                     <li className="items-center">
                                         <Link
-                                            href={"#"}
+                                            href={"/dashboard/referrals"}
                                             className={
                                                 "text-xs   py-3 px-3 rounded-md font-medium  text-[#707070] text-[13px]  flex items-center align-middle hover:bg-slate-200"
                                             }
