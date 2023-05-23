@@ -295,11 +295,13 @@ export default function Home() {
             Available Opportunities
           </h1>
 
-          <Button variant="secondary" className="bg-white text-customDarkGreen  text-base font-normal " >View All
+          <Button variant="secondary" className="bg-white text-customDarkGreen  text-base font-normal "  >
+            <Link href="/opportunities">
+            View All
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.16675 9.99984H15.8334M15.8334 9.99984L10.0001 4.1665M15.8334 9.99984L10.0001 15.8332" stroke="#1B4638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-
+</Link>
 
           </Button>
         </div>
@@ -355,11 +357,12 @@ export default function Home() {
             Marketplace
           </h1>
 
-          <Button variant="secondary" className="bg-white text-customDarkGreen  text-base font-normal " >View All
+          <Button variant="secondary" className="bg-white text-customDarkGreen  text-base font-normal " >            <Link href="/opportunities">
+            View All
             <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4.16675 9.99984H15.8334M15.8334 9.99984L10.0001 4.1665M15.8334 9.99984L10.0001 15.8332" stroke="#1B4638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
-
+</Link>
 
           </Button>
         </div>
