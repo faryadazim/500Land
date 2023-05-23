@@ -137,7 +137,7 @@ export default function ReferralsPage() {
 
                       Invite Via Email
                     </label>
-                    <Input placeholder="John Doe" value="https://500land.com/referrals/4012930AAC29KLAZASDA" className="bg-white mt-[6px] " />
+                    <Input placeholder="JohnDoe@gmail.com"   className="bg-white mt-[6px] " />
                   </div>
                   <div className="">  <Button variant="primaryDark" className="w-28 p-5  mr-2    text-center     rounded-full font-bold lg:font-semibold md:font-normal  md:my-1   " style={{ fontFamily: "Basier Square Regular" }}>
 
