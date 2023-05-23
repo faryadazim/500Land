@@ -49,10 +49,10 @@ export default async function LoginAccountPage() {
           <div className="flex justify-center h-screen relative top-0 right-0">
 
             <div className="w-1/2 h-screen hidden md:flex  i  py-24">
-            
+
             </div>
             <div className="w-full md:w-1/2 bg-white h-screen flex   py-24">
-              
+
               <div className="  ">
               </div>
             </div>
@@ -77,7 +77,7 @@ export default async function LoginAccountPage() {
 
                     <h1 className="font-bold text-3xl pt-8 pb-2">Sign In Account</h1>
 
-                     
+
                     <div className="row flex justify-between pt-5">
                       <div className="w-[380px] ">
                         <label htmlFor="Chad" className=" my-8   text-sm">Email</label>
@@ -94,7 +94,7 @@ export default async function LoginAccountPage() {
                       </div>
 
                     </div>
-                   
+
 
                     <div className="flex justify-center mt-5">
                       <Link href="/dashboard" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Login</Link>
