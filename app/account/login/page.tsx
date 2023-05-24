@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 import { Poppins } from 'next/font/google'
@@ -15,6 +17,8 @@ import { buttonVariants } from "@/components/ui/button"
 import Vector from "@/public/images/Image.png";
 
 import { Separator } from "@/components/ui/separator"
+import { Dialog, DialogTrigger } from "@radix-ui/react-dialog"
+import AddFundPage from "@/components/AddFund"
 
 
 const inter = Poppins({
@@ -97,7 +101,18 @@ export default async function LoginAccountPage() {
 
 
                     <div className="flex justify-center mt-5">
-                      <Link href="/dashboard/dashboard-main" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Login</Link>
+                      {/* <Link href="/dashboard/dashboard-main" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}>Login</Link> */}
+
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button
+                          className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2   w-[380px] px-6 rounded-full font-bold  py-6 my-2")} style={{ fontFamily: "sans-serif" }}
+                          >Login</Button>
+                        </DialogTrigger>
+                        <AddFundPage />
+                      </Dialog>
+
+
                     </div>
                     <div className="flex justify-center mt-5">
 
