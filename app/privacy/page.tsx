@@ -25,7 +25,7 @@ const inter = Poppins({
 
 
 
-export default async function TermsConditionsPage() {
+export default async function PrivacyPage() {
 
   return (
     <div className=" ">
@@ -43,7 +43,7 @@ export default async function TermsConditionsPage() {
         </div>
       </section>
       <section className="container my-12">
-        <h1 className="font-bold text-[34px] leading-10">TERMS & CONDITIONS</h1>
+        <h1 className="font-bold text-[34px] leading-10">Privacy</h1>
         <div className="container flex flex-row mx-auto md:pl-[5px] md:pt-[15px] sm:pl-[5px] sm:pt-[15px]">
           <span className="md:pr-2 sm:pr-2">
           <Image src={Vector} alt="500Land Logo" width={20} height={20} />
@@ -63,69 +63,49 @@ export default async function TermsConditionsPage() {
            our website and services.</p>
       </div>
 
-    <div className="mx-auto font-normal text-[18px] md:pl-[146px] md:pr-[145px] md:pb-14 sm:pl-[146px] sm:pr-[145px] sm:pb-14 leading-[1.625rem] tracking-[-0.408px]">
+    <div className="mx-auto font-normal text-[18px] md:pl-[146px] md:pr-[144px] md:pb-14 sm:pl-[146px] sm:pr-[144px] sm:pb-14 leading-[1.625rem] tracking-[-0.408px]">
       <ol className="list-decimal">
-    <li>Introduction Welcome to 500Land, a company specializing in land investments. 
-      These Terms and Conditions govern your access to and use of our website, services, 
-      and products (collectively, the "Services"). By accessing or using our Services, 
-      you agree to be bound by these Terms and Conditions.</li>
+    <li>Information We Collect We may collect personal information such as name, 
+      email address, phone number, and payment information when users register 
+      for an account, make a purchase, or contact us for support. We also collect 
+      non-personal information such as IP address, browser type, and device 
+      information through cookies and other tracking technologies.</li>
 
-  <li>Eligibility Our Services are available only to individuals who are
-   at least 18 years old and are legally able to enter into a binding contract. 
-   If you do not meet these requirements, you may not use our Services.</li>
+  <li>How We Use Your Information We use your personal information to provide and 
+    improve our services, to communicate with you, to process payments, and to 
+    comply with legal obligations. We may also use non-personal information for 
+    analytics and marketing purposes.</li>
 
-<li>Investment Risks Investing in land involves risks, and you should carefully 
-  consider these risks before making an investment. There is no guarantee of 
-  liquidity or return on investment, and you may lose all or a portion of your 
-  investment. You should consult with your own advisors before investing in land.</li>
+<li>Sharing of Information We may share your personal information with third-party 
+  service providers that assist us in providing our services, processing payments, 
+  or performing other business functions. We may also disclose your personal 
+  information if required by law or in response to legal process, or if necessary 
+  to protect our rights or the rights of others.</li>
 
-<li>Investment Amounts We may set minimum investment amounts for our Services, 
-  and you may not be able to invest in a particular property if you do not meet 
-  the minimum investment amount.</li>
+<li>Your Choices You may opt-out of receiving marketing communications from us at any 
+  time by following the unsubscribe link in our emails or by contacting us directly. 
+  You may also request access, correction, or deletion of your personal information 
+  by contacting us at info@500.land.</li>
 
-<li>Payments We may use third-party payment processors to process payments made 
-  through our Services. By using our Services, you agree to the terms and conditions 
-  of these third-party payment processors.</li>
+<li>Security We take reasonable measures to protect 
+  the personal information we collect and store, including the use of encryption and 
+  access controls. However, no security system is impenetrable and we cannot guarantee 
+  the security of your personal information.</li>
 
-<li>Withdrawals We may set minimum withdrawal amounts and minimum investment periods 
-  for our Services. You may not be able to withdraw your investment until the minimum 
-  investment period has elapsed and the minimum withdrawal amount has been met.</li>
+<li>Children’s Privacy Our website and services are not directed to individuals under 
+  the age of 18, and we do not knowingly collect personal information from children. 
+  If we become aware that we have collected personal information from a child without 
+  parental consent, we will take steps to remove the 
+  information as soon as possible.</li>
 
-<li>Termination We reserve the right to terminate or suspend your access to our 
-  Services at any time and for any reason, including if you breach these Terms and 
-  Conditions.</li>
+<li>Changes to this Privacy Policy We may update this Privacy Policy from time to 
+  time by posting a revised version on our website. Your continued use of our website 
+  and services after any changes to this Privacy Policy constitutes your acceptance 
+  of the changes.</li>
 
-<li>Intellectual Property Our Services and all content and materials contained in our 
-  Services, including without limitation, text, graphics, logos, button icons, images, 
-  audio clips, video clips, data compilations, and software, are the property of 500Land
-   or its licensors and are protected by United States and international 
-   copyright laws.</li>
+<li>Contact Us If you have any questions or concerns about this Privacy Policy, 
+  please contact us at info@500.land</li>
 
-<li>Disclaimer of Warranties Our Services are provided on an "as is" and "as available"
-   basis without warranties of any kind, whether express or implied, including but not 
-   limited to, implied warranties of merchantability, fitness for a particular purpose, 
-   and non-infringement.</li>
-
-<li>Limitation of Liability To the extent permitted by law, 500Land will not be liable 
-  for any direct, indirect, incidental, special, or consequential damages arising out 
-  of or in connection with your use of our Services, even if we have been advised of 
-  the possibility of such damages.</li>
-
-<li>Governing Law These Terms and Conditions shall be governed by and construed in 
-  accordance with the laws of the United States.</li>
-
-<li>Entire Agreement These Terms and Conditions constitute the entire agreement 
-  between you and 500Land with respect to your use of our Services and supersede all 
-  prior or contemporaneous communications and proposals, whether oral or written, 
-  between you and 500Land.</li>
-
-<li>Amendments We may modify these Terms and Conditions at any time, and any such
-   modifications will be effective immediately upon posting on our website. Your 
-   continued use of our Services after such modifications have been posted constitutes 
-   your acceptance of the modified Terms and Conditions.</li>
-
-<li>Contact Us If you have any questions about these Terms and Conditions or 
-  our Services, please contact us at info@500.land</li>
 
       </ol>
     </div>

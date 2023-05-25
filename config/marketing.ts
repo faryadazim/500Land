@@ -34,7 +34,7 @@ export const marketingConfig: any = {
     },
     {
       title: "Blogs",
-      href: "/blogs",
+      href: "/blogs/blog-single",
         isMobileOnly: true,
     },
     {
