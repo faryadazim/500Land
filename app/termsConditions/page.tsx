@@ -67,7 +67,7 @@ export default async function TermsConditionsPage() {
       <ol className="list-decimal">
     <li>Introduction Welcome to 500Land, a company specializing in land investments. 
       These Terms and Conditions govern your access to and use of our website, services, 
-      and products (collectively, the "Services"). By accessing or using our Services, 
+      and products (collectively, the  Services. By accessing or using our Services, 
       you agree to be bound by these Terms and Conditions.</li>
 
   <li>Eligibility Our Services are available only to individuals who are
@@ -101,7 +101,7 @@ export default async function TermsConditionsPage() {
    or its licensors and are protected by United States and international 
    copyright laws.</li>
 
-<li>Disclaimer of Warranties Our Services are provided on an "as is" and "as available"
+<li>Disclaimer of Warranties Our Services are provided on an  as is  and  as available 
    basis without warranties of any kind, whether express or implied, including but not 
    limited to, implied warranties of merchantability, fitness for a particular purpose, 
    and non-infringement.</li>

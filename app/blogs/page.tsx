@@ -46,8 +46,8 @@ export default async function BlogsPage() {
         <h1 className="font-bold text-[34px] leading-10">TERMS & CONDITIONS</h1>
         <div className="container flex flex-row mx-auto pl-[5px] pt-[15px]">
           <span className="pr-2">
-            <img src="Vector.png" alt="500Land Logo" width={20} height={20} />
-
+            <img src="Vector.png" alt="500Land Logo"  />
+            <Image src="Vector.png" alt="500Land Logo" width={20} height={20}/>
           </span>
           <span className="font-normal text-[16px] text-[#3C3C43] leading-5">
             Last update 12/9/2023
