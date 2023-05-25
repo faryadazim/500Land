@@ -29,6 +29,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { cn } from "@/lib/utils"
+import TaskPage from "@/components/customDataTable/page"
 const CARD_DATA = [
   {
     heading: 'My Balance',
@@ -75,18 +76,36 @@ export default function MarketplacePage() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
-    <div className="flex">
-      <div className="relative">
-        {/* Outer Ring*/}
-        <div className="w-12 h-12 rounded-full absolute
-                  border border-solid border-gray-200" />
-        {/* Inner Ring */}
-        <div className="w-12 h-12 rounded-full animate-spin absolute
-                  border border-solid border-[#70F09C] border-t-transparent" />
-      </div>
-    </div>
+    <>
+      <SideBar />
+      <div className="relative md:ml-64 bg-blueGray-100">
+        <NavBar />
+        <   div className="relative md:pt-20 lg:pt-16 pb-32 pt-12">
+          <div className="px-4 md:px-36 mx-auto w-full">
 
-  </div >
+
+
+          
+
+
+            <div id="setting_section" className=" mt-5">
+
+ 
+        
+              <div className="mt-3">
+                <TaskPage pageName="marketplace"/> 
+              </div>
+        
+              <div className="mt-3"> 
+                <TaskPage pageName="marketplace2"/>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </>
   )
 }

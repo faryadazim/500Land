@@ -29,6 +29,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { cn } from "@/lib/utils"
+import TaskPage from "@/components/customDataTable/page"
 const CARD_DATA = [
   {
     heading: 'My Balance',
@@ -137,7 +138,7 @@ export default function ReferralsPage() {
 
                       Invite Via Email
                     </label>
-                    <Input placeholder="JohnDoe@gmail.com"   className="bg-white mt-[6px] " />
+                    <Input placeholder="JohnDoe@gmail.com" className="bg-white mt-[6px] " />
                   </div>
                   <div className="">  <Button variant="primaryDark" className="w-28 p-5  mr-2    text-center     rounded-full font-bold lg:font-semibold md:font-normal  md:my-1   " style={{ fontFamily: "Basier Square Regular" }}>
 
@@ -158,7 +159,9 @@ export default function ReferralsPage() {
                 </div>
 
               </div>
-
+              <div className="mt-3">
+                <TaskPage pageName="referrals"/>
+              </div>
 
             </div>
 
