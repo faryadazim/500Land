@@ -27,6 +27,7 @@ const inter400 = Inter({
 
 import { buttonVariants } from "@/components/ui/button"
 import Footer from "@/components/Footer"
+import Carousel from "@/components/Carousel"
 
 export default function Home() {
   return (
@@ -113,8 +114,8 @@ export default function Home() {
             <h3 className={` ${inter400.className}  font-normal  leading-tight text-lg md:text-[34px]  text-black flex-none order-none self-stretch flex-grow-0  text-center   `} >
               We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
             </h3>
-            </div>
-         
+          </div>
+
         </div>
       </section>
 
@@ -183,10 +184,12 @@ export default function Home() {
         <h1 className="  pb-6  text-left font-bold leading-tight tracking-normal text-lg md:text-[34px] text-[#101010]">
           Our team of experts at 500Land follows a process to carefully select land based on its investment potential, including:
         </h1>
-        <div className=" bg-cover bg-center h-72" style={{ backgroundImage: "url('/images/blockchaindetail.png')" }}>
+        <div className=" bg-cover bg-center h-72"
+        //  style={{ backgroundImage: "url('/images/blockchaindetail.png')" }}
+        >
+          <Carousel />
 
 
-          
         </div>
 
       </section>
