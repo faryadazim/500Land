@@ -72,6 +72,45 @@ const SMALL_CARD_DATA = [
 
 export default function MarketplacePage() {
 
+
+  const columnsNames = [
+    "Property Name", "Email", "Phone Number", "Property Size"
+  ]
+
+  const values = [
+    {
+      text: "Lynch Canyon Road",
+      color: "#475467",
+      style: "normal",
+      weight: "normal",
+    },
+    {
+      text: "johndoe@gmail.com",
+      color: "#475467",
+      style: "normal",
+      weight: "normal",
+    },
+    {
+      text: "+201123123123",
+      color: "#475467",
+      style: "normal",
+      weight: "normal",
+    },
+    {
+      text: "2000 sqft",
+      color: "#475467",
+      style: "normal",
+      weight: "normal",
+    },
+   
+    {
+      text: "",
+      color: "",
+      style: "",
+      weight: "",
+    },
+     
+  ]
   // const isOpen=(false);
   const [isOpen, setIsOpen] = useState(false)
 
@@ -85,19 +124,19 @@ export default function MarketplacePage() {
 
 
 
-          
+
 
 
             <div id="setting_section" className=" mt-5">
 
- 
-        
+
+
               <div className="mt-3">
-                <TaskPage pageName="marketplace"/> 
+                <TaskPage pageName="marketplace" columns={columnsNames} Data={values} />
               </div>
-        
-              <div className="mt-3"> 
-                <TaskPage pageName="marketplace2"/>
+
+              <div className="mt-3">
+                <TaskPage pageName="marketplace2"  columns={columnsNames} Data={values} />
               </div>
 
             </div>
