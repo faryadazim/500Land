@@ -83,7 +83,7 @@ export function DataTable<TData, TValue>({
                   return ( */}
               {
                 columsName?.map((x: any, index: any) => {
-                  return <TableHead >
+                  return <TableHead  key={index}>
                     {
                       pageName == "referrals" && index == 0 && <Checkbox className="mr-2" />
                     }
@@ -107,13 +107,13 @@ export function DataTable<TData, TValue>({
             {/* {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => ( */}
             {
-              [1, 2, 3, 4, 5].map((row) => {
+              [1, 2, 3, 4, 5].map((row , index) => {
                 return (<TableRow
-                  key={1}
+                  key={index}
                 // data-state={row.getIsSelected() && "selected"}
                 >
                   {columnsData?.map((column: any, index: any) => {
-                    return <TableCell key={1} className={`text-[${column?.color}] ${column?.style} font-${column?.weight} `} >
+                    return <TableCell key={index} className={`text-[${column?.color}] ${column?.style} font-${column?.weight} `} >
 
                       <span className={`text-[${column?.color}]   flex items-center`}>
 
