@@ -8,6 +8,9 @@ import { cn } from "@/lib/utils"
 import { Dialog, DialogTrigger } from "@radix-ui/react-dialog"
 import AddFundPage from "@/components/AddFund"
 import TaskPage from "@/components/customDataTable/page"
+import { SweetAlert } from "@/components/SweetAlert"
+import { Input } from "@/components/ui/input"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@radix-ui/react-select"
 
 
 
@@ -76,9 +79,92 @@ export default function BillingPage() {
                 Your Cards
               </div>
 
-              <div className="  text-[15px] font-medium   text-[#4672E1] p-[22px]">
-                Add new payment method
-              </div>
+
+
+              <Dialog>
+                <DialogTrigger asChild>
+                  <div className="cursor-pointer  text-[15px] font-medium   text-[#4672E1] p-[22px]">
+                    Add new payment method
+                  </div>
+                </DialogTrigger>
+                <SweetAlert pageName={"market-single"}>
+
+                  <div className="flex justify-between ">
+                    <h3 className="font-bold text-xl">
+                      Add New Payment Method
+                    </h3>
+                    <div>
+                      <DialogTrigger asChild>
+                        <Button
+                          className="bg-transparent hover:bg-transparent"
+                        >
+                          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="20" fill="#EBEBEB" />
+                            <path d="M27 14.41L25.59 13L20 18.59L14.41 13L13 14.41L18.59 20L13 25.59L14.41 27L20 21.41L25.59 27L27 25.59L21.41 20L27 14.41Z" fill="#5F5F5F" />
+                          </svg>
+                        </Button>
+                      </DialogTrigger>
+                    </div>
+
+                  </div>
+
+
+                  <div >
+                    <div className="row flex justify-between ">
+                      <div className="w-full ">
+                        <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">Name</label>
+                        <Input placeholder="John Doe" className="bg-white mt-[2px]" />
+
+                      </div>
+
+                    </div>
+                    <div className="row flex justify-between pt-6">
+                      <div className="w-full ">
+                        <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">Address</label>
+                        <Input placeholder="Sample Address, 21233" className="bg-white mt-[2px]" />
+
+                      </div>
+
+                    </div>
+                    <div className="row flex justify-between pt-6">
+                      <div className="w-full ">
+                        <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">Country</label>
+                        <Input placeholder="Egypt" className="bg-white mt-[2px]" />
+
+                      </div>
+
+                    </div>
+
+                    <div className="row flex justify-between pt-6">
+                      <div className="w-full ">
+                        <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">City</label>
+                        <Input placeholder="Cairo" className="bg-white mt-[6px]" />
+
+                      </div>
+
+                    </div>
+                    <div className="row flex justify-between pt-6">
+                      <div className="w-full ">
+                        <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">Card Infomation</label>
+                        <div className="flex flex-wrap">
+                          <Input placeholder="1234 1234 1234 1234" className="w-full rounded-b-none bg-white  mt-[2px]  border-b-0" />
+
+                          <Input placeholder="MM/YY" className=" rounded-t-none basis-2/4 rounded-r-none border-r-0 bg-white w-1/2 " />
+                          <Input placeholder="CVC" className=" rounded-t-none rounded-l-none basis-2/4 bg-white w-1/2 " />
+                        </div>
+
+
+                      </div>
+
+                    </div>
+                    <div className="flex   justify-center">
+                      <Button variant="primaryDark" className="w-full text-center lg:w-[90%]  px-6 rounded-full font-bold lg:font-semibold md:font-normal    py-6  md:my-1 lg:my-2  " style={{ fontFamily: "sans-serif" }}>Delete</Button> </div>
+
+
+                  </div>
+
+                </SweetAlert >
+              </Dialog>
 
             </div>
             <div className="flex justify-between items-center">
@@ -103,12 +189,143 @@ export default function BillingPage() {
                 <span>        Visa ending in 8744</span>
 
               </div>
-              <div className="flex">
-                <div className="  text-[15px] font-medium   text-customDarkGreen p-[22px] mr-2 border-r-[0.5px] border-grey-300">
-                  Edit
-                </div>
-                <div className="  text-[15px] font-medium   text-customDarkGreen p-[22px] text-[#FF3B30]">
-                  Remove
+              <div className="flex ">
+
+
+
+
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className=" cursor-pointer text-[15px] font-bold   text-customDarkGreen p-[22px] mr-2 border-r-[0.5px] border-grey-300">
+                      Edit
+                    </div>
+                  </DialogTrigger>
+                  <SweetAlert pageName={"market-single"}>
+
+                    <div className="flex justify-between ">
+                      <h3 className="font-bold text-xl">
+                        Edit Visa ending in 8744
+                      </h3>
+                      <div>
+                        <DialogTrigger asChild>
+                          <Button
+                            className="bg-transparent hover:bg-transparent"
+                          >
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect width="40" height="40" rx="20" fill="#EBEBEB" />
+                              <path d="M27 14.41L25.59 13L20 18.59L14.41 13L13 14.41L18.59 20L13 25.59L14.41 27L20 21.41L25.59 27L27 25.59L21.41 20L27 14.41Z" fill="#5F5F5F" />
+                            </svg>
+                          </Button>
+                        </DialogTrigger>
+                      </div>
+
+                    </div>
+
+
+                    <div >
+                      <div className="row flex justify-between  ">
+                        <div className="w-full ">
+                          <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">Name</label>
+                          <Input placeholder="John Doe" className="bg-white mt-[2px]" />
+
+                        </div>
+
+                      </div>
+                      <div className="row flex justify-between pt-6">
+                        <div className="w-full ">
+                          <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">Address</label>
+                          <Input placeholder="Sample Address, 21233" className="bg-white mt-[2px]" />
+
+                        </div>
+
+                      </div>
+                      <div className="row flex justify-between pt-6">
+                        <div className="w-full ">
+                          <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">Country</label>
+                          <Input placeholder="Egypt" className="bg-white mt-[2px]" />
+
+                        </div>
+
+                      </div>
+
+                      <div className="row flex justify-between pt-6">
+                        <div className="w-full ">
+                          <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">City</label>
+                          <Input placeholder="Cairo" className="bg-white mt-[6px]" />
+
+                        </div>
+
+                      </div>
+                      <div className="row flex justify-between pt-6">
+                        <div className="w-full ">
+                          <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">Card Infomation</label>
+                          <div className="flex flex-wrap">
+                            <Input placeholder="1234 1234 1234 1234" className="w-full rounded-b-none bg-white  mt-[2px]  border-b-0" />
+
+                            <Input placeholder="MM/YY" className=" rounded-t-none basis-2/4 rounded-r-none border-r-0 bg-white w-1/2 " />
+                            <Input placeholder="CVC" className=" rounded-t-none rounded-l-none basis-2/4 bg-white w-1/2 " />
+                          </div>
+
+
+                        </div>
+
+                      </div>
+                      <div className="flex   justify-center">
+                        <Button variant="primaryDark" className="w-full text-center lg:w-[90%]  px-6 rounded-full font-bold lg:font-semibold md:font-normal    py-6  md:my-1 lg:my-2  " style={{ fontFamily: "sans-serif" }}>Delete</Button> </div>
+
+
+                    </div>
+
+                  </SweetAlert >
+                </Dialog>
+
+                <div>
+
+
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <p className=" cursor-pointer text-[15px] font-bold   text-customDarkGreen p-[22px] text-[#d53333]">
+                        Remove
+                      </p>
+                    </DialogTrigger>
+                    <SweetAlert pageName={"market-single"}>
+
+                      <div className="flex justify-between ">
+                        <h3 className="font-bold text-xl">
+                          Remove Visa ending in 8744
+                        </h3>
+                        <div>
+                          <DialogTrigger asChild>
+                            <Button
+                              className="bg-transparent hover:bg-transparent"
+                            >
+                              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="20" fill="#EBEBEB" />
+                                <path d="M27 14.41L25.59 13L20 18.59L14.41 13L13 14.41L18.59 20L13 25.59L14.41 27L20 21.41L25.59 27L27 25.59L21.41 20L27 14.41Z" fill="#5F5F5F" />
+                              </svg>
+                            </Button>
+                          </DialogTrigger>
+                        </div>
+
+                      </div>
+
+                      <div>
+                        <p className="text-[17px] font-normal text-[#475467] ">Are you sure you want to delete this payment method?</p>
+                      </div>
+                      <div >
+
+                        <div className="flex   justify-center">
+                          <Button variant="danger" className="w-full text-center lg:w-[90%]  px-6 rounded-full font-bold lg:font-semibold md:font-normal    py-6  md:my-1 lg:my-2  " style={{ fontFamily: "sans-serif" }}>Delete</Button> </div>
+                        <div className="flex justify-center">
+                          <Button variant="link" className="w-full  lg:w-[90%]   " style={{ fontFamily: "sans-serif" }}>Cancel</Button> </div>
+
+                      </div>
+
+                    </SweetAlert >
+                  </Dialog>
+
+
+
                 </div>
 
               </div>
