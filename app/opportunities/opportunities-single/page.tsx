@@ -23,8 +23,7 @@ import details from "@/public/Icon/details.png";
 import Map from "@/components/Map"
 import { Slider } from "@/components/ui/slider"
 
-import { Separator } from "@/components/ui/separator"
-import { SweetAlert } from "@/components/SweetAlert";
+import { Separator } from "@/components/ui/separator" 
 import { Dialog, DialogTrigger } from "@radix-ui/react-dialog";
 
 const inter = Poppins({
