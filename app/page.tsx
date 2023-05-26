@@ -31,9 +31,18 @@ import Footer from "@/components/Footer"
 export default function Home() {
   return (
     <>
+
+
+
+
+
       {/* hero section  */}
-      <section className={`hero-section relative min-h-screen `}>
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/bg.jpg')", minHeight: "auto" }}></div>
+      <section className={`hero-section relative min-h-screen`}>
+        <div className="absolute inset-0" style={{ minHeight: "auto" }}>
+          <video autoPlay muted loop className="w-full h-full object-cover object-center">
+            <source src="background_video.mp4" type="video/mp4" />
+          </video>
+        </div>
         {/* overlay on div  */}
         <div className="absolute inset-0 z-0" style={{ minHeight: "auto" }}>
           <div className="bg-black opacity-30 h-full w-full absolute z-0"></div>
@@ -72,6 +81,32 @@ export default function Home() {
 
         </div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <section className="my-14 container" id="info-section">
         <div className="flex flex-wrap ">
           <div className="w-full  ">   {/* md:w-3/5 */}
