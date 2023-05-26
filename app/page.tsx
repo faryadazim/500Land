@@ -28,6 +28,8 @@ const inter400 = Inter({
 import { buttonVariants } from "@/components/ui/button"
 import Footer from "@/components/Footer"
 import Carousel from "@/components/Carousel"
+import { Dialog, DialogTrigger } from "@radix-ui/react-dialog"
+import { SweetAlert } from "@/components/SweetAlert"
 
 export default function Home() {
   return (
@@ -355,7 +357,9 @@ export default function Home() {
                       <span className="font-normal text-[13px]">Bradley,CA</span>
                       <span className="font-normal text-[13px]">2000 SQFT</span>
                     </div>
-                    <h2 className="text-xl font-bold mb-3">Lynch Canyon Road</h2>
+                    <h2 className="text-xl font-bold mb-3">
+                      <Link href="/opportunities/opportunities-single"  >
+                        Lynch Canyon Road</Link></h2>
                     <div className="flex justify-between">
                       <span className="title">Requested Fund</span>
                       <span className="price  md:mb-0 mb-1  f  font-semibold text-base leading-5 text-black">USD 1,023,550</span>
@@ -421,7 +425,11 @@ export default function Home() {
                       <span className="font-normal text-[13px]">Bradley,CA</span>
                       <span className="font-normal text-[13px]">2000 SQFT</span>
                     </div>
-                    <h2 className="text-xl font-bold mb-3 ">Lynch Canyon Road</h2>
+                    <h2 className="text-xl font-bold mb-3 ">
+
+                      <Link href="/marketplace/marketplace-single"  >Contact Seller
+
+                        Lynch Canyon Road</Link></h2>
                     <div className="flex justify-between">
 
                       <span className="price  md:mb-0 mb-1  font-bold text-base leading-5 text-black">$ 1,023,550</span>
@@ -429,7 +437,49 @@ export default function Home() {
 
 
                     <div className="flex justify-center">
-                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "  mr-2  w-full text-center lg:w-[90%]  px-6 rounded-full font-bold lg:font-semibold md:font-normal    py-6  md:my-1 lg:my-2  ")} style={{ fontFamily: "sans-serif" }}>Contact Seller</Link>
+
+
+
+
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button variant="primaryDark" className="w-full text-center lg:w-[90%]  px-6 rounded-full font-bold lg:font-semibold md:font-normal    py-6  md:my-1 lg:my-2  " style={{ fontFamily: "sans-serif" }}>Contact Seller</Button>
+                        </DialogTrigger>
+                        <SweetAlert pageName={"market-single"}>
+
+                          <div className="flex justify-between ">
+                            <h3 className="font-bold text-xl">
+                              Contact Seller
+                            </h3>
+                            <div>
+                              <DialogTrigger asChild>
+                                <Button
+                                  className="bg-transparent hover:bg-transparent"
+                                >
+                                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="40" height="40" rx="20" fill="#EBEBEB" />
+                                    <path d="M27 14.41L25.59 13L20 18.59L14.41 13L13 14.41L18.59 20L13 25.59L14.41 27L20 21.41L25.59 27L27 25.59L21.41 20L27 14.41Z" fill="#5F5F5F" />
+                                  </svg>
+                                </Button>
+                              </DialogTrigger>
+                            </div>
+
+                          </div>
+
+                          <div>
+                            <p className="text-sm font-medium text-[#475467] ">Email</p>
+                            <p className="text-base font-medium text-[#344054]">johndoe@gmail.com</p>
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-[#475467] ">Phone number  </p>
+                            <p className="text-base font-medium text-[#344054]">+201123123123</p>
+                          </div>
+
+                        </SweetAlert >
+                      </Dialog>
+
+
+
                     </div>
 
                   </div>
