@@ -45,7 +45,7 @@ const Carousel = () => {
                     className=" slides-container h-72 flex snap-x snap-mandatory overflow-hidden overflow-x-auto space-x-8 rounded scroll-smooth before:w-[45vw] before:shrink-0 after:w-[45vw] after:shrink-0 md:before:w-0 md:after:w-0"
                     ref={slidesContainerRef}
                 >
-                    <div className="slide aspect-square h-full flex-shrink-0 snap-center  overflow-hidden p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-md ">
+                    <div className="slide aspect-square h-full flex-shrink-0 snap-center   p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-md ">
                         <div className="">
 
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@ const Carousel = () => {
                             Land in prime locations, such as urban areas with growing populations or near amenities and infrastructure, is more likely to see appreciation in value over time.
                         </p>
                     </div>
-                    <div className="slide aspect-square h-full flex-shrink-0 snap-center  overflow-hidden p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-md ">
+                    <div className="slide aspect-square h-full flex-shrink-0 snap-center   p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-md ">
                         <div className="">
 
                             <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +77,7 @@ const Carousel = () => {
                         <p className='font-normal text-[17px] mt-1'>
                             We evaluate the land's zoning and development potential, such as whether it can be rezoned for higher-density use or if there is potential for commercial or residential development.     </p>
                     </div>
-                    <div className="slide aspect-square h-full flex-shrink-0 snap-center  overflow-hidden p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-md ">
+                    <div className="slide aspect-square h-full flex-shrink-0 snap-center   p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-md ">
                         <div className="">
 
                             <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +93,7 @@ const Carousel = () => {
                         <p className='font-normal text-[17px] mt-1'>
                             We work closely with local officials and contractors to navigate the development process and ensure that the land is developed in accordance with local regulations and building codes.      </p>
                     </div>
-                    <div className="slide aspect-square h-full flex-shrink-0 snap-center  overflow-hidden p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-md ">
+                    <div className="slide aspect-square h-full flex-shrink-0 snap-center   p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-md ">
                         <div className="">
 
 
@@ -110,7 +110,7 @@ const Carousel = () => {
                         <p className='font-normal text-[17px] mt-1'>
                             We carefully track market trends and conditions, such as supply and demand for land, development costs, and interest rates, to identify opportunities for profitable investments. After selecting a property, We take the following steps to develop the land into profitable properties:   </p>
                     </div>
-                    <div className="slide aspect-square h-full flex-shrink-0 snap-center  overflow-hidden p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-md ">
+                    <div className="slide aspect-square h-full flex-shrink-0 snap-center  p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-md ">
                         <div className="">
 
 
