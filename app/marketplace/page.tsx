@@ -143,9 +143,10 @@ export default async function MarketplacePage() {
         <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm  " aria-label="Pagination">
             <a href="#" className="relative inline-flex items-center rounded-l-md px-2 py-2 pl-4 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 bg-white">
 
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.8327 9.99996H4.16602M4.16602 9.99996L9.99935 15.8333M4.16602 9.99996L9.99935 4.16663" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+        <svg width={20} height={20} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M15.8327 9.99996H4.16602M4.16602 9.99996L9.99935 15.8333M4.16602 9.99996L9.99935 4.16663" stroke="#344054" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round" />
+</svg>
+
               <span className="text-black px-2 hidden md:flex">Previous</span>
             </a>
             {/* Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" */}
@@ -160,9 +161,10 @@ export default async function MarketplacePage() {
             <a href="#" className="relative inline-flex items-center rounded-r-md px-2 py-2  pr-4  text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0  bg-white">
               <span className="text-black px-3 hidden md:flex">Next</span>
 
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.16602 9.99996H15.8327M15.8327 9.99996L9.99935 4.16663M15.8327 9.99996L9.99935 15.8333" stroke="#344054" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <svg width={20} height={20} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4.16602 9.99996H15.8327M15.8327 9.99996L9.99935 4.16663M15.8327 9.99996L9.99935 15.8333" stroke="#344054" strokeWidth="1.67" strokeLinecap="round" strokeLinejoin="round" />
+</svg>
+
 
             </a>
           </nav>

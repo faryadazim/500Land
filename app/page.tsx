@@ -324,9 +324,10 @@ export default function Home() {
           <Button variant="secondary" className="bg-white text-customDarkGreen  text-base font-normal  "   >
             <Link href="/opportunities" className="w-full flex items-center ">
               <span className="mr-2 "> View All</span>
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.16675 9.99984H15.8334M15.8334 9.99984L10.0001 4.1665M15.8334 9.99984L10.0001 15.8332" stroke="#1B4638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <svg width={18} height={18} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.16675 9.99984H15.8334M15.8334 9.99984L10.0001 4.1665M15.8334 9.99984L10.0001 15.8332" stroke="#1B4638" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
               </svg>
+
             </Link>
 
           </Button>
@@ -386,9 +387,10 @@ export default function Home() {
           <Button variant="secondary" className="bg-white text-customDarkGreen  text-base font-normal  "   >
             <Link href="/marketplace" className="w-full flex items-center ">
               <span className="mr-2 "> View All</span>
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.16675 9.99984H15.8334M15.8334 9.99984L10.0001 4.1665M15.8334 9.99984L10.0001 15.8332" stroke="#1B4638" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <svg width={18} height={18} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4.16675 9.99984H15.8334M15.8334 9.99984L10.0001 4.1665M15.8334 9.99984L10.0001 15.8332" stroke="#1B4638" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+</svg>
+
             </Link>
 
           </Button>
