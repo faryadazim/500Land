@@ -12,17 +12,18 @@ const Footer = () => {
           <div className="flex flex-col space-y-4"  >
             <h2 className="font-bold">Website</h2>
             <div className="flex flex-col space-y-2 text-sm dark:text-gray-480">
-              <Link href="/opportunity" className="font-normal">Opportunities </Link>
-              <a rel="noopener noreferrer" href="#" className="font-normal">Marketplace</a>
+              <Link href="/opportunities" className="font-normal">Opportunities </Link>
+              <Link href="/marketplace" className="font-normal">Marketplace </Link>
             </div>
           </div>
           {/* column two  */}
           <div className="flex flex-col space-y-4"  >
             <h2 className="font-bold">Company</h2>
             <div className="flex flex-col space-y-2 text-sm dark:text-gray-480">
-              <a rel="noopener noreferrer" href="#" className="font-normal"> Careers  </a>
-              <a rel="noopener noreferrer" href="#" className="font-normal">Contact</a>
-              <a rel="noopener noreferrer" href="#" className="font-normal">Media Kit</a>
+
+              <Link href="/" className="font-normal">Careers </Link>
+              <Link href="/contact-us" className="font-normal">Contact </Link>
+              <Link href="/" className="font-normal">Media Kit </Link>
             </div>
           </div>
 
@@ -30,7 +31,7 @@ const Footer = () => {
           <div className="flex flex-col space-y-4"  >
             <h2 className="font-bold">Resources</h2>
             <div className="flex flex-col space-y-2 text-sm dark:text-gray-480">
-              <a rel="noopener noreferrer" href="#" className="font-normal">  Blog </a>
+              <Link href="/blogs" className="font-normal">Blog </Link> 
 
             </div>
           </div>
@@ -38,21 +39,20 @@ const Footer = () => {
           <div className="flex flex-col space-y-4"  >
             <h2 className="font-bold">Social</h2>
             <div className="flex flex-col space-y-2 text-sm dark:text-gray-480">
-              <a rel="noopener noreferrer" href="#" className="font-normal"> Twitter </a>
-              <a rel="noopener noreferrer" href="#" className="font-normal">LinkedIn</a>
-              <a rel="noopener noreferrer" href="#" className="font-normal">Facebook</a>
-              <a rel="noopener noreferrer" href="#" className="font-normal">Tiktok</a>
-              <a rel="noopener noreferrer" href="#" className="font-normal">LinkedIn</a>
-              <a rel="noopener noreferrer" href="#" className="font-normal">Facebook</a>
-              <a rel="noopener noreferrer" href="#" className="font-normal">Tiktok</a>
+              <Link href="/" className="font-normal">Twitter </Link> 
+              <Link href="/" className="font-normal">LinkedIn </Link> 
+              <Link href="/" className="font-normal">Facebook </Link> 
+              <Link href="/" className="font-normal">Tiktok </Link> 
+              <Link href="/" className="font-normal">Instagram</Link> 
+              <Link href="/" className="font-normal">Github </Link>  
             </div>
           </div>
           {/* column 5  */}
           <div className="flex flex-col space-y-4"  >
             <h2 className="font-bold">Legal</h2>
-            <div className="flex flex-col space-y-2 text-sm dark:text-gray-480">
+            <div className="flex flex-col space-y-2 text-sm dark:text-gray-480"> 
               <Link href="/termsConditions">Terms  </Link>
-              <Link href="//privacy">Privacy </Link>
+              <Link href="/privacy">Privacy </Link>
             </div>
           </div>
 

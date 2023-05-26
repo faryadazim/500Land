@@ -28,6 +28,7 @@ import Box from "@/public/Box.png";
 
 
 import { Separator } from "@/components/ui/separator"
+import Footer from "@/components/Footer";
 
 const inter = Poppins({
   subsets: ['latin'],
@@ -152,33 +153,8 @@ export default async function BlogsPage() {
       </section>
 
 
-      <footer className="p-6 bg-customGreen py-10 ">
-        <div className="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-5">
-          {[1, 2, 3, 4, , 5].map((x) => {
-            return <div className="flex flex-col space-y-4" key={x}>
-              <h2 className="font-bold">Website</h2>
-              <div className="flex flex-col space-y-2 text-sm dark:text-gray-480">
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Overview</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Features</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Solutions</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Tutorials</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Pricing</a>
-                <a rel="noopener noreferrer" href="#" className="font-semibold">Releases</a>
-                {/* <a rel="noopener noreferrer" href="#" className="font-semibold">IntelliSense</a> */}
-              </div>
-            </div>
-          })}
-        </div>
-        <div className="container mt-8  ">
-          <Separator />
-        </div>
-        <div className=" container flex items-center justify-between px-6  pt-6 text-sm">
-          <span className="dark:text-gray-480">  <Image src="/images/logoDark.png" alt="500Land Logo" width={48}
-            height={48}
-            quality={100} /></span>
-          <span className="dark:text-gray-480">© Copyright 2023 500 Land. All Rights Reserved.</span>
-        </div>
-      </footer>
+
+      <Footer/>
     </div>
   )
 }

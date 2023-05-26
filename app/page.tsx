@@ -113,26 +113,8 @@ export default function Home() {
             <h3 className={` ${inter400.className}  font-normal  leading-tight text-lg md:text-[34px]  text-black flex-none order-none self-stretch flex-grow-0  text-center   `} >
               We select land based on its investment potential by evaluating factors such as location, potential for development, and market conditions.
             </h3>
-            {/* <p className="  font-normal text-base leading-5 text-black flex-none order-1 self-stretch flex-grow-0 py-5 text-center md:text-left md:pb-0">
-              We believe that investing in land should be simple, secure, and easy. With 500Land, you can purchase a fractional of land with just a few simple steps
-            </p> */}
-          </div>
-          {/* <div className="w-full md:w-2/5">
-            <div className="relative h-56  flex justify-end">
-              <Image
-                src="/images/home1.png"
-                alt="Image"
-                // quality={100}
-                width={200}
-                height={480}
-                // style={{ height: '100%' }}
-                sizes="(max-width: 768px) 100vw,
-                      (max-width: 1200px) 50vw,
-                      33vw"
-                style={{ height: '100%', width: 'auto' }} //The point is right there!
-              />
             </div>
-          </div> */}
+         
         </div>
       </section>
 
@@ -201,7 +183,11 @@ export default function Home() {
         <h1 className="  pb-6  text-left font-bold leading-tight tracking-normal text-lg md:text-[34px] text-[#101010]">
           Our team of experts at 500Land follows a process to carefully select land based on its investment potential, including:
         </h1>
-        <div className=" bg-cover bg-center h-72" style={{ backgroundImage: "url('/images/blockchaindetail.png')" }}></div>
+        <div className=" bg-cover bg-center h-72" style={{ backgroundImage: "url('/images/blockchaindetail.png')" }}>
+
+
+          
+        </div>
 
       </section>
       <section className="container my-14">
