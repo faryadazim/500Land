@@ -19,8 +19,37 @@ async function getTasks() {
   return z.array(taskSchema).parse(tasks)
 }
 
-export default function TaskPage({ pageName }: any) {
+export default function TaskPage({ pageName, columns, Data }: any) {
   const tasks = getTasks()
+
+  const columnsNames = [
+    "Date", "Invoice Detail", "Total Charged", "Invoices"
+  ]
+
+  const values = [
+    {
+      text: "March 5, 2023",
+      color: "#1B4638",
+      style: "normal",
+      weight: "normal",
+    },
+    {
+      text: "Egypt Land Fund",
+      color: "#1B4638",
+      style: "underline",
+      weight: "bold"
+    },
+    {
+      text: "$103",
+      color: "#000000",
+      weight: "normal"
+    }, {
+      text: "Download Invoice",
+      color: "#1B4638",
+      style: "underline",
+      weight: "bold"
+    }
+  ]
 
   return (
     <>
@@ -41,46 +70,46 @@ export default function TaskPage({ pageName }: any) {
         />
       </div>
       <div className=" h-full flex-1 flex-col space-y-4 py-8 pt-5 md:flex border rounded-md">
-    
-
-
-{
-        pageName==="referrals"?<><div className="flex items-center justify-between space-y-2  px-5" >
-          <div>
-            <h2 className="text-2xl font-bold tracking-tight">Referred</h2>
-            <p className="text-muted-foreground">
-              A list of people you have referred and your current earned status.
-            </p>
-          </div>
-          <div className="flex items-center space-x-2">
-            Total amount earned: $2000
-            {/* <UserNav /> */}
-          </div>
-        </div></> :  pageName==="marketplace"?<><div className="flex items-center justify-between space-y-2  px-5" >
-          <div>
-            <h2 className="text-2xl font-bold tracking-tight">Current Listings</h2>
-
-          </div>
-
-        </div></>:pageName==="marketplace2"?<><div className="flex items-center justify-between space-y-2  px-5" >
-          <div>
-            <h2 className="text-2xl font-bold tracking-tight">My Listings</h2>
-
-          </div>
-
-        </div></>:pageName==="billing"?<><div className="flex items-center justify-between space-y-2  px-5" >
-          <div>
-            <h2 className="text-2xl font-bold tracking-tight">Invoices</h2>
-
-          </div>
-
-        </div></>:<>Undefined</>
-}
 
 
 
+        {
+          pageName === "referrals" ? <><div className="flex items-center justify-between space-y-2  px-5" >
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight">Referred</h2>
+              <p className="text-muted-foreground">
+                A list of people you have referred and your current earned status.
+              </p>
+            </div>
+            <div className="flex items-center space-x-2">
+              Total amount earned: $2000
+              {/* <UserNav /> */}
+            </div>
+          </div></> : pageName === "marketplace" ? <><div className="flex items-center justify-between space-y-2  px-5" >
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight">Current Listings</h2>
 
-        <DataTable data={tasks} columns={columns} />
+            </div>
+
+          </div></> : pageName === "marketplace2" ? <><div className="flex items-center justify-between space-y-2  px-5" >
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight">My Listings</h2>
+
+            </div>
+
+          </div></> : pageName === "billing" ? <><div className="flex items-center justify-between space-y-2  px-5" >
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight">Invoices</h2>
+
+            </div>
+
+          </div></> : <>Undefined</>
+        }
+
+
+
+
+        <DataTable data={tasks} columns={columns} columsName={columns}  columnsData = {Data}  pageName={pageName}/>
       </div>
     </>
   )

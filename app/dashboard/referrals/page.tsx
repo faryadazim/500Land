@@ -72,6 +72,35 @@ const SMALL_CARD_DATA = [
 
 export default function ReferralsPage() {
 
+
+  const columnsNames = [
+    "Name", "Last Updated", "Status",  
+  ]
+
+  const values = [
+    {
+      text: "John Doe",
+      color: "#101828",
+      style: "normal",
+      weight: "normal",
+      fontSze:15
+    },
+    {
+      text: "5 minutes ago",
+      color: "#667085",
+      style: "normal",
+      weight: "nprmal",
+      fontSze:13
+    },
+    {
+      text: "Accepted Invite",
+      color: "#027A48",
+      weight: "medium",
+      fontSize:12
+    }
+  ]
+
+
   // const isOpen=(false);
   const [isOpen, setIsOpen] = useState(false)
 
@@ -160,7 +189,8 @@ export default function ReferralsPage() {
 
               </div>
               <div className="mt-3">
-                <TaskPage pageName="referrals"/>
+                <TaskPage pageName="referrals" columns={columnsNames} Data={values} />
+
               </div>
 
             </div>

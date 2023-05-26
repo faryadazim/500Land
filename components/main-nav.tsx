@@ -70,7 +70,7 @@ export function MainNav({ items, children , isDarkNav=false }: MainNavProps) {
               key={index}
               href={item.disabled ? "#" : item.href}
               className={cn(
-                `flex items-center text-[15px]  font-normal  ${index==0 &&'hidden lg:flex'}  text-white tracking-widest`,
+                `${!isDarkNav? 'text-white --':'text-black 88'} flex items-center text-[15px]  font-normal  ${index==0 &&'hidden lg:flex'}   tracking-widest`,
                 item.href.startsWith(`/${segment}`) && "text-slate-900",
                 item.disabled && "cursor-not-allowed opacity-80"
               )}

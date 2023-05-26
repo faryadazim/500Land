@@ -29,14 +29,14 @@ export default async function TermsConditionsPage() {
 
   return (
     <div className=" ">
-      <section className={`hero-section relative  bg-customDarkGreen   ${inter.className} z-30`}>
+     <section className={`hero-section relative   bg-white   ${inter.className} z-30`}>
         <div className={`flex   flex-col sticky top-0 z-50`}>
           <header className="container   top-0 z-48">
             <div className="flex h-16 items-center justify-between py-5" >
-              <MainNav items={marketingConfig.mainNav} />
+              <MainNav items={marketingConfig.mainNav} isDarkNav={true}/>
               <nav className="flex">
-                <Link href="/contact-us" className={cn("  items-center text-lg   sm:text-sm text-white tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Contact Us</Link>
-                <Link href="/account/create-account" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-white w-100 px-10 rounded-full font-normal")} style={{ fontFamily: "Basier Square Regular" }}>Login</Link>
+                <Link href="/contact-us" className={cn("  items-center text-lg   sm:text-sm text-black tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Contact Us</Link>
+                <Link href="/account/create-account" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-black w-100 px-10 rounded-full font-normal border-black")} style={{ fontFamily: "Basier Square Regular" }}>Login</Link>
               </nav>
             </div>
           </header>
@@ -44,8 +44,8 @@ export default async function TermsConditionsPage() {
       </section>
       <section className="container my-12">
         <h1 className="font-bold text-[34px] leading-10">TERMS & CONDITIONS</h1>
-        <div className="container flex flex-row mx-auto md:pl-[5px] md:pt-[15px] sm:pl-[5px] sm:pt-[15px]">
-          <span className="md:pr-2 sm:pr-2">
+        <div className="container flex flex-row mx-auto md:pl-[5px] md:pt-[15px] sm:pl-0 sm:pt-0 sm:mx-0">
+          <span className="md:pr-2 sm:pr-0">
           <Image src={Vector} alt="500Land Logo" width={20} height={20} />
             
           </span>
@@ -54,8 +54,8 @@ export default async function TermsConditionsPage() {
           </span>
        </div>
 
-      <div className="gap-[10px] md:pl-[125px] md:pr-[161px] md:pt-20 md:pb-6 sm:pl-[125px] sm:pr-[161px] sm:pt-20 sm:pb-6">
-        <p className="font-bold text-[22px]  mx-auto leading-7">
+      <div className="gap-[10px] md:pl-[125px] md:pr-[161px] md:pt-20 md:pb-6 sm:p-0">
+        <p className="font-bold text-[22px]  mx-auto leading-7 sm:mx-0">
           500Land (hereafter “we”, “us”, “our”, or “500Land”) is committed to protecting the 
           privacy and security of our users’ personal information. This Privacy Policy outlines 
           our practices and procedures regarding the collection, use, 
@@ -63,11 +63,11 @@ export default async function TermsConditionsPage() {
            our website and services.</p>
       </div>
 
-    <div className="mx-auto font-normal text-[18px] md:pl-[146px] md:pr-[145px] md:pb-14 sm:pl-[146px] sm:pr-[145px] sm:pb-14 leading-[1.625rem] tracking-[-0.408px]">
+    <div className="mx-auto font-normal text-[18px] md:pl-[146px] md:pr-[145px] md:pb-14  sm:mx-0 sm:pl-0 sm:pr-0 sm:pb-0 leading-[1.625rem] tracking-[-0.408px]">
       <ol className="list-decimal">
     <li>Introduction Welcome to 500Land, a company specializing in land investments. 
       These Terms and Conditions govern your access to and use of our website, services, 
-      and products (collectively, the  Services. By accessing or using our Services, 
+      and products (collectively, the "Services"). By accessing or using our Services, 
       you agree to be bound by these Terms and Conditions.</li>
 
   <li>Eligibility Our Services are available only to individuals who are
@@ -101,7 +101,7 @@ export default async function TermsConditionsPage() {
    or its licensors and are protected by United States and international 
    copyright laws.</li>
 
-<li>Disclaimer of Warranties Our Services are provided on an  as is  and  as available 
+<li>Disclaimer of Warranties Our Services are provided on an "as is" and "as available"
    basis without warranties of any kind, whether express or implied, including but not 
    limited to, implied warranties of merchantability, fitness for a particular purpose, 
    and non-infringement.</li>

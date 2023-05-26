@@ -14,6 +14,17 @@ import { Textarea } from "@/components/ui/textarea"
 
 import { buttonVariants } from "@/components/ui/button"
 import Vector from "@/public/images/Image.png";
+import background from "@/public/background.png";
+import balti from "@/public/balti.png";
+import camera from "@/public/camera.png";
+import capsule from "@/public/capsule.png";
+import message from "@/public/message.png";
+import paint from "@/public/paint.png";
+import Sun from "@/public/Sun.png";
+import tablet from "@/public/tablet.png";
+import thumb from "@/public/thumb.png";
+import Box from "@/public/Box.png";
+
 
 
 import { Separator } from "@/components/ui/separator"
@@ -29,105 +40,113 @@ export default async function BlogsPage() {
 
   return (
     <div className=" ">
-      <section className={`hero-section relative  bg-customDarkGreen   ${inter.className} z-30`}>
+      <section className={`hero-section relative   bg-white   ${inter.className} z-30`}>
         <div className={`flex   flex-col sticky top-0 z-50`}>
           <header className="container   top-0 z-48">
             <div className="flex h-16 items-center justify-between py-5" >
-              <MainNav items={marketingConfig.mainNav} />
+              <MainNav items={marketingConfig.mainNav} isDarkNav={true}/>
               <nav className="flex">
-                <Link href="/contact-us" className={cn("  items-center text-lg   sm:text-sm text-white tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Contact Us</Link>
-                <Link href="/account/create-account" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-white w-100 px-10 rounded-full font-normal")} style={{ fontFamily: "Basier Square Regular" }}>Login</Link>
+                <Link href="/contact-us" className={cn("  items-center text-lg   sm:text-sm text-black tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Contact Us</Link>
+                <Link href="/account/create-account" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-black w-100 px-10 rounded-full font-normal border-black")} style={{ fontFamily: "Basier Square Regular" }}>Login</Link>
               </nav>
             </div>
           </header>
         </div>
       </section>
       <section className="container my-12">
-        <h1 className="font-bold text-[34px] leading-10">TERMS & CONDITIONS</h1>
-        <div className="container flex flex-row mx-auto pl-[5px] pt-[15px]">
-          <span className="pr-2">
-            <img src="Vector.png" alt="500Land Logo"  />
-            <Image src="Vector.png" alt="500Land Logo" width={20} height={20}/>
+        <div className=" container flex lg:flex-row md:flex-col sm:flex-col items-center justify-between px-6 pt-6 text-sm">
+          <span className="">
+            <h1 className="font-bold text-[72px] leading-[80px]">Blog</h1>
           </span>
-          <span className="font-normal text-[16px] text-[#3C3C43] leading-5">
-            Last update 12/9/2023
+          <span className="">
+            <form className="md:flex hidden flex-row flex-wrap items-center mr-3">
+              <div className="relative w-96">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                </div>
+                <input type="text" id="voice-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-10 p-2  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                            
+                              border-input focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50
+                            
+                            " placeholder="Search..." required />
+                <button type="button" className="absolute inset-y-0 right-0 flex items-center pr-3">
+                  {/* <span className='flex rounded-md' style={{ backgroundColor: 'rgba(150, 150, 150, 0.2)', padding: '5px 8px 5px 8px' }}> */}
+
+                  <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="0.5" width="30" height="17" rx="4" fill="#969696" fill-opacity="0.2" />
+                    <path d="M7.125 13.625C6.65 13.625 6.23958 13.4542 5.89375 13.1125C5.54792 12.7708 5.375 12.3583 5.375 11.875C5.375 11.3833 5.54792 10.9688 5.89375 10.6312C6.23958 10.2937 6.65 10.125 7.125 10.125H7.875V7.875H7.125C6.65 7.875 6.23958 7.70417 5.89375 7.3625C5.54792 7.02083 5.375 6.60833 5.375 6.125C5.375 5.63333 5.54583 5.21875 5.8875 4.88125C6.22917 4.54375 6.64167 4.375 7.125 4.375C7.61667 4.375 8.03125 4.54583 8.36875 4.8875C8.70625 5.22917 8.875 5.64167 8.875 6.125V6.875H11.125V6.125C11.125 5.64167 11.2958 5.22917 11.6375 4.8875C11.9792 4.54583 12.3917 4.375 12.875 4.375C13.3667 4.375 13.7812 4.54583 14.1187 4.8875C14.4562 5.22917 14.625 5.64167 14.625 6.125C14.625 6.6 14.4542 7.01042 14.1125 7.35625C13.7708 7.70208 13.3583 7.875 12.875 7.875H12.125V10.125H12.875C13.3583 10.125 13.7708 10.2958 14.1125 10.6375C14.4542 10.9792 14.625 11.3917 14.625 11.875C14.625 12.35 14.4542 12.7604 14.1125 13.1062C13.7708 13.4521 13.3583 13.625 12.875 13.625C12.4 13.625 11.9896 13.4521 11.6438 13.1062C11.2979 12.7604 11.125 12.35 11.125 11.875V11.125H8.875V11.875C8.875 12.35 8.70417 12.7604 8.3625 13.1062C8.02083 13.4521 7.60833 13.625 7.125 13.625ZM7.125 12.625C7.34167 12.625 7.52083 12.5521 7.6625 12.4062C7.80417 12.2604 7.875 12.0833 7.875 11.875V11.125H7.125C6.91667 11.125 6.73958 11.1979 6.59375 11.3438C6.44792 11.4896 6.375 11.6667 6.375 11.875C6.375 12.075 6.44792 12.25 6.59375 12.4C6.73958 12.55 6.91667 12.625 7.125 12.625ZM12.875 12.625C13.0917 12.625 13.2708 12.5521 13.4125 12.4062C13.5542 12.2604 13.625 12.0833 13.625 11.875C13.625 11.6583 13.5521 11.4792 13.4062 11.3375C13.2604 11.1958 13.0833 11.125 12.875 11.125H12.125V11.875C12.125 12.0833 12.1979 12.2604 12.3438 12.4062C12.4896 12.5521 12.6667 12.625 12.875 12.625ZM8.875 10.125H11.125V7.875H8.875V10.125ZM7.125 6.875H7.875V6.125C7.875 5.91667 7.80208 5.73958 7.65625 5.59375C7.51042 5.44792 7.33333 5.375 7.125 5.375C6.925 5.375 6.75 5.44792 6.6 5.59375C6.45 5.73958 6.375 5.91667 6.375 6.125C6.375 6.325 6.44792 6.5 6.59375 6.65C6.73958 6.8 6.91667 6.875 7.125 6.875ZM12.125 6.875H12.875C13.0833 6.875 13.2604 6.80208 13.4062 6.65625C13.5521 6.51042 13.625 6.33333 13.625 6.125C13.625 5.90833 13.5521 5.72917 13.4062 5.5875C13.2604 5.44583 13.0833 5.375 12.875 5.375C12.675 5.375 12.5 5.44792 12.35 5.59375C12.2 5.73958 12.125 5.91667 12.125 6.125V6.875Z" fill="#656565" />
+                    <path d="M18.9688 13.5V5.5H19.9375V9.46875H20.0313L23.625 5.5H24.8906L21.5313 9.10937L24.8906 13.5H23.7188L20.9375 9.78125L19.9375 10.9062V13.5H18.9688Z" fill="#656565" />
+                  </svg>
+                  {/* </span> */}
+                </button>
+              </div>
+            </form>
           </span>
         </div>
 
-        <div className="gap-[10px] pl-[125px] pr-[161px] pt-20 pb-6">
-          <p className="font-bold text-[22px]  mx-auto leading-7">
-            500Land (hereafter “we”, “us”, “our”, or “500Land”) is committed to protecting the
-            privacy and security of our users’ personal information. This Privacy Policy outlines
-            our practices and procedures regarding the collection, use,
-            and disclosure of personal information we receive from users of
-            our website and services.</p>
+
+
+
+        {/* Flex box */}
+
+        <div className="flex lg:flex-row md:flex-row flex-col  mx-auto py-10">
+          <div className="basis-[45%] pb-5 rounded-3xl bg-[#FFB24B]">
+            <Image src={background} alt="500Land Logo" width={701} height={500}
+              className="w-full" />
+          </div>
+          <div className="basis-[55%] px-10 pt-[120px] mx-auto">
+            <h3 className="font-normal text-[16px] leading-5 text-[#3C3C43]">2 October 2023</h3>
+            <h2 className="font-bold text-[28px] leading-[34px] tracking-[-0.6px]">How to speed up your ui design<br />
+              with nayzak</h2>
+            <p className="font-normal text-[20px] leading-[25px] pt-4 pr-14">Everyone in my team works towards the samegoal. This
+              enabled our teams to ship new ideas and feel more capable. Podcasting
+              operational — change management inside of workflo...</p>
+
+            <button className="mt-[32px] px-[77px] py-[14px] rounded-[50px] bg-[#70F09C] font-bold text-[15px] leading-[20px] text-center"> <Link href="/blogs/blog-single"> Read More</Link></button>
+          </div>
         </div>
 
-        <div className="mx-auto font-normal text-[18px] pl-[146px] pr-[145px] pb-14 leading-[1.625rem] tracking-[-0.408px]">
-          <ol className="list-decimal">
-            <li>Introduction Welcome to 500Land, a company specializing in land investments.
-              These Terms and Conditions govern your access to and use of our website, services,
-              and products (collectively, the "Services"). By accessing or using our Services,
-              you agree to be bound by these Terms and Conditions.</li>
+        {/* Card Layout */}
 
-            <li>Eligibility Our Services are available only to individuals who are
-              at least 18 years old and are legally able to enter into a binding contract.
-              If you do not meet these requirements, you may not use our Services.</li>
+        <div className="container grid lg:grid-cols-3 rounded-xl mx-auto pb-[95px] pt-[80px] gap-x-8 gap-y-20 sm:grid-cols-1 md:grid-cols-2">
+          {
+            [1, 2, 3].map((i: any) => {
+              return <>
+                <div className="md:items-center">
+                  <Image src={message} alt="500Land Logo" />
+                  <h3 className="font-normal pt-4 text-[16px] leading-5 text-[#3C3C43]">2 October 2023</h3>
+                  <h3 className="font-bold text-[28px] leading-[34px] pt-2">
+                    <Link href="/blogs/blog-single"> Messaing apps you should use this year </Link></h3>
 
-            <li>Investment Risks Investing in land involves risks, and you should carefully
-              consider these risks before making an investment. There is no guarantee of
-              liquidity or return on investment, and you may lose all or a portion of your
-              investment. You should consult with your own advisors before investing in land.</li>
+                  <p className="font-normal text-[19px] leading-[25px] pt-3 mx-auto">Everyone in
+                    my team works towards the samegoal. This enabled our team…</p>
+                </div>
 
-            <li>Investment Amounts We may set minimum investment amounts for our Services,
-              and you may not be able to invest in a particular property if you do not meet
-              the minimum investment amount.</li>
+                <div>
+                  <Image src={camera} alt="500Land Logo" />
 
-            <li>Payments We may use third-party payment processors to process payments made
-              through our Services. By using our Services, you agree to the terms and conditions
-              of these third-party payment processors.</li>
+                  <h3 className="font-normal pt-4 text-[16px] leading-5 text-[#3C3C43]">2 October 2023</h3>
+                  <h3 className="font-bold text-[28px] leading-[34px] pt-2">   <Link href="/blogs/blog-single"> Tips how to become a better designer </Link></h3>
 
-            <li>Withdrawals We may set minimum withdrawal amounts and minimum investment periods
-              for our Services. You may not be able to withdraw your investment until the minimum
-              investment period has elapsed and the minimum withdrawal amount has been met.</li>
+                  <p className="font-normal text-[19px] leading-[25px] pt-3 mx-auto ">Everyone in
+                    my team works towards the samegoal. This enabled our team…</p>
+                </div>
 
-            <li>Termination We reserve the right to terminate or suspend your access to our
-              Services at any time and for any reason, including if you breach these Terms and
-              Conditions.</li>
+                <div>
+                  <Image src={balti} alt="500Land Logo" />
 
-            <li>Intellectual Property Our Services and all content and materials contained in our
-              Services, including without limitation, text, graphics, logos, button icons, images,
-              audio clips, video clips, data compilations, and software, are the property of 500Land
-              or its licensors and are protected by United States and international
-              copyright laws.</li>
+                  <h3 className="font-normal pt-4 text-[16px] leading-5 text-[#3C3C43]">2 October 2023</h3>
+                  <h3 className="font-bold text-[28px] leading-[34px] pt-2">   <Link href="/blogs/blog-single"> 8 proven ways to conquer design fatigue </Link></h3>
 
-            <li>Disclaimer of Warranties Our Services are provided on an "as is" and "as available"
-              basis without warranties of any kind, whether express or implied, including but not
-              limited to, implied warranties of merchantability, fitness for a particular purpose,
-              and non-infringement.</li>
+                  <p className="font-normal text-[19px] leading-[25px] pt-3 mx-auto ">Everyone in
+                    my team works towards the samegoal. This enabled our team…</p>
+                </div>
+              </>
+            })
+          }
 
-            <li>Limitation of Liability To the extent permitted by law, 500Land will not be liable
-              for any direct, indirect, incidental, special, or consequential damages arising out
-              of or in connection with your use of our Services, even if we have been advised of
-              the possibility of such damages.</li>
 
-            <li>Governing Law These Terms and Conditions shall be governed by and construed in
-              accordance with the laws of the United States.</li>
 
-            <li>Entire Agreement These Terms and Conditions constitute the entire agreement
-              between you and 500Land with respect to your use of our Services and supersede all
-              prior or contemporaneous communications and proposals, whether oral or written,
-              between you and 500Land.</li>
-
-            <li>Amendments We may modify these Terms and Conditions at any time, and any such
-              modifications will be effective immediately upon posting on our website. Your
-              continued use of our Services after such modifications have been posted constitutes
-              your acceptance of the modified Terms and Conditions.</li>
-
-            <li>Contact Us If you have any questions about these Terms and Conditions or
-              our Services, please contact us at info@500.land</li>
-
-          </ol>
         </div>
 
       </section>
