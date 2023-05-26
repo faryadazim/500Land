@@ -75,7 +75,7 @@ const Carousel = () => {
                             Potential for Development
                         </h3>
                         <p className='font-normal text-[17px] mt-1'>
-                            We evaluate the land's zoning and development potential, such as whether it can be rezoned for higher-density use or if there is potential for commercial or residential development.     </p>
+                            We evaluate the land&#39;s zoning and development potential, such as whether it can be rezoned for higher-density use or if there is potential for commercial or residential development.     </p>
                     </div>
                     <div className="slide aspect-square h-full flex-shrink-0 snap-center   p-8 w-[25.125em]       border   border-[#E7E7E7]   rounded-lg ">
                         <div className="">
@@ -132,7 +132,7 @@ const Carousel = () => {
                             Develop the Land
                         </h3>
                         <p className='font-normal text-[17px] mt-1'>
-                            We develop the land into profitable properties, such as residential or commercial buildings, to increase the land's value    </p>
+                            We develop the land into profitable properties, such as residential or commercial buildings, to increase the land&#39;s value    </p>
                     </div>
 
 

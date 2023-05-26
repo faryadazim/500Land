@@ -24,6 +24,10 @@ import Map from "@/components/Map"
 import { Slider } from "@/components/ui/slider"
 
 import { Separator } from "@/components/ui/separator"
+import { Dialog, DialogTrigger } from "@radix-ui/react-dialog";
+import { SweetAlert } from "@/components/SweetAlert";
+import { Label } from "@radix-ui/react-select";
+import { DialogFooter } from "@/components/ui/dialog";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -42,7 +46,7 @@ export default async function MarketplaceSinglePage() {
             <div className="flex h-16 items-center justify-between py-5" >
               <MainNav items={marketingConfig.mainNav} />
               <nav className="flex">
-               <Link href="/contact-us" className={cn("  items-center text-lg   sm:text-sm text-white tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Contact Us</Link>
+                <Link href="/contact-us" className={cn("  items-center text-lg   sm:text-sm text-white tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Contact Us</Link>
                 <Link href="/account/create-account" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-white w-100 px-10 rounded-full font-normal")} style={{ fontFamily: "Basier Square Regular" }}>Login</Link>
               </nav>
             </div>
@@ -201,7 +205,47 @@ export default async function MarketplaceSinglePage() {
 
 
                     <div className="flex justify-center">
-                      <Link href="/opportunities" className={cn(buttonVariants({ variant: "primaryDark" }), "    w-full text-center lg:w-[90%]  px-6 rounded-full font-bold lg:font-semibold md:font-normal    py-6  md:my-1 lg:my-2  ")} style={{ fontFamily: "sans-serif" }}>Contact Seller</Link>
+                      <Link href="/opportunities"></Link>
+
+
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button variant="primaryDark" className="w-full text-center lg:w-[90%]  px-6 rounded-full font-bold lg:font-semibold md:font-normal    py-6  md:my-1 lg:my-2  " style={{ fontFamily: "sans-serif" }}>Contact Seller</Button>
+                        </DialogTrigger>
+                        <SweetAlert screenWidth="571px">
+
+                          <div className="flex justify-between ">
+                            <h3 className="font-bold text-xl">
+                              Contact Seller
+                            </h3>
+                            <div>
+                              <DialogTrigger asChild>
+                                <Button
+                                  className="bg-transparent hover:bg-transparent"
+                                >
+                                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="40" height="40" rx="20" fill="#EBEBEB" />
+                                    <path d="M27 14.41L25.59 13L20 18.59L14.41 13L13 14.41L18.59 20L13 25.59L14.41 27L20 21.41L25.59 27L27 25.59L21.41 20L27 14.41Z" fill="#5F5F5F" />
+                                  </svg>
+                                </Button>
+                              </DialogTrigger>
+                            </div>
+
+                          </div>
+
+                          <div>
+                            <p  className="text-sm font-medium text-[#475467] ">Email</p>
+                            <p  className="text-base font-medium text-[#344054]">johndoe@gmail.com</p>
+                          </div>
+                          <div>
+                            <p  className="text-sm font-medium text-[#475467] ">Phone number  </p>
+                            <p  className="text-base font-medium text-[#344054]">johndoe@gmail.com</p>
+                          </div>
+
+                        </SweetAlert >
+                      </Dialog>
+
+
                     </div>
 
                   </div>

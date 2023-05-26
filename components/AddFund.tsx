@@ -15,7 +15,7 @@ import { MainNav } from "@/components/main-nav";
 import { marketingConfig } from "@/config/marketing";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input"; 
 
 // export const metadata = {
 //   title: "Add Fund",
@@ -54,17 +54,14 @@ export default  function AddFundPage() {
               </header> 
             </div> 
           </DialogHeader> 
-            {/* <SweeAlert3/> */}   
-            {/* we will create a custom dialogue box to act like swwet alert */}
+        
           <div className="container">
-            <div className="grid gap-14 lg:grid-cols-2 w-full sm:w-4/5 xl:w-full ">
-              {/* Left container starts here */}
+            <div className="grid gap-14 lg:grid-cols-2 w-full sm:w-4/5 xl:w-full "> 
               <div className="">
                 <div className="row flex justify-between pt-6  ">
                   <div className="w-1/2 ">
                     <label htmlFor="Chad" className=" my-8 font-normal  text-[13px]">Share Amount</label>
-                    <Input placeholder="First Name" className="bg-white mt-[6px]" />
-
+                    <Input placeholder="First Name" className="bg-white mt-[6px]" /> 
                   </div>
                   <div className="w-1/2 pl-3">
                     <label htmlFor="Chad" className=" my-8   font-normal  text-[13px]">Fund Amount</label>

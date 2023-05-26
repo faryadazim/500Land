@@ -8,7 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import SweeAlert3 from "@/components/sweeAlert3";
+import SweeAlert3 from "@/components/SweetAlert";
 import logo from "../../../public/images/logoDark.png";
 import crossIcon from "../../../public/Icons/crossIcon.png";
 import vector from "../../../public/500 Land — Dashboard/Vector.png";

@@ -27,8 +27,8 @@ import Box from "@/public/Box.png";
 
 
 
-import { Separator } from "@/components/ui/separator"
-import Footer from "@/components/Footer";
+import { Separator } from "@/components/ui/separator";
+import Footer from "@/components/Footer"
 
 const inter = Poppins({
   subsets: ['latin'],
@@ -85,7 +85,7 @@ export default async function BlogsPage() {
           </span>
         </div>
 
-
+      
 
 
         {/* Flex box */}
@@ -97,13 +97,13 @@ export default async function BlogsPage() {
           </div>
           <div className="basis-[55%] px-10 pt-[120px] mx-auto">
             <h3 className="font-normal text-[16px] leading-5 text-[#3C3C43]">2 October 2023</h3>
-            <h2 className="font-bold text-[28px] leading-[34px] tracking-[-0.6px]">How to speed up your ui design<br />
+            <h2 className="font-bold text-[28px] leading-[34px] tracking-[-0.6px]" style={{ fontFamily: "Inter,sans-serif" }}>How to speed up your ui design<br />
               with nayzak</h2>
             <p className="font-normal text-[20px] leading-[25px] pt-4 pr-14">Everyone in my team works towards the samegoal. This
               enabled our teams to ship new ideas and feel more capable. Podcasting
               operational — change management inside of workflo...</p>
 
-            <button className="mt-[32px] px-[77px] py-[14px] rounded-[50px] bg-[#70F09C] font-bold text-[15px] leading-[20px] text-center"> <Link href="/blogs/blog-single"> Read More</Link></button>
+            <button className="mt-[32px] px-[77px] py-[14px] rounded-[50px] bg-[#70F09C] font-bold text-[15px] leading-[20px] text-center" style={{ fontFamily: "Inter,sans-serif" }}> <Link href="/blogs/blog-single"> Read more</Link></button>
           </div>
         </div>
 
@@ -113,31 +113,37 @@ export default async function BlogsPage() {
           {
             [1, 2, 3].map((i: any) => {
               return <>
-                <div className="md:items-center">
-                  <Image src={message} alt="500Land Logo" />
+                <div className="md:items-center ">
+                  <div className="rounded-2xl overflow-hidden">
+
+                  
+                  <Image src={message} alt="500Land Logo" className="hover:scale-125 duration-1000"/>
+                  </div>
                   <h3 className="font-normal pt-4 text-[16px] leading-5 text-[#3C3C43]">2 October 2023</h3>
-                  <h3 className="font-bold text-[28px] leading-[34px] pt-2">
+                  <h3 className="font-bold text-[28px] leading-[34px] pt-2" style={{ fontFamily: "Inter,sans-serif" }}>
                     <Link href="/blogs/blog-single"> Messaing apps you should use this year </Link></h3>
 
                   <p className="font-normal text-[19px] leading-[25px] pt-3 mx-auto">Everyone in
                     my team works towards the samegoal. This enabled our team…</p>
                 </div>
 
-                <div>
-                  <Image src={camera} alt="500Land Logo" />
-
+                <div className="md:items-center ">
+                <div className="rounded-2xl overflow-hidden">
+                  <Image src={camera} alt="500Land Logo" className="hover:scale-125 duration-1000"/>
+                  </div>
                   <h3 className="font-normal pt-4 text-[16px] leading-5 text-[#3C3C43]">2 October 2023</h3>
-                  <h3 className="font-bold text-[28px] leading-[34px] pt-2">   <Link href="/blogs/blog-single"> Tips how to become a better designer </Link></h3>
+                  <h3 className="font-bold text-[28px] leading-[34px] pt-2" style={{ fontFamily: "Inter,sans-serif" }}>   <Link href="/blogs/blog-single"> Tips how to become a better designer </Link></h3>
 
                   <p className="font-normal text-[19px] leading-[25px] pt-3 mx-auto ">Everyone in
                     my team works towards the samegoal. This enabled our team…</p>
                 </div>
 
-                <div>
-                  <Image src={balti} alt="500Land Logo" />
-
+                <div className="md:items-center ">
+                <div className="rounded-2xl overflow-hidden">
+                  <Image src={balti} alt="500Land Logo" className="hover:scale-125 duration-1000"/>
+                  </div>
                   <h3 className="font-normal pt-4 text-[16px] leading-5 text-[#3C3C43]">2 October 2023</h3>
-                  <h3 className="font-bold text-[28px] leading-[34px] pt-2">   <Link href="/blogs/blog-single"> 8 proven ways to conquer design fatigue </Link></h3>
+                  <h3 className="font-bold text-[28px] leading-[34px] pt-2" style={{ fontFamily: "Inter,sans-serif" }}>   <Link href="/blogs/blog-single"> 8 proven ways to conquer design fatigue </Link></h3>
 
                   <p className="font-normal text-[19px] leading-[25px] pt-3 mx-auto ">Everyone in
                     my team works towards the samegoal. This enabled our team…</p>
@@ -152,9 +158,8 @@ export default async function BlogsPage() {
 
       </section>
 
-
-
-      <Footer/>
+          <Footer/>
+      
     </div>
   )
 }
