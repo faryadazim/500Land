@@ -6,37 +6,37 @@ const Carousel = () => {
     const slideWidth = useRef<number | null>(null);
     const totalSlides = useRef<number | null>(null);
 
-    //   useEffect(() => {
-    //     const scrollInterval = setInterval(() => {
-    //       if (slidesContainerRef.current && slideWidth.current && totalSlides.current) {
-    //         const { scrollLeft, clientWidth } = slidesContainerRef.current;
-    //         const maxScrollLeft = totalSlides.current * slideWidth.current - clientWidth;
+      useEffect(() => {
+        const scrollInterval = setInterval(() => {
+          if (slidesContainerRef.current && slideWidth.current && totalSlides.current) {
+            const { scrollLeft, clientWidth } = slidesContainerRef.current;
+            const maxScrollLeft = totalSlides.current * slideWidth.current - clientWidth;
 
-    //         if (scrollLeft < maxScrollLeft) {
-    //           slidesContainerRef.current.scrollBy({
-    //             left: slideWidth.current,
-    //             behavior: 'smooth',
-    //           });
-    //         } else {
-    //           slidesContainerRef.current.scrollTo({
-    //             left: 0,
-    //             behavior: 'smooth',
-    //           });
-    //         }
-    //       }
-    //     }, 5000); // Scroll every 5 seconds
+            if (scrollLeft < maxScrollLeft) {
+              slidesContainerRef.current.scrollBy({
+                left: slideWidth.current,
+                behavior: 'smooth',
+              });
+            } else {
+              slidesContainerRef.current.scrollTo({
+                left: 0,
+                behavior: 'smooth',
+              });
+            }
+          }
+        }, 5000); // Scroll every 5 seconds
 
-    //     return () => {
-    //       clearInterval(scrollInterval); // Cleanup the interval on component unmount
-    //     };
-    //   }, []);
+        return () => {
+          clearInterval(scrollInterval); // Cleanup the interval on component unmount
+        };
+      }, []);
 
-    //   useEffect(() => {
-    //     if (slidesContainerRef.current) {
-    //       slideWidth.current = slidesContainerRef.current.offsetWidth;
-    //       totalSlides.current = slidesContainerRef.current.querySelectorAll('.slide').length;
-    //     }
-    //   }, []);
+      useEffect(() => {
+        if (slidesContainerRef.current) {
+          slideWidth.current = slidesContainerRef.current.offsetWidth;
+          totalSlides.current = slidesContainerRef.current.querySelectorAll('.slide').length;
+        }
+      }, []);
 
     return (
         <div className="   transition-all duration-500  ">
