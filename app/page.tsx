@@ -73,7 +73,7 @@ export default function Home() {
               <p className=" font-normal text-white text-xl leading-8   mb-6 " style={{ fontFamily: "Basier Square Regular" }}>
                 Invest in your future, starting at $100. We specialize in land investments that offer stability, returns, and diversification for your portfolio.</p>
               <div className="flex  ">
-                <Link href="/account/login" className={cn(buttonVariants({ variant: "primary" }), " text-center mr-2   w-100 px-4 md:px-6 rounded-full md:font-bold font-normal  py-6 ")} style={{ fontFamily: "sans-serif" }}>Get Started</Link>
+                <Link href="/account/login" className={cn(buttonVariants({ variant: "primaryDark" }), " text-center mr-2   w-100 px-4 md:px-6 rounded-full md:font-bold font-normal  py-6 ")} style={{ fontFamily: "sans-serif" }}>Get Started</Link>
                 {/* <Link href="/login" className={cn(buttonVariants({ variant: "primaryLight" }), "    w-100 px-4 md:px-6 rounded-full font-normal md:font-bold py-6 text-center ")} style={{ fontFamily: "sans-serif" }}> How it works</Link> */}
               </div>
             </div>
