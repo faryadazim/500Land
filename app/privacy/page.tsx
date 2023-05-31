@@ -1,4 +1,3 @@
-"use client";
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import Image from 'next/image'
@@ -18,6 +17,7 @@ import Vector from "@/public/Vector.png";
 
 import { Separator } from "@/components/ui/separator"
 import Footer from "@/components/Footer";
+import supabase from '../../supabase'
 
 const inter = Poppins({
   subsets: ['latin'],
@@ -27,7 +27,13 @@ const inter = Poppins({
 
 
 export default async function PrivacyPage() {
+  //  console.log(supabase)
 
+  let { data: country, error } = await supabase
+  .from('country')
+  .select('country_name')
+
+console.log("Privacy" , country)
   return (
     <div className=" ">
       <section className={`hero-section relative   bg-white   ${inter.className} z-30`}>

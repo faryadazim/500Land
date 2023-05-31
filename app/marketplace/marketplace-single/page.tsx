@@ -181,8 +181,8 @@ export default async function MarketplaceSinglePage() {
                     <div id="locationHeading" className={`${inter.className} font-medium text-sm text-[#475467] `}>   Location</div>
                     <div id="locationValue" className="flex mt-1">   <span className="mr-2">
 
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_534_35685)">
+                      <svg width={20} height={20} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clipPath="url(#clip0_534_35685)">
                           <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#F0F0F0" />
                           <path d="M10.0011 -0.000244141C5.70141 -0.000244141 2.03598 2.71351 0.623047 6.52151H19.3791C17.9661 2.71351 14.3007 -0.000244141 10.0011 -0.000244141Z" fill="#D80027" />
                           <path d="M10.0011 20.0003C14.3007 20.0003 17.9661 17.2865 19.3791 13.4785H0.623047C2.03598 17.2865 5.70141 20.0003 10.0011 20.0003Z" fill="black" />
@@ -190,10 +190,11 @@ export default async function MarketplaceSinglePage() {
                         </g>
                         <defs>
                           <clipPath id="clip0_534_35685">
-                            <rect width="20" height="20" fill="white" />
+                            <rect width={20} height={20} fill="white" />
                           </clipPath>
                         </defs>
                       </svg>
+
 
                     </span>  <span className={`${inter.className} font-medium text-base text-[#475467] `}> Cairo, Egypt</span></div>
 
@@ -206,7 +207,7 @@ export default async function MarketplaceSinglePage() {
                   <div className=" mt-2">
 
 
-                    <div className="flex justify-center"> 
+                    <div className="flex justify-center">
 
 
                       <Dialog>

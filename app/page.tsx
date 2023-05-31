@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils"
 import { MainNav } from "@/components/main-nav"
 import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator"
+// import supabase from '../supabase'
 
 import {
   Accordion,
@@ -30,8 +31,28 @@ import Footer from "@/components/Footer"
 import Carousel from "@/components/Carousel"
 import { Dialog, DialogTrigger } from "@radix-ui/react-dialog"
 import { SweetAlert } from "@/components/SweetAlert"
+import { useEffect } from "react" 
 
 export default function Home() {
+
+const fetchCityRecord =async ()=>{
+  // console.log(supabase)
+  
+// let { data: city, error } = await supabase
+// .from('city')
+// .select('county_name')
+// console.log(city)
+
+
+}
+
+useEffect(() => {
+  fetchCityRecord()
+}, [])
+
+
+
+
   return (
     <>
 
@@ -59,13 +80,13 @@ export default function Home() {
               <nav className="flex">
                 <Link href="/blogs" className={cn(" items-center text-lg   sm:text-sm text-white tracking-widest mx-3 hidden lg:flex text-[15px]  font-normal    ")} style={{ fontFamily: "Basier Square Regular" }}>Blogs</Link>
                 <Link href="/contact-us" className={cn("  items-center text-lg   sm:text-sm text-white tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Contact Us</Link>
-                <Link href="/account/create-account" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-white w-100 px-10 rounded-full font-normal")} style={{ fontFamily: "Basier Square Regular" }}>Login</Link>
+                <Link href="/account/create-account" className={cn(buttonVariants({ size: "sm", variant: "outline" }), " text-white w-100 px-10 rounded-full font-normal")} style={{ fontFamily: "Basier Square Regular" }}>Login</Link>
               </nav>
             </div>
           </header>
 
 
-          <div className=" pb-5 relative md:absolute bottom-0 left-0  w-full mt-28 md:m-auto mv-12 md:mb-auto md:w-3/5  left-auto     top-1/3" style={{ minHeight: "auto" }}>
+          <div className=" pb-5 relative md:absolute bottom-0  w-full mt-28 md:m-auto mv-12 md:mb-auto md:w-3/5  left-auto     top-1/3" style={{ minHeight: "auto" }}>
             <div className=" ">
               <h1 className={`font-bold text-white text-7xl leading-tight     ${inter.className} `}
                 style={{ textShadow: "0px 1px 1px rgba(0, 0, 0, 0.15)" }}>Invest in land.
