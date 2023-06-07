@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 import { MainNav } from "@/components/main-nav"
 import { Progress } from "@/components/ui/progress"
 import { Separator } from "@/components/ui/separator"
-// import supabase from '../supabase'
+import supabase from '../supabase'
 
 import {
   Accordion,
@@ -38,11 +38,11 @@ export default function Home() {
 const fetchCityRecord =async ()=>{
   // console.log(supabase)
   
-// let { data: city, error } = await supabase
-// .from('city')
-// .select('county_name')
-// console.log(city)
-
+let data = await supabase
+.from('country')
+.select('country_name')
+console.log(data , "data")
+ 
 
 }
 
