@@ -70,7 +70,7 @@ export default async function CreateAccountPage() {
               <div className="w-full md:w-1/2 bg-blue h-screen md:pl-10 lg:pl-0 flex items-center justify-center py-24">
 
 
-                <div className="  ">
+                <div className="ml-[80px]  ">
 
 
                   <div className="">

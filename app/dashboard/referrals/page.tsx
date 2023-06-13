@@ -110,7 +110,7 @@ export default function ReferralsPage() {
       <div className="relative md:ml-64 bg-blueGray-100">
         <NavBar />
         <   div className="relative md:pt-20 lg:pt-16 pb-32 pt-12">
-          <div className="px-4 md:px-36 mx-auto w-full">
+          <div className="px-4 md:px-8 lg:px-36 mx-auto w-full">
 
 
 

@@ -55,7 +55,7 @@ export default function BillingPage() {
       <div className="relative md:ml-64 bg-blueGray-100">
         <NavBar />
         <div className="relative md:pt-20 lg:pt-16 pb-32 pt-12">
-          <div className="px-4 md:px-36 mx-auto w-full">
+          <div className="px-4 md:px-8 lg:px-30 xl:px-36 mx-auto w-full">
             <div className='lg:flex justify-between my-6'  >
               <h1 className='font-bold text-[28px] '>Billing</h1>
               <div className="">

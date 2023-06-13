@@ -71,7 +71,7 @@ export default function DashboardPage() {
       <div className="relative md:ml-64 bg-blueGray-100">
         <NavBar />
         <   div className="relative md:pt-20 lg:pt-16 pb-32 pt-12">
-          <div className="px-4 md:px-36 mx-auto w-full">
+          <div className="px-4 md:px-8 lg:px-30 xl:px-36  mx-auto w-full">
             <div className='lg:flex justify-between my-6'  >
               <h1 className='font-bold text-[28px] '>Overall Portfolio</h1>
               <div className="">
@@ -212,13 +212,13 @@ export default function DashboardPage() {
             </div>
             {[1, 2, 3].map((x: any): any => {
               return <>
-                <div className="w-full flex">
+                <div className="w-full flex flex-col md:flex-col lg:flex-row">
 
-                  <div className="w-2/5">
+                  <div className="w-full md:w-full">
                     <Image src={map} alt="opertunity" className="w-full h-full rounded-[14px]  " />
 
                   </div>
-                  <div className="w-3/5 py-1 px-3">
+                  <div className="w-full py-1 px-3 md:w-full">
 
                     <h1 className="font-bold text-xl">North Wilkesboro, Wilkes County</h1>
 

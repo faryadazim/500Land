@@ -17,7 +17,7 @@ export default function SettingPage() {
       <div className="relative md:ml-64 bg-blueGray-100">
         <NavBar />
         <div className="relative md:pt-20 lg:pt-16 pb-32 pt-12">
-          <div className="px-4 md:px-36 mx-auto w-full">
+          <div className="px-4 md:px-8 lg:px-36 mx-auto w-full">
             <div className=" flex justify-between mt-4">
               <h1 className="w-1/2 font-bold text-[28px] mb-3">Settings</h1>
             </div>
@@ -211,7 +211,7 @@ export default function SettingPage() {
                 </span>
               </div>
 
-              <div className="container grid lg:grid-cols-3 rounded-xl gap-x-4 mx-auto  sm:grid-cols-1 md:grid-cols-2">
+              <div className="container grid lg:grid-cols-3 rounded-xl gap-x-4 mx-auto  sm:grid-cols-1 md:grid-cols-1">
                 <div className="border border-[#E7E7E7] mt-6 rounded-md p-4">
                   <div className="flex items-center">
                     <div className="pr-[10px]">
