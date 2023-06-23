@@ -1,5 +1,4 @@
 import { ClassValue, clsx } from "clsx"
-import { useRouter } from "next/router";
 import { twMerge } from "tailwind-merge"
  
 export function cn(...inputs: ClassValue[]) {
@@ -51,16 +50,4 @@ export function getTimeAgo(createdAt: string): string {
   const yearsElapsed = Math.floor(monthsElapsed / 12);
 
   return `${yearsElapsed} years ago`;
-}
-
-
-export function getBaseUrl() {
-  const { asPath } = useRouter();
-    const origin =
-        typeof window !== 'undefined' && window.location.origin
-            ? window.location.origin
-            : '';
-
-    const URL = `${origin}${asPath}`;
-   return URL;
 }
