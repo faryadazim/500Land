@@ -1,6 +1,6 @@
-const project = {
-    name: "project",
-    title: "Projects",
+const blog = {
+    name: "blog",
+    title: "Blogs",
     type: "document",
     fields: [
         {
@@ -27,19 +27,23 @@ const project = {
                 }
             ]
         },
-        {
-            name: "url",
-            title: "URL",
-            type: "url",
-        },
+        // {
+        //     name: "url",
+        //     title: "URL",
+        //     type: "url",
+        // },
         {
             name: "content",
             title: "Content",
             type: "array",
-            of: [{ type: "block" }]
+            of: [
+                { type: "block" },
+                // {type: 'actor'},
+    {type: 'image'}
+            ]
         }
 
     ]
 }
 
-export default project;
+export default blog;

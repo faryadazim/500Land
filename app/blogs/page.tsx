@@ -28,12 +28,12 @@ import thumb from "@/public/thumb.png";
 import Box from "@/public/Box.png";
 
 
-import project from "@/sanity/schemas/project-schema";
-import { getProjects } from "@/sanity/schemas/sanity-utils"
+import project from "@/sanity/schemas/blogs-schema";
+import { getBlogs } from "@/sanity/schemas/sanity-utils"
 
 import { Separator } from "@/components/ui/separator";
 import Footer from "@/components/Footer"
-import { Project } from "@/sanity/types/Project";
+import { Blog } from "@/sanity/types/blog";
 
 const inter = Poppins({
   subsets: ['latin'],
@@ -43,37 +43,8 @@ const inter = Poppins({
 
 
 export default async function BlogsPage() {
-  const projects = await getProjects();
-  console.log(projects);
- 
-  // return (
-  //   <div className="">
-  //     <h1 className="text-7xl font-extrabold">Hello I am
-  //       <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent"> Muhammad Hamza</span></h1>
-  //     <p className="mt-3 text-xl text-gray-600">Hello everyone! check out my projects</p>
-  //     <h2 className="mt-24 font-bold text-gray-700 text-3xl">My Projects</h2>
-  //   <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-  //     {projects.map((project) => (
-  //       <Link 
-  //       href={`/projects/${project.slug}`}
-  //       key={project._id} 
-  //       className="border-2 border-gray-500 rounded-lg p-3 hover:border-blue-500 hover:scale-105 transition shadow-lg hover:shadow-slate-800">
-  //         {project.image && (
-  //           <Image
-  //             src={project.image}
-  //             alt={project.name}
-  //             width={300}
-  //             height={355}
-  //             className="object-cover rounded-lg border border-gray-500"
-  //           />
-  //         )}
-  //         <div className="mt-2 font-extrabold  bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">{project.name}</div>
-  //       </Link>
-
-  //     ))}
-  //     </div>
-  //   </div>
-  // )
+  const projects = await getBlogs();
+ var topBlog= projects[0];
 
   return (
     <div className=" ">
@@ -83,6 +54,8 @@ export default async function BlogsPage() {
             <div className="flex h-16 items-center justify-between py-5" >
               <MainNav items={marketingConfig.mainNav} isDarkNav={true} />
               <nav className="flex">
+              <Link href="/blogs" className={cn("  items-center text-lg   sm:text-sm text-black tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Blogs</Link>
+
                 <Link href="/contact-us" className={cn("  items-center text-lg   sm:text-sm text-black tracking-widest mx-3 hidden  lg:flex text-[15px]  font-normal  ")} style={{ fontFamily: "Basier Square Regular" }}>Contact Us</Link>
                 <Link href="/account/create-account" className={cn(buttonVariants({ size: "sm", variant: "outline" }), "px-4 text-black w-100 px-10 rounded-full font-normal border-black")} style={{ fontFamily: "Basier Square Regular" }}>Login</Link>
               </nav>
@@ -124,19 +97,26 @@ export default async function BlogsPage() {
         {/* Flex box */}
 
         <div className="flex lg:flex-row md:flex-row flex-col  mx-auto py-10">
-          <div className="basis-[45%] pb-5 rounded-3xl bg-[#FFB24B]">
-            <Image src={background} alt="500Land Logo" width={701} height={500}
-              className="w-full" />
+          <div className="basis-[45%] pb-5 rounded-3xl">
+            {/* <Image src={background} alt="500Land Logo" width={701} height={500}
+              className="w-full" /> */}
+              {topBlog.image && (
+                        <Image
+                          src={topBlog.image}
+                          alt={topBlog.name}
+                          width={701}
+                          height={500}
+                          className="hover:scale-125 duration-1000"
+                        />
+                      )}
           </div>
           <div className="basis-[55%] px-10 pt-[120px] mx-auto">
-            <h3 className="font-normal text-[16px] leading-5 text-[#3C3C43]">2 October 2023</h3>
-            <h2 className="font-bold text-[28px] leading-[34px] tracking-[-0.6px]" style={{ fontFamily: "Inter,sans-serif" }}>How to speed up your ui design<br />
-              with nayzak</h2>
-            <p className="font-normal text-[20px] leading-[25px] pt-4 pr-14">Everyone in my team works towards the samegoal. This
-              enabled our teams to ship new ideas and feel more capable. Podcasting
-              operational — change management inside of workflo...</p>
-
-            <button className="mt-[32px] px-[77px] py-[14px] rounded-[50px] bg-[#70F09C] font-bold text-[15px] leading-[20px] text-center" style={{ fontFamily: "Inter,sans-serif" }}> <Link href="/blogs/blog-single"> Read more</Link></button>
+            <h3 className="font-normal text-[16px] leading-5 text-[#3C3C43]">{formatDate(topBlog._createdAt)}</h3>
+            <h2 className="font-bold text-[28px] leading-[34px] tracking-[-0.6px]" style={{ fontFamily: "Inter,sans-serif" }}>{topBlog.name} </h2>
+            <p className="font-normal text-[20px] leading-[25px] pt-4 pr-14">{toPlainText(topBlog.content).slice(0, 150)}...</p>
+              
+            <button className="mt-[32px] px-[77px] py-[14px] rounded-[50px] bg-[#70F09C] font-bold text-[15px] leading-[20px] text-center" 
+            style={{ fontFamily: "Inter,sans-serif" }}> <Link href={"/blogs/"+topBlog.slug}> Read more</Link></button>
           </div>
         </div>
 
@@ -144,11 +124,11 @@ export default async function BlogsPage() {
 
         <div className="container grid lg:grid-cols-3 rounded-xl mx-auto pb-[95px] pt-[80px] gap-x-8 gap-y-20 sm:grid-cols-1 md:grid-cols-2">
           {
-            projects.map((i: Project) => {
+            projects.slice(1).map((i: Blog) => {
               return <>
                 <div className="md:items-center ">
                   <Link
-                    href={`/projects/${i.slug}`}
+                    href={"/blogs/"+i.slug}
                     key={i._id}
                   >
                     <div className="rounded-2xl overflow-hidden">
@@ -166,7 +146,7 @@ export default async function BlogsPage() {
                     </div>
                     <h3 className="font-normal pt-4 text-[16px] leading-5 text-[#3C3C43]">{formatDate(i._createdAt)}</h3>
                     <h3 className="font-bold text-[28px] leading-[34px] pt-2" style={{ fontFamily: "Inter,sans-serif" }}>
-                      <Link href="/blogs/blog-single"> {i.name} </Link></h3>
+                      {i.name} </h3>
 
                     <p className="font-normal text-[19px] leading-[25px] pt-3 mx-auto ">
                       {/* <PortableText   value={i.content}/> */}

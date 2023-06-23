@@ -1,6 +1,6 @@
 import page from "./page-schema";
-import project from "./project-schema";
+import blogs from "./blogs-schema";
 
-const  schemas=[project,page];
+const  schemas=[blogs,page];
 
 export default schemas;

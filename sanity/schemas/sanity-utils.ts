@@ -1,9 +1,9 @@
 import clientConfig from "@/config/client-config";
-import { Project } from "@/sanity/types/Project";
+import { Blog } from "@/sanity/types/blog";
 import { Page } from "@/sanity/types/page";
 import { createClient, groq } from "next-sanity";
 
-export async function getProjects(): Promise<Project[]> {
+export async function getBlogs(): Promise<Blog[]> {
     // const client = createClient({
 
     //     projectId: 'ot0o1c7j',
@@ -14,13 +14,13 @@ export async function getProjects(): Promise<Project[]> {
     // debugger;
     // console.log(JSON.stringify(client));
     return createClient(clientConfig).fetch(
-        groq`*[_type=="project"]{
+        groq`*[_type=="blog"]{
         _id,
         _createdAt,
         name,
         "slug": slug.current,
         "image":image.asset->url,
-        url,
+
         content
     }`
 
@@ -28,7 +28,7 @@ export async function getProjects(): Promise<Project[]> {
     )
 }
 
-export async function getProjectsslug(slug: string): Promise<Project> {
+export async function getBlogslug(slug: string): Promise<Blog> {
     // const client = createClient({
 
     //     projectId: 'ot0o1c7j',
@@ -39,13 +39,13 @@ export async function getProjectsslug(slug: string): Promise<Project> {
     // debugger;
     // console.log(JSON.stringify(client));
     return createClient(clientConfig).fetch(
-        groq`*[_type=="project" && slug.current==$slug][0]{
+        groq`*[_type=="blog" && slug.current==$slug][0]{
         _id,
         _createdAt,
         name,
         "slug": slug.current,
         "image":image.asset->url,
-        url,
+       
         content
     }`,
         { slug }
