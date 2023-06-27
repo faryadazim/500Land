@@ -210,7 +210,9 @@ export default function LoginAccountPage() {
                       <p>
                         Have not Registered yet?{" "}
                         <span className="text-customDarkGreen font-bold">
-                          <Link href="/account/create-account">Login</Link>{" "}
+                          <Link href="/account/create-account">
+                            Create Account
+                          </Link>{" "}
                         </span>{" "}
                       </p>
                     </div>
