@@ -94,7 +94,7 @@ export default function Home() {
                   )}
                   style={{ fontFamily: "Basier Square Regular" }}
                   onClick={() => {
-                    router.push("/account/createAccount");
+                    router.push("/account/create-account");
                   }}
                 >
                   Login
