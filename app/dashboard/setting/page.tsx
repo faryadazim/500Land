@@ -33,8 +33,8 @@ export default function SettingPage() {
   const [documents, setDocuments] = useState([]);
 
   useEffect(() => {
-    let Token = localStorage.getItem("token");
-    let user = jwt.decode(Token);
+    let Token = localStorage.getItem("token") || "";
+    let user: any = jwt.decode(Token) || "";
     getUserInfo(user.email, "", () => {}, setFormState);
     const userId = localStorage.getItem("userId") || "";
     getDocuments(userId, setDocuments);
