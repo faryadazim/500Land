@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MainNav } from "@/components/main-nav";
@@ -55,7 +55,12 @@ export default function CreateAccountPage() {
         });
       });
   };
-
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      router.push("/dashboard/dashboard-main");
+    }
+  }, []);
   return (
     <div
       className="h-screen w-screen   bg-cover bg-center -z-10"
