@@ -1,42 +1,79 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import supabase from '../../../supabase'
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import supabase from "../../../supabase";
+import axios from "axios";
 
 type Data = {
-  message: string
-}
+  message: string;
+};
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  if (req.method === 'POST') {
-
+  if (req.method === "POST") {
     try {
-      const { email, password, phone } = req.body;
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
-        // phone:  //comment down as phone signup is disable
-        // options: {
-        //   redirectTo: 'https://example.com/dashboard',
-        // },
-      });
+      const { email, password, phone, firstName, lastName } = req.body;
 
-
-      if (error) {
-        throw new Error("Went wrong");
+      // Check is user Exist or not
+      const { data: existingUser, error: existingUserError } = await supabase
+        .from("userProfile")
+        .select("*")
+        .eq("email", email);
+      if (existingUserError) {
+        throw new Error(existingUserError.message);
       }
 
-          return res.status(200).json({ message: 'User registered successfully!' });
-    } catch (error) { 
-         return  res.status(400).json({ message: 'User registration failed ' });
+      if (existingUser.length > 0) {
+        if (existingUser[0].verified) {
+          throw new Error("Already registered");
+        }
+      } else {
+        // signUp
+        const signUp = await supabase.auth.signUp({
+          email,
+          password,
+        });
+
+        if (signUp.error) {
+          throw new Error(signUp.error.message);
+        }
+
+        // Insert data into the table
+
+        const { data, error: insertDataError } = await supabase
+          .from("userProfile")
+          .insert([
+            {
+              firstName: firstName,
+              lastName: lastName,
+              email: email,
+              phone: phone,
+            },
+          ]);
+
+        if (insertDataError) {
+          throw new Error(insertDataError.message);
+        }
+      }
+      //  send OTP to email
+      if (email) {
+        await axios
+          .post(`http://${req.headers.host}/api/auth/resendOTP`, { email })
+          .then(() => {})
+          .catch((error) => {
+            throw new Error(error);
+          });
+      }
+
+      return res.status(200).json({
+        message: email
+          ? "Check email for verification OTP"
+          : "Send OTP to Phone# is in under processing",
+      });
+    } catch (error: any) {
+      return res.status(400).json({ message: error.message });
     }
   } else {
-       return  res.status(405).json({ message: 'User registration failed' });
+    return res.status(405).json({ message: "User registration failed" });
   }
-
-
 }
-
-
