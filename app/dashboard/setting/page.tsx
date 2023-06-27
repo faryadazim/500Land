@@ -9,10 +9,9 @@ import { PhoneInput } from "@/components/ui/phone-input-field";
 import { Input } from "@/components/ui/input";
 import axios from "axios";
 import { settingUrls } from "@/services/apiUrls";
-import { getUserInfo } from "@/app/account/verify-email/actions";
 import jwt from "jsonwebtoken";
 import { useToast } from "@/components/ui/use-toast";
-import { getDocuments } from "./actions";
+import { getDocuments, getUserInfo } from "./actions";
 import UploadDocument from "./uploadDocument";
 
 export default function SettingPage() {
@@ -35,8 +34,8 @@ export default function SettingPage() {
   useEffect(() => {
     let Token = localStorage.getItem("token") || "";
     let user: any = jwt.decode(Token) || "";
-    getUserInfo(user.email, "", () => {}, setFormState);
     const userId = localStorage.getItem("userId") || "";
+    getUserInfo(userId, setFormState);
     getDocuments(userId, setDocuments);
   }, []);
 
@@ -58,6 +57,7 @@ export default function SettingPage() {
         firstName: formState.firstName,
         lastName: formState.lastName,
         email: formState.email,
+        phone: formState.phone,
       },
     })
       .then((res) => {
@@ -157,6 +157,9 @@ export default function SettingPage() {
                         <PhoneInput
                           placeholder="+20 123 456 789"
                           className="bg-white mt-[6px] "
+                          name="phone"
+                          value={formState.phone}
+                          onChange={(e) => changeHandler(e)}
                         />
                       </div>
                     </div>
@@ -230,6 +233,7 @@ export default function SettingPage() {
                       onClick={() => {
                         setIsEditMode(true);
                       }}
+                      style={{ cursor: "pointer" }}
                     >
                       <svg
                         width="40"

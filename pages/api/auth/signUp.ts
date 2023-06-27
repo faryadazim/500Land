@@ -54,6 +54,8 @@ export default async function handler(
         if (insertDataError) {
           throw new Error(insertDataError.message);
         }
+
+        console.log("data", data);
       }
       //  send OTP to email
       if (email) {

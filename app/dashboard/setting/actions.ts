@@ -52,3 +52,30 @@ export const uploadDocuments = async (
       });
     });
 };
+
+type UserData = {
+  created_at: string;
+  email: string;
+  firstName: string;
+  id: string;
+  lastName: string;
+  phone: string;
+  verified: string;
+};
+
+export const getUserInfo = async (
+  userId: string,
+  setUserData: React.Dispatch<React.SetStateAction<UserData>>
+) => {
+  await axios({
+    method: "get",
+    url: authUrls.getUserInfoByUserId,
+    params: {
+      userId: userId,
+    },
+  })
+    .then(({ data }) => {
+      setUserData(data?.res);
+    })
+    .catch((error) => {});
+};

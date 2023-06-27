@@ -25,10 +25,16 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
       const filteredFiles = files.filter((file) => {
         const fileType = file.type;
         return (
-          fileType === "image/svg+xml" ||
+          // fileType === "image/svg+xml" ||
           fileType === "image/png" ||
+          fileType === "image/PNG" ||
           fileType === "image/jpeg" ||
-          fileType === "image/gif"
+          fileType === "image/JPEG" ||
+          fileType === "image/jpg" ||
+          fileType === "image/JPG" ||
+          fileType === "application/PDF" ||
+          // fileType === "image/gif"
+          fileType === "application/pdf"
         );
       });
       setSelectedFiles((prevSelectedFiles: any) => [
@@ -48,10 +54,16 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
       const filteredFiles = files.filter((file) => {
         const fileType = file.type;
         return (
-          fileType === "image/svg+xml" ||
+          // fileType === "image/svg+xml" ||
           fileType === "image/png" ||
+          fileType === "image/PNG" ||
           fileType === "image/jpeg" ||
-          fileType === "image/gif"
+          fileType === "image/JPEG" ||
+          fileType === "image/jpg" ||
+          fileType === "image/JPG" ||
+          fileType === "application/PDF" ||
+          // fileType === "image/gif"
+          fileType === "application/pdf"
         );
       });
       if (selectedFiles.length + filteredFiles.length <= 2) {

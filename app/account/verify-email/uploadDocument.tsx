@@ -2,6 +2,7 @@ import React, { useRef, useState, ChangeEvent, DragEvent } from "react";
 import Image from "next/image";
 import { Delete, DeleteIcon, LucideDelete } from "lucide-react";
 import DeleteIcons from "@/public/delete.png";
+import { toast } from "@/components/ui/use-toast";
 interface UploadDocumentProps {
   // Add any props you need for the component
   selectedFiles: File[];
@@ -12,19 +13,32 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
   selectedFiles,
   setSelectedFiles,
 }) => {
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleFileSelect = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const files = Array.from(e.target.files);
       const filteredFiles = files.filter((file) => {
         const fileType = file.type;
-        return (
-          fileType === "image/svg+xml" ||
+
+        const a =
           fileType === "image/png" ||
+          fileType === "image/PNG" ||
           fileType === "image/jpeg" ||
-          fileType === "image/gif"
-        );
+          fileType === "image/JPEG" ||
+          fileType === "image/jpg" ||
+          fileType === "image/JPG" ||
+          fileType === "application/PDF" ||
+          // fileType === "image/gif"
+          fileType === "application/pdf";
+        if (!a) {
+          toast({
+            variant: "destructive",
+            title: "Invalid File",
+          });
+        }
+        fileInputRef.current = null;
+        return a;
       });
       if (selectedFiles.length + filteredFiles.length <= 2) {
         setSelectedFiles((prevSelectedFiles) => [
@@ -32,7 +46,10 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
           ...filteredFiles,
         ]);
       } else {
-        // Display an error message or take appropriate action when exceeding the file limit
+        // toast({
+        //   variant: "destructive",
+        //   title: "Invalid File",
+        // });
       }
     }
   };
@@ -43,12 +60,25 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
       const files = Array.from(e.dataTransfer.files);
       const filteredFiles = files.filter((file) => {
         const fileType = file.type;
-        return (
-          fileType === "image/svg+xml" ||
+        const a =
           fileType === "image/png" ||
+          fileType === "image/PNG" ||
           fileType === "image/jpeg" ||
-          fileType === "image/gif"
-        );
+          fileType === "image/JPEG" ||
+          fileType === "image/jpg" ||
+          fileType === "image/JPG" ||
+          fileType === "application/PDF" ||
+          // fileType === "image/gif"
+          fileType === "application/pdf";
+        if (!a) {
+          toast({
+            variant: "destructive",
+            title: "Invalid File",
+          });
+        }
+        fileInputRef.current = null;
+
+        return a;
       });
       if (selectedFiles.length + filteredFiles.length <= 2) {
         setSelectedFiles((prevSelectedFiles) => [
@@ -57,6 +87,10 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
         ]);
       } else {
         // Display an error message or take appropriate action when exceeding the file limit
+        toast({
+          variant: "destructive",
+          title: "Invalid File",
+        });
       }
     }
   };

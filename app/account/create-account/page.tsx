@@ -31,29 +31,46 @@ export default function CreateAccountPage() {
     }));
   };
 
-  const submitHandler = async (e: any) => {
-    setLoading(true);
-    e.preventDefault();
-    await axios
-      .post(`${authUrls.signUp}`, formState)
-      .then((res) => {
-        router.push("/account/verify-email");
-        setLoading(false);
-        toast({
-          title: res?.data?.message,
-        });
-        sessionStorage.setItem("email", formState?.email);
-        sessionStorage.setItem("phone", formState?.phone);
-      })
-      .catch(({ response }) => {
-        setLoading(false);
-        sessionStorage.setItem("email", "");
-        sessionStorage.setItem("phone", "");
-        toast({
-          variant: "destructive",
-          title: response?.data?.message,
-        });
+  const validatePhoneNumber = (phoneNumber: any) => {
+    console.log(phoneNumber);
+
+    const phoneRegex = /^\+[0-9]{1,3}[0-9]{10,14}$/;
+    if (!phoneRegex.test(phoneNumber)) {
+      toast({
+        variant: "destructive",
+        title: "Invalid Phone Number",
       });
+      return true;
+    } else {
+      return false;
+    }
+  };
+  const submitHandler = async (e: any) => {
+    e.preventDefault();
+    const error = validatePhoneNumber(formState.phone);
+    if (!error) {
+      setLoading(true);
+      await axios
+        .post(`${authUrls.signUp}`, formState)
+        .then((res) => {
+          router.push("/account/verify-email");
+          setLoading(false);
+          toast({
+            title: res?.data?.message,
+          });
+          sessionStorage.setItem("email", formState?.email);
+          sessionStorage.setItem("phone", formState?.phone);
+        })
+        .catch(({ response }) => {
+          setLoading(false);
+          sessionStorage.setItem("email", "");
+          sessionStorage.setItem("phone", "");
+          toast({
+            variant: "destructive",
+            title: response?.data?.message,
+          });
+        });
+    }
   };
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -156,6 +173,11 @@ export default function CreateAccountPage() {
                         <PhoneInput
                           placeholder="+20 123 456 789"
                           className="bg-white mt-[6px]"
+                          name="phone"
+                          type="tel"
+                          required
+                          onChange={(e) => changeHandler(e)}
+                          value={formState.phone}
                         />
                       </div>
                     </div>

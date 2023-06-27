@@ -31,6 +31,8 @@ export default async function handler(
         if (updateDataError) {
           throw new Error(updateDataError.message);
         }
+      } else {
+        return res.status(400).json({ message: "Invalid Code" });
       }
 
       return res.status(200).json({ message: "Email verified" });
