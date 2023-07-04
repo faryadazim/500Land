@@ -22,13 +22,15 @@ import axios from "axios";
 import { authUrls } from "@/services/apiUrls";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
+import supabase from "@/supabase";
+import withAuth from "./withAuth";
 
 const inter = Poppins({
   subsets: ["latin"],
   weight: "100",
 });
 
-export default function LoginAccountPage() {
+function LoginAccountPage() {
   const { toast } = useToast();
   const [formState, setFormState] = useState({
     password: "",
@@ -47,30 +49,55 @@ export default function LoginAccountPage() {
   const submitHandler = (e: any) => {
     setLoading(true);
     e.preventDefault();
-    axios({
-      method: "POST",
-      url: authUrls.signIn,
-      data: {
-        email: formState?.email,
-        password: formState?.password,
-      },
-    })
-      .then((res) => {
-        router.push("/dashboard/dashboard-main");
-        localStorage.setItem("token", res?.data?.res?.access_token);
-        localStorage.setItem("userId", res?.data?.userId);
-        setLoading(false);
-        toast({
-          title: "Login successfully",
-        });
+    const email = formState?.email;
+
+    const password = formState?.password;
+    supabase.auth
+      .signInWithPassword({
+        email,
+        password,
       })
-      .catch(({ response }) => {
-        setLoading(false);
-        toast({
-          variant: "destructive",
-          title: response?.data?.message,
-        });
+      .then(({ error, data }: any) => {
+        if (error) {
+          setLoading(false);
+          toast({
+            variant: "destructive",
+            title: error?.message,
+          });
+        } else {
+          supabase.auth.setSession(data.session);
+          router.push("/dashboard/dashboard-main");
+          setLoading(false);
+          toast({
+            title: "Login successfully",
+          });
+        }
       });
+
+    // axios({
+    //   method: "POST",
+    //   url: authUrls.signIn,
+    //   data: {
+    //     email: formState?.email,
+    //     password: formState?.password,
+    //   },
+    // })
+    //   .then((res) => {
+    //     router.push("/dashboard/dashboard-main");
+    //     localStorage.setItem("token", res?.data?.res?.access_token);
+    //     localStorage.setItem("userId", res?.data?.userId);
+    //     setLoading(false);
+    //     toast({
+    //       title: "Login successfully",
+    //     });
+    //   })
+    //   .catch(({ response }) => {
+    //     setLoading(false);
+    //     toast({
+    //       variant: "destructive",
+    //       title: response?.data?.message,
+    //     });
+    //   });
   };
 
   useEffect(() => {
@@ -81,19 +108,6 @@ export default function LoginAccountPage() {
   }, []);
 
   return (
-    // <div className="h-[100vh] bg-grey-600 flex"  style={{ backgroundImage: "url('/images/Image.png  ')", minHeight: "100vh"  , minWidth:"50vw" , backgroundRepeat:"no-repeat"}}>
-    //   <div className="w-1/2  "  >First Tolo lala</div>
-    //   <div className="w-1/2">Second O Maa Goo</div>
-    //   {/* <header className="container  border-t-pink-0 border-l-pink-0 border-t-pink-0   top-0 z-40">
-
-    //     NavLogo
-    //   </header>
-    //   <section className="container my-12">
-    //     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eos repellat quaerat rerum officia aliquam nisi odit impedit dolorum! Optio unde quod nam. Debitis sint vel recusandae rem maiores quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eos repellat quaerat rerum officia aliquam nisi odit impedit dolorum! Optio unde quod nam. Debitis sint vel recusandae rem maiores quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam eos repellat quaerat rerum officia aliquam nisi odit impedit dolorum! Optio unde quod nam. Debitis sint vel recusandae rem maiores quidem.
-
-    //   </section> */}
-
-    // </div>
     <>
       <div
         className="h-screen w-screen   bg-cover bg-center -z-10"
@@ -234,3 +248,5 @@ export default function LoginAccountPage() {
     </>
   );
 }
+
+export default withAuth(LoginAccountPage);

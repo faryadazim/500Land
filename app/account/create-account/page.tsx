@@ -11,8 +11,9 @@ import axios from "axios";
 import { authUrls } from "@/services/apiUrls";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
+import withAuth from "./withAuth";
 
-export default function CreateAccountPage() {
+function CreateAccountPage() {
   const { toast } = useToast();
   const router = useRouter();
   const [formState, setFormState] = useState({
@@ -248,3 +249,5 @@ export default function CreateAccountPage() {
     </div>
   );
 }
+
+export default withAuth(CreateAccountPage);

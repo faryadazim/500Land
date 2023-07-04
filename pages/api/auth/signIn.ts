@@ -13,7 +13,6 @@ export default async function handler(
       // await requireAuth(req, res);
 
       const { email, password, phone } = req.body;
-
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,

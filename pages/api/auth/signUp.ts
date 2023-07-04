@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import supabase from "../../../supabase";
-import axios from "axios";
+import { sendOTP } from "@/functions/sendOTP";
 
 type Data = {
   message: string;
@@ -13,6 +13,8 @@ export default async function handler(
   if (req.method === "POST") {
     try {
       const { email, password, phone, firstName, lastName } = req.body;
+      console.log("email", email);
+      let userId = "";
 
       // Check is user Exist or not
       const { data: existingUser, error: existingUserError } = await supabase
@@ -29,43 +31,44 @@ export default async function handler(
         }
       } else {
         // signUp
-        const signUp = await supabase.auth.signUp({
-          email,
-          password,
-        });
-
-        if (signUp.error) {
-          throw new Error(signUp.error.message);
-        }
-
-        // Insert data into the table
-
-        const { data, error: insertDataError } = await supabase
-          .from("userProfile")
-          .insert([
-            {
-              firstName: firstName,
-              lastName: lastName,
-              email: email,
-              phone: phone,
-            },
-          ]);
-
-        if (insertDataError) {
-          throw new Error(insertDataError.message);
-        }
-
-        console.log("data", data);
-      }
-      //  send OTP to email
-      if (email) {
-        await axios
-          .post(`http://${req.headers.host}/api/auth/resendOTP`, { email })
-          .then(() => {})
+        const signUp = await supabase.auth
+          .signUp({
+            email,
+            password,
+          })
+          .then(async (res) => {
+            // Insert data into the table
+            userId = res.data.user?.id || "";
+            const { data, error: insertDataError } = await supabase
+              .from("userProfile")
+              .insert([
+                {
+                  userId: res.data.user?.id,
+                  firstName: firstName,
+                  lastName: lastName,
+                  email: email,
+                  phone: phone,
+                },
+              ]);
+            if (insertDataError) {
+              throw new Error(insertDataError.message);
+            }
+            // send OTP
+            sendOTP(email, userId);
+          })
           .catch((error) => {
-            throw new Error(error);
+            throw new Error(error.message);
           });
       }
+
+      // if (email) {
+      //   await axios
+      //     .post(`http://${req.headers.host}/api/auth/resendOTP`, { email })
+      //     .then(() => {})
+      //     .catch((error) => {
+      //       throw new Error(error);
+      //     });
+      // }
 
       return res.status(200).json({
         message: email

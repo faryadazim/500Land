@@ -28,7 +28,8 @@ export default async function sendEmail(
         .sendMail(mailOptions)
         .then((res: any) => {})
         .catch((err: any) => {
-          throw new Error(err);
+          console.log(err.message);
+          throw new Error(err.message);
         });
 
     return { status: "200", message: "Email send successfully" };

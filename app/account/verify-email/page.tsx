@@ -21,13 +21,14 @@ import { useRouter } from "next/navigation";
 import { toast } from "@/components/ui/use-toast";
 import { getUserInfo, uploadDocuments } from "./actions";
 import DocumentUploader from "./uploadDocument";
+import withAuth from "./withAuth";
 
 const inter = Poppins({
   subsets: ["latin"],
   weight: "100",
 });
 
-export default function VerifyEmailPage() {
+function VerifyEmailPage() {
   const inputRefs = useRef<Array<HTMLInputElement | null>>([]);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -295,6 +296,7 @@ export default function VerifyEmailPage() {
     </>
   );
 }
+export default withAuth(VerifyEmailPage);
 
 ///////////////this is code for screen above the verification but nee to mention how should be it look like
 
