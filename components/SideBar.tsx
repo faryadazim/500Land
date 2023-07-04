@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../public/sideLogo.png";
@@ -34,7 +35,29 @@ import supabase from "@/supabase";
 
 export default function SideBar() {
   const [collapseShow, setCollapseShow] = React.useState<String>("hidden");
+  const [userData, setUserData] = useState({
+    created_at: "",
+    email: "",
+    firstName: "",
+    id: "",
+    lastName: "",
+    phone: "",
+    userId: "",
+    verified: false,
+  });
   const router = useRouter();
+  useEffect(() => {
+    supabase.auth.getUser().then(({ error, data }) => {
+      supabase
+        .from("userProfile")
+        .select("*")
+        .eq("userId", data.user?.id)
+        .then(({ error, data }: any) => {
+          setUserData(data[0]);
+        });
+    });
+  }, []);
+
   return (
     <>
       <nav
@@ -447,11 +470,16 @@ export default function SideBar() {
                     className="h-12 rounded-2xl p-3 w-12 flex justify-center"
                     style={{ backgroundColor: "#E99E0D", alignItems: "center" }}
                   >
-                    <Image src={JLogo} alt="Image Not Found" />
+                    {/* <Image src="" alt="Image Not Found" /> */}
+                    <p style={{ color: "white" }}>
+                      {userData.firstName.charAt(0)}
+                    </p>
                   </div>
                   <div className="ml-3">
-                    <h1 className="font-bold text-lg">John Doe</h1>
-                    <p className="text-sm">johndoe@gmail.com</p>
+                    <h1 className="font-bold text-lg">
+                      {userData.firstName} {userData.lastName}
+                    </h1>
+                    <p className="text-sm">{userData.email}</p>
                   </div>
                 </div>
               </div>
