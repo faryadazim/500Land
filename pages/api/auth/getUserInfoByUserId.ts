@@ -16,7 +16,7 @@ export default async function handler(
       const { data, error } = await supabase
         .from("userProfile")
         .select("*")
-        .eq("id", userId);
+        .eq("userId", userId);
       if (error) {
         throw new Error(error.message);
       }

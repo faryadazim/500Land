@@ -13,6 +13,7 @@ import jwt from "jsonwebtoken";
 import { useToast } from "@/components/ui/use-toast";
 import { getDocuments, getUserInfo } from "./actions";
 import UploadDocument from "./uploadDocument";
+import supabase from "@/supabase";
 
 export default function SettingPage() {
   // const isOpen=(false);
@@ -34,9 +35,12 @@ export default function SettingPage() {
   useEffect(() => {
     let Token = localStorage.getItem("token") || "";
     let user: any = jwt.decode(Token) || "";
-    const userId = localStorage.getItem("userId") || "";
-    getUserInfo(userId, setFormState);
-    getDocuments(userId, setDocuments);
+    supabase.auth.getSession().then(({ error, data }: any) => {
+      if (data?.session?.user?.id) {
+        getUserInfo(data?.session?.user?.id, setFormState);
+        getDocuments(data?.session?.user?.id, setDocuments);
+      }
+    });
   }, []);
 
   const changeHandler = (e: any) => {
