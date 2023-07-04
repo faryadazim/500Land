@@ -296,7 +296,7 @@ function VerifyEmailPage() {
     </>
   );
 }
-export default withAuth(VerifyEmailPage);
+export default VerifyEmailPage;
 
 ///////////////this is code for screen above the verification but nee to mention how should be it look like
 
