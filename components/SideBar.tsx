@@ -30,6 +30,7 @@ import {
 } from "@/components/ui/popover";
 import JLogo from "../public/JLogo.png";
 import { useRouter } from "next/navigation";
+import supabase from "@/supabase";
 
 export default function SideBar() {
   const [collapseShow, setCollapseShow] = React.useState<String>("hidden");
@@ -419,8 +420,7 @@ export default function SideBar() {
                 <Button
                   className="uppercase py-3 px-2 rounded-md font-bold   text-red-500 text-sm flex align-middle hover:bg-red-100"
                   onClick={() => {
-                    localStorage.removeItem("token");
-                    localStorage.removeItem("userId");
+                    supabase.auth.signOut();
                     router.push("/account/login");
                   }}
                 >

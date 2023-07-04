@@ -67,8 +67,6 @@ export const getUserInfo = async (
   userId: string,
   setUserData: React.Dispatch<React.SetStateAction<UserData>>
 ) => {
-  console.log("userId", userId);
-
   await axios({
     method: "get",
     url: authUrls.getUserInfoByUserId,
