@@ -8,18 +8,21 @@ interface UploadDocumentProps {
   // Add any props you need for the component
   selectedFiles: File[];
   setSelectedFiles: any;
+  userId: string;
 }
 
 const UploadDocument: React.FC<UploadDocumentProps> = ({
   selectedFiles,
   setSelectedFiles,
+  userId,
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
   const handleFileSelect = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const files = Array.from(e.target.files);
-      const userId = localStorage.getItem("userId") || "";
+      // const userId = localStorage.getItem("userId") || "";
+
       uploadDocuments(userId, files, setLoading);
 
       const filteredFiles = files.filter((file) => {

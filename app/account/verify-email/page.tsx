@@ -39,6 +39,7 @@ function VerifyEmailPage() {
   });
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [userData, setUserData] = useState({
+    userId: "",
     created_at: "",
     email: "",
     firstName: "",
@@ -150,7 +151,7 @@ function VerifyEmailPage() {
   };
   const handleFileUpload = (files: any) => {
     setLoading(true);
-    uploadDocuments(userData?.id, selectedFiles, router, setLoading);
+    uploadDocuments(userData?.userId, selectedFiles, router, setLoading);
   };
 
   return (

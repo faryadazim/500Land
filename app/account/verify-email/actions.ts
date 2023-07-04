@@ -1,6 +1,7 @@
 import { authUrls, settingUrls } from "@/services/apiUrls";
 import axios from "axios";
 type UserData = {
+  userId: string;
   created_at: string;
   email: string;
   firstName: string;
@@ -25,7 +26,6 @@ export const getUserInfo = async (
     },
   })
     .then(({ data }) => {
-      debugger;
       setIsEmailVerified(data?.res?.verified);
       setUserData(data?.res);
     })

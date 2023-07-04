@@ -29,7 +29,7 @@ export default function SettingPage() {
     phone: "",
     verified: "",
   });
-
+  const [userId, setUserId] = useState("");
   const [documents, setDocuments] = useState([]);
 
   useEffect(() => {
@@ -37,6 +37,7 @@ export default function SettingPage() {
     let user: any = jwt.decode(Token) || "";
     supabase.auth.getSession().then(({ error, data }: any) => {
       if (data?.session?.user?.id) {
+        setUserId(data?.session?.user?.id);
         getUserInfo(data?.session?.user?.id, setFormState);
         getDocuments(data?.session?.user?.id, setDocuments);
       }
@@ -57,7 +58,7 @@ export default function SettingPage() {
       method: "POST",
       url: settingUrls.updateUserProfile,
       data: {
-        userId: localStorage.getItem("userId"),
+        userId: userId,
         firstName: formState.firstName,
         lastName: formState.lastName,
         email: formState.email,
@@ -384,6 +385,7 @@ export default function SettingPage() {
               <UploadDocument
                 selectedFiles={documents}
                 setSelectedFiles={setDocuments}
+                userId={userId}
               />
             </div>
           </div>

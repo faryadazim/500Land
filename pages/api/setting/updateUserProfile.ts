@@ -12,7 +12,7 @@ export default async function handler(
       const { data, error: updateDataError } = await supabase
         .from("userProfile")
         .update({ firstName, lastName, email, phone })
-        .eq("id", userId);
+        .eq("userId", userId);
 
       if (updateDataError) {
         throw new Error(updateDataError.message);
