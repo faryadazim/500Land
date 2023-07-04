@@ -3,47 +3,48 @@ import Image from "next/image";
 import { Delete, DeleteIcon, LucideDelete } from "lucide-react";
 import DeleteIcons from "@/public/delete.png";
 import { Button } from "@/components/ui/button";
-import { uploadDocuments } from "./actions";
+import { deleteDocument, uploadDocuments } from "./actions";
 interface UploadDocumentProps {
   // Add any props you need for the component
   selectedFiles: File[];
   setSelectedFiles: any;
   userId: string;
+  refetchDoc: any;
 }
 
 const UploadDocument: React.FC<UploadDocumentProps> = ({
   selectedFiles,
   setSelectedFiles,
   userId,
+  refetchDoc,
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
   const handleFileSelect = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const files = Array.from(e.target.files);
-      // const userId = localStorage.getItem("userId") || "";
 
-      uploadDocuments(userId, files, setLoading);
-
-      const filteredFiles = files.filter((file) => {
-        const fileType = file.type;
-        return (
-          // fileType === "image/svg+xml" ||
-          fileType === "image/png" ||
-          fileType === "image/PNG" ||
-          fileType === "image/jpeg" ||
-          fileType === "image/JPEG" ||
-          fileType === "image/jpg" ||
-          fileType === "image/JPG" ||
-          fileType === "application/PDF" ||
-          // fileType === "image/gif"
-          fileType === "application/pdf"
-        );
-      });
-      setSelectedFiles((prevSelectedFiles: any) => [
-        ...prevSelectedFiles,
-        ...filteredFiles,
-      ]);
+      uploadDocuments(userId, files, setLoading, refetchDoc);
+      refetchDoc();
+      // const filteredFiles = files.filter((file) => {
+      //   const fileType = file.type;
+      //   return (
+      //     // fileType === "image/svg+xml" ||
+      //     fileType === "image/png" ||
+      //     fileType === "image/PNG" ||
+      //     fileType === "image/jpeg" ||
+      //     fileType === "image/JPEG" ||
+      //     fileType === "image/jpg" ||
+      //     fileType === "image/JPG" ||
+      //     fileType === "application/PDF" ||
+      //     // fileType === "image/gif"
+      //     fileType === "application/pdf"
+      //   );
+      // });
+      // setSelectedFiles((prevSelectedFiles: any) => [
+      //   ...prevSelectedFiles,
+      //   ...filteredFiles,
+      // ]);
       // Display an error message or take appropriate action when exceeding the file limit
     }
   };
@@ -84,7 +85,8 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
     e.preventDefault();
   };
 
-  const handleDeleteFile = (index: number) => {
+  const handleDeleteFile = (index: number, documentId: any) => {
+    deleteDocument(userId, documentId, setLoading);
     setSelectedFiles((prevSelectedFiles: any) => {
       const newSelectedFiles = [...prevSelectedFiles];
       newSelectedFiles.splice(index, 1);
@@ -195,7 +197,7 @@ const UploadDocument: React.FC<UploadDocumentProps> = ({
                   <div className="pl-[12px]">
                     <Image
                       src={DeleteIcons}
-                      onClick={() => handleDeleteFile(index)}
+                      onClick={() => handleDeleteFile(index, file?.id)}
                       alt="Image Not Found"
                       height={15}
                       width={15}

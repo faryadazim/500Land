@@ -20,7 +20,8 @@ export const getDocuments = async (userId: string, setDocumentData: any) => {
 export const uploadDocuments = async (
   userId: string,
   files: File[],
-  setLoading: any
+  setLoading: any,
+  refetchDoc: any
 ) => {
   //   const formData = new FormData();
   //   formData.append("userId", userId);
@@ -36,6 +37,39 @@ export const uploadDocuments = async (
     data: {
       userId,
       files: names,
+    },
+  })
+    .then((res) => {
+      setLoading(false);
+      refetchDoc();
+      toast({
+        title: res?.data?.message,
+      });
+    })
+    .catch(({ response }) => {
+      setLoading(false);
+      toast({
+        variant: "destructive",
+        title: response?.data?.message,
+      });
+    });
+};
+export const deleteDocument = async (
+  userId: string,
+  documentId: string,
+  setLoading: any
+) => {
+  //   const formData = new FormData();
+  //   formData.append("userId", userId);
+  //   files.forEach((file) => formData.append("files", file));
+  let names: any = [];
+
+  await axios({
+    method: "DELETE",
+    url: settingUrls.deleteDocument,
+    params: {
+      userId,
+      documentId: documentId,
     },
   })
     .then((res) => {

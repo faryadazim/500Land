@@ -44,6 +44,13 @@ export default function SettingPage() {
     });
   }, []);
 
+  const refetchDoc = () => {
+    supabase.auth.getSession().then(({ error, data }: any) => {
+      if (data?.session?.user?.id) {
+        getDocuments(data?.session?.user?.id, setDocuments);
+      }
+    });
+  };
   const changeHandler = (e: any) => {
     const { name, value } = e.target;
     setFormState((formState) => ({
@@ -386,6 +393,7 @@ export default function SettingPage() {
                 selectedFiles={documents}
                 setSelectedFiles={setDocuments}
                 userId={userId}
+                refetchDoc={refetchDoc}
               />
             </div>
           </div>

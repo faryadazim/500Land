@@ -8,6 +8,7 @@ export const authUrls = {
 };
 export const settingUrls = {
   uploadDocument: `/api/setting/uploadDocument`,
+  deleteDocument: `/api/setting/deleteDocument`,
   updateUserProfile: `/api/setting/updateUserProfile`,
   getDocuments: `/api/setting/getDocuments`,
 };
