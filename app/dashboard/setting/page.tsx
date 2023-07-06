@@ -15,6 +15,7 @@ import { getDocuments, getUserInfo } from "./actions";
 import SettingLoading from "./loading";
 import UploadDocument from "./uploadDocument";
 import supabase from "@/supabase";
+import { countries } from "country-data-list";
 
 
 export default function SettingPage() {
@@ -110,14 +111,14 @@ export default function SettingPage() {
   };
 
   const phoneNumberHandler = (e:any)=>{
-    const number=JSON.parse(e);
-    
-    //alert(number);
-    //console.log("===================================",e);
+ 
+    let countryData = 
+    countries.all.find((country: any) => country.name === e);
+    const code =countryData?.countryCallingCodes[0] || ""
     setFormState((formState) => ({
       ...formState,
-      phone:number
-    }))
+      phone:code
+    }));
   }
 
 

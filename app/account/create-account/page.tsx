@@ -77,13 +77,14 @@ function CreateAccountPage() {
 
 
 const phoneNumberHandler = (e:any)=>{
-  const couties= countries || []
-  let countryData = couties.find((country: any) => country.name === e);
-
+ 
+  let countryData = 
+  countries.all.find((country: any) => country.name === e);
+  const code =countryData?.countryCallingCodes[0] || ""
   setFormState((formState) => ({
     ...formState,
-    phone:countryData[0]?.countryCallingCodes[0]
-  }))
+    phone:code
+  }));
 }
 
   useEffect(() => {
