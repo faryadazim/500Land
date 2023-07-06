@@ -11,7 +11,7 @@ export const getDocuments = async (userId: string, setDocumentData: any) => {
     },
   })
     .then(({ data }) => {
-      debugger;
+      
       setDocumentData(data?.res);
     })
     .catch((error) => {});

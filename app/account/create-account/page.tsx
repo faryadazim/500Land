@@ -12,6 +12,7 @@ import { authUrls } from "@/services/apiUrls";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import withAuth from "./withAuth";
+import { countries } from "country-data-list"
 
 function CreateAccountPage() {
   const { toast } = useToast();
@@ -73,6 +74,18 @@ function CreateAccountPage() {
         });
     }
   };
+
+
+const phoneNumberHandler = (e:any)=>{
+  const couties= countries || []
+  let countryData = couties.find((country: any) => country.name === e);
+
+  setFormState((formState) => ({
+    ...formState,
+    phone:countryData[0]?.countryCallingCodes[0]
+  }))
+}
+
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {
@@ -177,6 +190,7 @@ function CreateAccountPage() {
                           name="phone"
                           type="tel"
                           required
+                          phoneNumberHandler={phoneNumberHandler}
                           onChange={(e) => changeHandler(e)}
                           value={formState.phone}
                         />

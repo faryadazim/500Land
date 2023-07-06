@@ -11,7 +11,7 @@ export async function getBlogs(): Promise<Blog[]> {
     //     apiVersion: '2023-03-04'
 
     // });
-    // debugger;
+    // 
     // console.log(JSON.stringify(client));
     return createClient(clientConfig).fetch(
         groq`*[_type=="blog"]{
@@ -36,7 +36,7 @@ export async function getBlogslug(slug: string): Promise<Blog> {
     //     apiVersion: '2023-03-04'
 
     // });
-    // debugger;
+    // 
     // console.log(JSON.stringify(client));
     return createClient(clientConfig).fetch(
         groq`*[_type=="blog" && slug.current==$slug][0]{

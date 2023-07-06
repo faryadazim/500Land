@@ -1,5 +1,5 @@
 import * as React from "react"
-
+import { countries } from "country-data-list"
 import { cn } from "@/lib/utils"
 import {
   Select,
@@ -13,26 +13,43 @@ import {
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> { }
 
-const PhoneInput = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
+
+
+  export interface ExtendedInputProps extends InputProps {
+    phoneNumberHandler: (e:any) => void;
+  }
+
+  
+
+
+
+const PhoneInput = React.forwardRef<HTMLInputElement, ExtendedInputProps>(
+  ({ className,phoneNumberHandler  , type, ...props }, ref) => {
+// console.log('====================================');
+// console.log("countries",countries);
+// console.log('====================================');
     return (
 
 
 
 
       <div className="relative flex w-full">
-        <Select >
+        <Select onValueChange={(e)=>phoneNumberHandler(e)}>
           <SelectTrigger className="  bg-white rounded-l-lg mt-[6px] border-r-0  rounded-r-none w-18">
             <SelectValue placeholder="Country" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="overflow-y-auto h-40">
             <SelectGroup>
-              <SelectItem value="grapes">Pakistan</SelectItem>
+            {countries.all.map((x,index): any => (
+              x.countryCallingCodes.length > 0 &&
+              <SelectItem value={x.name} key={x.name}>{x.name}</SelectItem>
+            ))}
+              {/* <SelectItem value="grapes">Pakistan</SelectItem> */}
               {/* <SelectLabel>UAE</SelectLabel> */}
-              <SelectItem value="apple">Oman</SelectItem>
+              {/* <SelectItem value="apple">Oman</SelectItem>
               <SelectItem value="banana">Egypt</SelectItem>
               <SelectItem value="blueberry">United Kingdom</SelectItem>
-              <SelectItem value="pineapple">USA</SelectItem>
+              <SelectItem value="pineapple">USA</SelectItem> */}
             </SelectGroup>
           </SelectContent>
         </Select>

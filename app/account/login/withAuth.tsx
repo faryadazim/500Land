@@ -10,7 +10,7 @@ const withAuth = (WrappedComponent: React.ComponentType) => {
       const session = supabase.auth
         .getSession()
         .then(({ error, data }: any) => {
-          debugger;
+          
           if (data.session) {
             router.push("/dashboard/dashboard-main"); // Redirect to login page if not logged in
           } else {
