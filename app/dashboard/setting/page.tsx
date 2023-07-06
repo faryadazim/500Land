@@ -2,14 +2,11 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
-
 import { Button, buttonVariants } from "@/components/ui/button";
-
 import { PhoneInput } from "@/components/ui/phone-input-field";
 import { Input } from "@/components/ui/input";
 import axios from "axios";
 import { settingUrls } from "@/services/apiUrls";
-import jwt from "jsonwebtoken";
 import { useToast } from "@/components/ui/use-toast";
 import { getDocuments, getUserInfo } from "./actions";
 import UploadDocument from "./uploadDocument";
@@ -33,8 +30,6 @@ export default function SettingPage() {
   const [documents, setDocuments] = useState([]);
 
   useEffect(() => {
-    let Token = localStorage.getItem("token") || "";
-    let user: any = jwt.decode(Token) || "";
     supabase.auth.getSession().then(({ error, data }: any) => {
       if (data?.session?.user?.id) {
         setUserId(data?.session?.user?.id);

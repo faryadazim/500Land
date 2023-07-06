@@ -32,8 +32,9 @@ import {
 import JLogo from "../public/JLogo.png";
 import { useRouter } from "next/navigation";
 import supabase from "@/supabase";
+import withAuth from "@/app/withAuth";
 
-export default function SideBar() {
+function SideBar() {
   const [collapseShow, setCollapseShow] = React.useState<String>("hidden");
   const [userData, setUserData] = useState({
     created_at: "",
@@ -472,14 +473,14 @@ export default function SideBar() {
                   >
                     {/* <Image src="" alt="Image Not Found" /> */}
                     <p style={{ color: "white" }}>
-                      {userData.firstName.charAt(0)}
+                      {userData?.firstName.charAt(0)}
                     </p>
                   </div>
                   <div className="ml-3">
                     <h1 className="font-bold text-lg">
-                      {userData.firstName} {userData.lastName}
+                      {userData?.firstName} {userData?.lastName}
                     </h1>
-                    <p className="text-sm">{userData.email}</p>
+                    <p className="text-sm">{userData?.email}</p>
                   </div>
                 </div>
               </div>
@@ -490,3 +491,5 @@ export default function SideBar() {
     </>
   );
 }
+
+export default withAuth(SideBar);
