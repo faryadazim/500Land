@@ -31,7 +31,8 @@ const opportunity = {
     {
       name: "requestedFund",
       title: "Requested Fund",
-      type: "string",
+      type: "number",
+      validation: (Rule: any) => Rule.integer().positive(),
     },
     {
       name: "slug",
