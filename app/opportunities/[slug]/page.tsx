@@ -330,6 +330,7 @@ export default function OpportunitiesPage(props: any) {
                 {" "}
                 Location{" "}
               </h3>
+
               <div className=" xl:w-full h-full rounded-[14px]  ">
                 <Map src={opportunity?.locationMap} />
               </div>
