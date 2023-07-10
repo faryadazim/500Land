@@ -58,11 +58,6 @@ const opportunity = {
         },
       ],
     },
-    // {
-    //     name: "url",
-    //     title: "URL",
-    //     type: "url",
-    // },
     {
       name: "description",
       title: "Description",
